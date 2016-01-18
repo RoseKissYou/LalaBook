@@ -69,11 +69,9 @@
         }
     }];
 }
-// 任务: 1 -> 上传
-#pragma mark - 上传位置信息到服务器
-
 /*
-
+ 任务: 1 -> 上传
+#pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

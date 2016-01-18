@@ -36,7 +36,8 @@
 
 @property (nonatomic,strong) NSArray *firstArr;
 @property (nonatomic,strong) NSArray *secondArr;
-
+@property (nonatomic,strong) AAASearchParam *param;
+@property (nonatomic,assign) BOOL isShowCircle;
 
 @end
 
@@ -45,65 +46,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     // Do any additional setup after loading the view.
     [self addCalendar];
     
-    AAASearchParam *param = [AAASearchParam sharedAAASearchParam];
-    param.tbname = self.modelName;
-#warning df-调试中
-    [[AAASearchTool sharedAAASearchTool] getTableViewContent:param Success:^(TableViewContentResult *result) {
-        NSArray *arr1 = result.datainfo;
-        [[AAASearchTool sharedAAASearchTool] getPresentDailyData:nil Success:^(NSArray *result) {
-            
-            NSArray *arr2 = result[0];
-            ////
-            NSMutableArray *firstArr = [NSMutableArray array];
-            for (TVCDataInfoResult *tvc in arr1) {
-                if (firstArr.count == 0) {
-                    [firstArr addObject:tvc.GroupName];
-                }else{
-                    if (![firstArr containsObject:tvc.GroupName]) {
-                        [firstArr addObject:tvc.GroupName];
-                    }
-                }
-            }
-            NSLog(@"%@",firstArr);
-            
-            NSMutableArray *secondArr = [NSMutableArray array];
-            for (NSString *str in firstArr) {
-                NSMutableArray *keyArr = [NSMutableArray array];
-                NSMutableArray *valueArr = [NSMutableArray array];
-                for (TVCDataInfoResult *tvc in arr1) {
-                    NSLog(@"%@",tvc.FieldName);
-                    for (PDDataInfoResult *pd in arr2) {
-                        NSLog(@"%@",pd.FieldName);
-                        if ([tvc.FieldName isEqualToString:pd.FieldName]&&[tvc.GroupName isEqualToString:str]) {
-                            [keyArr addObject:pd.FieldName];
-                            [valueArr addObject:pd.FieldValue];
-                        }
-                    }
-                }
-//                NSDictionary *dic = [[NSDictionary alloc]initWithObjects:valueArr forKeys:keyArr];
-//                [secondArr addObject:dic];
-                [secondArr addObject:keyArr];
-                [secondArr addObject:valueArr];
-            }
-            NSLog(@"%@",secondArr);
-            ////
-//            NSLog(@"%@",[NSDictionary In2ArrayOutDicWithOneArr:arr andTwoArr:result[0]]);
-//            self.dataDic = [NSDictionary In2ArrayOutDicWithOneArr:arr andTwoArr:result[0]];
-//            self.count = [self.dataDic allKeys].count;
-            self.firstArr = [firstArr copy];
-            self.secondArr = [secondArr copy];
-            self.count = self.firstArr.count;
-            [self.tableView reloadData];
-        } Failure:^(NSError *error) {
-            ;
-        }];
-    } Failure:^(NSError *error) {
-        ;
-    }];
+    self.param = [AAASearchParam sharedAAASearchParam];
+    self.param.entname = @"百得电器";
+    self.param.tbname = self.modelName;
+    self.param.autoid = @"2015/08/01";
+    
+    [self requestData];
     
 }
 
@@ -116,26 +68,54 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-
+///请求数据
+- (void)requestData{
+    [[AAASearchTool sharedAAASearchTool] getPresentDailyData:self.param Success:^(NSArray *result1, NSArray *result2) {
+        self.firstArr = result1;
+        self.secondArr = result2;
+        for (int i = 0; i<result2.count; i++) {
+            if (i>0) {
+                if (((NSArray *)result2[i-1]).count == ((NSArray *)result2[i]).count) {
+                    if ((((NSArray *)result2[i]).count) == 0) {
+                        self.isShowCircle = NO;
+                    }else{
+                        self.isShowCircle = YES;
+                    }
+                }else{
+                    self.isShowCircle = YES;
+                }
+            }
+        }
+        NSLog(@"%d",self.isShowCircle);
+        self.count = result1.count;
+        [self.tableView reloadData];
+    } Failure:^(NSError *error) {
+        ;
+    }];
+}
 
 #pragma mark - 以下为TableView相关板块
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
 #warning df-测试观察
-    NSLog(@"%@",self.modelName);
-    if (self.count == 0) {
+    NSLog(@"%ld",(long)self.count);
+    if (!self.isShowCircle) {
         return 0;
     }else{
-        return self.count + 1;
+        if (self.count == 0) {
+            return 0;
+        }else{
+            return self.count + 1;
+        }
     }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSLog(@"%ld",(unsigned long)self.count);
     
-    if (section == 0) {
-        return 1;
-    }else
-        return ((NSArray *)self.secondArr[section * 2 - 1]).count;
+        if (section == 0) {
+            return 1;
+        }else
+            return ((NSArray *)self.secondArr[section * 2 - 1]).count;
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -156,6 +136,7 @@
             cell.valueLabel.text = arr2[indexPath.row];
             return cell;
         }
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -185,6 +166,18 @@
     [_calendarManager setMenuView:_calendarMenuView];
     [_calendarManager setContentView:_calendarContentView];
     [_calendarManager setDate:_todayDate];
+    
+    _calendarManager.settings.weekModeEnabled = NO;
+    [_calendarManager reload];
+    self.calendarContentViewHeight.constant = 210;
+    [self.view layoutIfNeeded];
+   
+    _calendarManager.settings.weekModeEnabled = YES;
+    [_calendarManager reload];
+    self.calendarContentViewHeight.constant = 60;
+    [self.view layoutIfNeeded];
+  
+
 }
 
 
@@ -290,6 +283,12 @@
             [_calendarContentView loadPreviousPageWithAnimation];
         }
     }
+    
+    self.param.autoid = [NSDate NSDate2FormatNSString:_dateSelected];
+    
+    [self requestData];
+
+    
 }
 
 #pragma mark - Views customization

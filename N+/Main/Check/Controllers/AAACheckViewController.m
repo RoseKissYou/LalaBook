@@ -18,6 +18,8 @@
 
 #import "ZCTradeView.h"
 
+#import "SearchFilesViewController.h"
+
 @interface AAACheckViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *backgroundView;
@@ -189,6 +191,9 @@
         SearchContentViewController *scVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@""];
         scVC.modelName = btn.modelName;
         [self.navigationController pushViewController:scVC animated:YES];
+    }else if ([btn.modelName isEqualToString:@"档案查询"]){
+        SearchFilesViewController *sfVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"SearchFile"];
+        [self.navigationController pushViewController:sfVC animated:YES];
     }
     
 }
