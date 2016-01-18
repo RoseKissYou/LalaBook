@@ -25,6 +25,7 @@
 #import "AAATodayCell.h"
 //headTableView设置
 //招手动画
+//字符串
 //服装图片
 //---------AAAHouseMainViewController
 
