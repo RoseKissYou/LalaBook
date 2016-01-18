@@ -42,6 +42,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+- (IBAction)backToChoose:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 - (IBAction)clickRegion:(UIButton *)sender {
     
     [self.view endEditing:YES];

@@ -25,7 +25,10 @@
 @property (strong,nonatomic) NSString *address;
 
 + (instancetype)sharedAAALoginParam;
-
+//云端用户名
+@property (strong, nonatomic) NSString *userNameInWeb;
+ //云端密码
+@property (strong, nonatomic) NSString *userPasswordInWeb;
 
 //添加项
 //工资查询密码

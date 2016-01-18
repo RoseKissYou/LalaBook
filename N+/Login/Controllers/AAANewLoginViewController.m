@@ -27,8 +27,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+- (IBAction)backToChoose:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 - (IBAction)loginToApplication:(UIButton *)sender {
     AAALoginParam *param = [AAALoginParam sharedAAALoginParam];
+    //这里把用户名和密码存在单例里面,
+    
     if (self.userNameTextFiled.text == nil || self.userPasswordTextFiled.text == nil) {
         //提示密码不能为空
         [[[UIAlertView alloc]initWithTitle:@"输入错误" message:@"用户名或者密码不能为空" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil]  show];

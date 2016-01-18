@@ -197,6 +197,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="设置" id="uM7-eJ-rIA"/>
+                    <connections>
+                        <outlet property="userNameLabel" destination="d7P-IA-C2x" id="o9X-dv-LFh"/>
+                        <outlet property="userNameNumber" destination="MN4-WT-40f" id="YTs-aH-N39"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f59-dW-4Vz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -13,7 +13,11 @@
 #import "AAASearchParam.h"
 
 @interface AAASettingViewController ()
+//用户名
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 
+//用户电话
+@property (weak, nonatomic) IBOutlet UILabel *userNameNumber;
 @end
 
 @implementation AAASettingViewController
@@ -34,6 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
 }
 
