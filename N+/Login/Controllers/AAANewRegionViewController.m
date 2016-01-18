@@ -1,12 +1,12 @@
 //
-//  AAARegionViewController.m
-//  BaseProject
+//  AAANewRegionViewController.m
+//  N+
 //
-//  Created by 小笨熊 on 16/1/4.
+//  Created by hy2 on 16/1/18.
 //  Copyright © 2016年 Jake_Smith. All rights reserved.
 //
 
-#import "AAARegionViewController.h"
+#import "AAANewRegionViewController.h"
 
 #import "AAALoginTool.h"
 #import "AAALoginParam.h"
@@ -14,26 +14,12 @@
 #import "AAAHomeViewController.h"
 
 #import "AAALocationStr.h"
-//扫描二维码 需要系统库  AVFoundation支持
-//1.到build phase +类库, 然后使用 #import <AVF...>
-//iOS7以后,引入系统类库 有快捷方式
-@import AVFoundation;
 
-/*扫描二维码流程
- 1.打开后置摄像头
- 2.从后置摄像头中读取数据输入流
- 3.把输入流 输出到屏幕上进行展示-> 输出流
- 4.把输入流 -> 转移到 输出流.. 中间需要一个管道-->会话
- 5.让输出流(向屏幕显示) 实时过滤自己的内容, 监听是否有二维码/条形码存在.  如果有,就通过协议通知我们
- */
-
-@interface AAARegionViewController ()<AVCaptureMetadataOutputObjectsDelegate,MBProgressHUDDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *userPhoneOrEmail;//手机号码
-//公司全称
-@property (weak, nonatomic) IBOutlet UILabel *corporationName;
+@interface AAANewRegionViewController ()<AVCaptureMetadataOutputObjectsDelegate,MBProgressHUDDelegate>
+//公司全称: 可通过输入或者扫一扫获得
+@property (weak, nonatomic) IBOutlet UITextField *corporationName;
 //员工号
 @property (weak, nonatomic) IBOutlet UITextField *userNumber;
-
 //密码
 @property (weak, nonatomic) IBOutlet UITextField *passWordTextFiled;
 //手机号码
@@ -48,25 +34,14 @@
 //扫描后拿到的字符串
 @property (nonatomic,strong) NSString *str;
 
-/*************************************************/
-//填写手机号码视图
-@property (weak, nonatomic) IBOutlet UIView *telephoneView;
-//填写登录视图
-@property (weak, nonatomic) IBOutlet UIView *loginView;
-
-@property (weak, nonatomic) IBOutlet UITextView *protocolTextView;
-
 @end
 
-@implementation AAARegionViewController
+@implementation AAANewRegionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
     // Do any additional setup after loading the view.
 }
-
-#pragma mark-注册
 - (IBAction)clickRegion:(UIButton *)sender {
     
     [self.view endEditing:YES];
@@ -84,13 +59,14 @@
     param.corporationName =[@"百得电器" stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     param.staffName = self.userNumber.text;
     param.password = self.passWordTextFiled.text;
+    param.phoneType = self.telephoneTF.text;
     
     [AAALoginTool loginUseTool:param Success:^(NSInteger result) {
         switch (result) {
             case 0:
                 [self hujiao1];
                 NSLog(@"登录错误");
-//                param.address = [AAALocationStr sharedAAALocationStr].locationStr;
+                // param.address = [AAALocationStr sharedAAALocationStr].locationStr;
                 //提示重新输入
                 break;
             case 1:
@@ -100,16 +76,17 @@
                 [self go2Main];
                 break;
             }
-            case 2:
-            {
-                NSLog(@"登录正确，未注册");
-#warning df-把协议内容置顶
-                [self.protocolTextView setContentOffset:CGPointMake(0, 0)];
-                //手机号码输入页
-                self.loginView.hidden = YES;
-                self.telephoneView.hidden = NO;
-                break;
-            }
+                //没有手机号码的隐藏
+//            case 2:
+//            {
+//                NSLog(@"登录正确，未注册");
+//#warning df-把协议内容置顶
+//                [self.protocolTextView setContentOffset:CGPointMake(0, 0)];
+//                //手机号码输入页
+//                self.loginView.hidden = YES;
+//                self.telephoneView.hidden = NO;
+//                break;
+//            }
             default:
                 break;
         }
@@ -154,52 +131,8 @@
     AAAHomeViewController *firstControl = [mainStory instantiateViewControllerWithIdentifier:@"Main"];
     [self presentViewController:firstControl animated:YES completion:nil];
 }
-
-#pragma mark - 上传手机号
-- (IBAction)currentTelephone:(id)sender {
-    if (self.telephoneTF.text.length != 11) {
-        return;
-    }else{
-        [AAALoginParam sharedAAALoginParam].telephone = self.telephoneTF.text;
-        
-        [AAALoginTool registerTelephone:[AAALoginParam sharedAAALoginParam] Success:^(BOOL result) {
-            if (result) {
-                //注册成功
-                [self go2Main];
-            }else{
-                //注册失败
-                //提醒重新输入
-            }
-        } Failure:^(NSError *error) {
-            NSLog(@"%@",error);
-        }];
-    }
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    [self.view endEditing:YES];
-}
-#pragma mark - 点击取消按钮
-- (IBAction)back2Login:(id)sender {
-    [self.telephoneTF resignFirstResponder];
-    self.telephoneView.hidden = YES;
-    self.loginView.hidden = NO;
-}
-
-/**
- *  扫码
- *
- *  @param sender UIButton
- */
 - (IBAction)scanCode:(id)sender {
-   [self scanCodeWithImage];
+    [self scanCodeWithImage];
 }
 
 #pragma mark - 扫码
@@ -250,6 +183,15 @@
         self.str = [obj.stringValue stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     }
     
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 /*

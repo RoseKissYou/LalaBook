@@ -82,6 +82,10 @@
 		6800AD4E1C4380F3006B756A /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6800AD4A1C4380F3006B756A /* login.storyboard */; };
 		6800AD821C4381CF006B756A /* AAASettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6800AD7E1C4381CF006B756A /* AAASettingViewController.m */; };
 		6800AD831C4381CF006B756A /* setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6800AD801C4381CF006B756A /* setting.storyboard */; };
+		74289D1E1C4CBF330092F2BE /* AAALoginOrRegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74289D1D1C4CBF330092F2BE /* AAALoginOrRegionViewController.m */; };
+		74289D211C4CBF580092F2BE /* AAANewLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74289D201C4CBF580092F2BE /* AAANewLoginViewController.m */; };
+		74289D241C4CBF700092F2BE /* AAANewRegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74289D231C4CBF700092F2BE /* AAANewRegionViewController.m */; };
+		74289D261C4CCE150092F2BE /* inbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 74289D251C4CCE150092F2BE /* inbg.jpg */; };
 		747EF0B91C49161500D1BA13 /* AAALalaNudeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 747EF0B81C49161500D1BA13 /* AAALalaNudeView.m */; };
 		747EF0BC1C49188400D1BA13 /* AAAHouseBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 747EF0BB1C49188400D1BA13 /* AAAHouseBaseViewController.m */; };
 		749EE18D1C48E6DD00F533A0 /* AAAHouseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749EE1861C48E6DD00F533A0 /* AAAHouseTableViewController.m */; };
@@ -256,6 +260,13 @@
 		6800AD801C4381CF006B756A /* setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = setting.storyboard; sourceTree = "<group>"; };
 		6BDAA00CA8655EAD5B7A115B /* Pods-N+.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-N+.debug.xcconfig"; path = "Pods/Target Support Files/Pods-N+/Pods-N+.debug.xcconfig"; sourceTree = "<group>"; };
 		74065E5E1C462B8300B75924 /* AAARquestAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAARquestAPI.h; sourceTree = "<group>"; };
+		74289D1C1C4CBF330092F2BE /* AAALoginOrRegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAALoginOrRegionViewController.h; sourceTree = "<group>"; };
+		74289D1D1C4CBF330092F2BE /* AAALoginOrRegionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAALoginOrRegionViewController.m; sourceTree = "<group>"; };
+		74289D1F1C4CBF580092F2BE /* AAANewLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAANewLoginViewController.h; sourceTree = "<group>"; };
+		74289D201C4CBF580092F2BE /* AAANewLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAANewLoginViewController.m; sourceTree = "<group>"; };
+		74289D221C4CBF700092F2BE /* AAANewRegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAANewRegionViewController.h; sourceTree = "<group>"; };
+		74289D231C4CBF700092F2BE /* AAANewRegionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAANewRegionViewController.m; sourceTree = "<group>"; };
+		74289D251C4CCE150092F2BE /* inbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = inbg.jpg; sourceTree = "<group>"; };
 		747EF0B71C49161500D1BA13 /* AAALalaNudeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAALalaNudeView.h; sourceTree = "<group>"; };
 		747EF0B81C49161500D1BA13 /* AAALalaNudeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAALalaNudeView.m; sourceTree = "<group>"; };
 		747EF0BA1C49188400D1BA13 /* AAAHouseBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAAHouseBaseViewController.h; sourceTree = "<group>"; };
@@ -621,6 +632,7 @@
 		0C6B2AD31C435A8A00F0D866 /* Delete */ = {
 			isa = PBXGroup;
 			children = (
+				74289D251C4CCE150092F2BE /* inbg.jpg */,
 				74F190E71C474D09004A6B56 /* lala */,
 				74F190E51C474B37004A6B56 /* sunny.png */,
 				74F190DD1C473A48004A6B56 /* lalaHello.png */,
@@ -744,6 +756,12 @@
 			children = (
 				6800AD481C4380F3006B756A /* AAARegionViewController.h */,
 				6800AD491C4380F3006B756A /* AAARegionViewController.m */,
+				74289D1C1C4CBF330092F2BE /* AAALoginOrRegionViewController.h */,
+				74289D1D1C4CBF330092F2BE /* AAALoginOrRegionViewController.m */,
+				74289D1F1C4CBF580092F2BE /* AAANewLoginViewController.h */,
+				74289D201C4CBF580092F2BE /* AAANewLoginViewController.m */,
+				74289D221C4CBF700092F2BE /* AAANewRegionViewController.h */,
+				74289D231C4CBF700092F2BE /* AAANewRegionViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1296,6 +1314,7 @@
 				0CBE20A81C43608800349FF0 /* house.storyboard in Resources */,
 				74F190F41C474D09004A6B56 /* lala_3.png in Resources */,
 				0C1D0BC91C438542002932D9 /* cloudyBackground.png in Resources */,
+				74289D261C4CCE150092F2BE /* inbg.jpg in Resources */,
 				0C6B2B141C435B0900F0D866 /* 2.png in Resources */,
 				74F190F31C474D09004A6B56 /* lala_2.png in Resources */,
 				0C6B2AE41C435A8A00F0D866 /* girl.png in Resources */,
@@ -1423,6 +1442,7 @@
 				0C53224E1C45E2EA00872A1F /* MGViewControllerDataSource.m in Sources */,
 				749EE1FA1C48F48E00F533A0 /* JTCalendarWeekView.m in Sources */,
 				749EE2331C48F50600F533A0 /* AAASearchTool.m in Sources */,
+				74289D241C4CBF700092F2BE /* AAANewRegionViewController.m in Sources */,
 				0C6B2B4A1C435CE900F0D866 /* AAAHomeTab.m in Sources */,
 				749EE2301C48F50600F533A0 /* AAALoginParam.m in Sources */,
 				0C5322511C45E2EA00872A1F /* UIImageView+LBBlurredImage.m in Sources */,
@@ -1446,6 +1466,7 @@
 				749EE23B1C48F50600F533A0 /* AAAWeatherDataRequestTool.m in Sources */,
 				6800AD451C4380D3006B756A /* AAAWelcomeViewController.m in Sources */,
 				0C6B2A9D1C434AC900F0D866 /* main.m in Sources */,
+				74289D1E1C4CBF330092F2BE /* AAALoginOrRegionViewController.m in Sources */,
 				749EE1FD1C48F48E00F533A0 /* NSString+Extension.m in Sources */,
 				749EE1BA1C48F40300F533A0 /* SpecialCell.m in Sources */,
 				749EE1F51C48F48E00F533A0 /* JTCalendarScrollManager.m in Sources */,
@@ -1453,6 +1474,7 @@
 				749EE18F1C48E6DD00F533A0 /* AAATodayCell.m in Sources */,
 				749EE1B71C48F40300F533A0 /* CommonCell.m in Sources */,
 				749EE1F21C48F48E00F533A0 /* JTCalendarSettings.m in Sources */,
+				74289D211C4CBF580092F2BE /* AAANewLoginViewController.m in Sources */,
 				749EE1F71C48F48E00F533A0 /* JTCalendarMenuView.m in Sources */,
 				0CBE20A91C43608800349FF0 /* AAAWeatherCell.m in Sources */,
 				74AA7AB31C46610D0097859B /* NSString+CN2UTF8.m in Sources */,

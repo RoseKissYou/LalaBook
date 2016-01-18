@@ -10,6 +10,8 @@
 //注册
 
 #import "AAARegionViewController.h"
+//新的选择注册或者登陆界面
+#import "AAALoginOrRegionViewController.h"
 
 @interface AAAWelcomeViewController ()<UIScrollViewDelegate>
 @property (strong, nonatomic) UIPageControl *pageControl;
@@ -100,9 +102,11 @@
 /* 点击进入应用按钮后,执行该方法  */
 -(void)enterApp:(UIButton *)button
 {
+    
     UIStoryboard *loginStory = [UIStoryboard storyboardWithName:@"login" bundle:nil];
-    AAARegionViewController *regionController = [loginStory instantiateViewControllerWithIdentifier:@"Region"];
-    [self presentViewController:regionController animated:YES completion:nil];
+   
+    AAALoginOrRegionViewController *chooseLoginOrRegion = [loginStory instantiateViewControllerWithIdentifier:@"choose"];
+    [self presentViewController:chooseLoginOrRegion animated:YES completion:nil];
 }
 /* 配置分页控件 */
 -(void) setUpPageControl
