@@ -1,18 +1,18 @@
 //
-//  LeaveTableViewController.m
+//  RewardTableViewController.m
 //  N+
 //
 //  Created by hy1 on 16/1/19.
 //  Copyright © 2016年 Jake_Smith. All rights reserved.
 //
 
-#import "LeaveTableViewController.h"
-#import "LeaveCell.h"
+#import "RewardTableViewController.h"
 #import "AAASearchAPI.h"
+#import "RewardCell.h"
 
 #import "NSString+SubstringBySpace.h"
 
-@interface LeaveTableViewController ()
+@interface RewardTableViewController ()
 
 @property (assign,nonatomic) NSInteger count;
 
@@ -20,27 +20,27 @@
 
 @end
 
-@implementation LeaveTableViewController
+@implementation RewardTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     AAASearchParam *param = [AAASearchParam sharedAAASearchParam];
     param.entname  = @"百得电器";
-    param.tbname = @"请假查询";
+    param.tbname = @"奖惩查询";
     param.empcode = @"111714";
     param.autoid = @"201508";
     
     [[AAASearchTool sharedAAASearchTool] getPresentDailyDataMore:[AAASearchParam sharedAAASearchParam] Success:^(NSArray *result1, NSArray *result2) {
         self.arr = result2;
         self.count = result2.count;
-
+        NSLog(@"%@",self.arr);
         [self.tableView reloadData];
         
     } Failure:^(NSError *error) {
         ;
     }];
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,6 +50,7 @@
 
 #pragma mark - Table view data source
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     return self.count;
@@ -57,13 +58,20 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    LeaveCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LCell" forIndexPath:indexPath];
-    NSArray *array = (NSArray *)self.arr[indexPath.row];
-    cell.LeaveTypeLabel.text = array[9];
-    cell.LeaveTimeLabel.text = [@"请假时长：" stringByAppendingFormat:@"%@小时",array[8]];
-    cell.LeaveReasonLabel.text = array[10];
-    cell.LeaveStartLabel.text = [NSString getSubstring:array[4]];
-    cell.LeaveEndLabel.text = [NSString getSubstring:array[6]];
+    RewardCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RCell" forIndexPath:indexPath];
+     NSArray *array = (NSArray *)self.arr[indexPath.row];
+    cell.rewardLabel.text = [NSString stringWithFormat:@"%ld",(long)((NSString *)array[6]).integerValue];
+    cell.nameLabel.text = array[5];
+    cell.reasonLabel.text = array[7];
+    cell.timeLabel.text = [NSString getSubstring:array[4]];
+    
+    /*
+     @property (weak, nonatomic) IBOutlet UILabel *rewardLabel;
+     @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+     @property (weak, nonatomic) IBOutlet UILabel *reasonLabel;
+     @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+     */
+    
     return cell;
 }
 

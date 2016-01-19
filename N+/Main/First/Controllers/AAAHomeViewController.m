@@ -94,8 +94,7 @@ static NSString *identifier = @"firstCell";
 // scrollview滚动的时候调用
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSLog(@"%@",scrollView);
-    NSLog(@"滚动中");
+   
     //    计算页码
     //    页码 = (contentoffset.x + scrollView一半宽度)/scrollView宽度
     CGFloat scrollviewW =  scrollView.frame.size.width;

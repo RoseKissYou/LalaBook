@@ -133,6 +133,8 @@
 		68FC5EB01C4E40700021F396 /* first.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68FC5EA71C4E40700021F396 /* first.storyboard */; };
 		68FC5EB11C4E40700021F396 /* AAAHomeTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FC5EAA1C4E40700021F396 /* AAAHomeTab.m */; };
 		68FC5EB21C4E40700021F396 /* AAAHomeTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FC5EAD1C4E40700021F396 /* AAAHomeTabCell.m */; };
+		68FCA2631C4E58B500DAAC9D /* RewardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FCA2621C4E58B500DAAC9D /* RewardTableViewController.m */; };
+		68FCA2661C4E58CB00DAAC9D /* RewardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FCA2651C4E58CB00DAAC9D /* RewardCell.m */; };
 		74289D861C4D1DE80092F2BE /* buttonRect.png in Resources */ = {isa = PBXBuildFile; fileRef = 74289D851C4D1DE80092F2BE /* buttonRect.png */; };
 		747EF0B91C49161500D1BA13 /* AAALalaNudeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 747EF0B81C49161500D1BA13 /* AAALalaNudeView.m */; };
 		747EF0BC1C49188400D1BA13 /* AAAHouseBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 747EF0BB1C49188400D1BA13 /* AAAHouseBaseViewController.m */; };
@@ -339,6 +341,10 @@
 		68FC5EAA1C4E40700021F396 /* AAAHomeTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAAHomeTab.m; sourceTree = "<group>"; };
 		68FC5EAC1C4E40700021F396 /* AAAHomeTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAAHomeTabCell.h; sourceTree = "<group>"; };
 		68FC5EAD1C4E40700021F396 /* AAAHomeTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAAHomeTabCell.m; sourceTree = "<group>"; };
+		68FCA2611C4E58B500DAAC9D /* RewardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardTableViewController.h; sourceTree = "<group>"; };
+		68FCA2621C4E58B500DAAC9D /* RewardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardTableViewController.m; sourceTree = "<group>"; };
+		68FCA2641C4E58CB00DAAC9D /* RewardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardCell.h; sourceTree = "<group>"; };
+		68FCA2651C4E58CB00DAAC9D /* RewardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardCell.m; sourceTree = "<group>"; };
 		6BDAA00CA8655EAD5B7A115B /* Pods-N+.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-N+.debug.xcconfig"; path = "Pods/Target Support Files/Pods-N+/Pods-N+.debug.xcconfig"; sourceTree = "<group>"; };
 		74065E5E1C462B8300B75924 /* AAARquestAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAARquestAPI.h; sourceTree = "<group>"; };
 		74289D841C4D1BA90092F2BE /* loginHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginHead.h; sourceTree = "<group>"; };
@@ -725,6 +731,7 @@
 			children = (
 				68E2D8F61C4DC7E70042BAEF /* AAACheckViewController.h */,
 				68E2D8F71C4DC7E70042BAEF /* AAACheckViewController.m */,
+				68FCA25D1C4E586200DAAC9D /* RewardTableView */,
 				68E2D8F81C4DC7E70042BAEF /* LeaveTableView */,
 				68E2D8F91C4DC7E70042BAEF /* MealRecondTabelView */,
 				68E2D8FA1C4DC7E70042BAEF /* SearchDailyData */,
@@ -815,6 +822,8 @@
 				68E2D9101C4DC7E70042BAEF /* SpecialCell.m */,
 				68FC5E441C4E1F320021F396 /* LeaveCell.h */,
 				68FC5E451C4E1F320021F396 /* LeaveCell.m */,
+				68FCA2641C4E58CB00DAAC9D /* RewardCell.h */,
+				68FCA2651C4E58CB00DAAC9D /* RewardCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -928,6 +937,15 @@
 				68FC5EAD1C4E40700021F396 /* AAAHomeTabCell.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		68FCA25D1C4E586200DAAC9D /* RewardTableView */ = {
+			isa = PBXGroup;
+			children = (
+				68FCA2611C4E58B500DAAC9D /* RewardTableViewController.h */,
+				68FCA2621C4E58B500DAAC9D /* RewardTableViewController.m */,
+			);
+			path = RewardTableView;
 			sourceTree = "<group>";
 		};
 		749EE1831C48E6DD00F533A0 /* NewLA */ = {
@@ -1291,6 +1309,7 @@
 				749EE22E1C48F50600F533A0 /* AAALocateTool.m in Sources */,
 				68E2D9141C4DC7E70042BAEF /* SearchFilesViewController.m in Sources */,
 				68E2D8D41C4DC7A60042BAEF /* ZCTradeView.m in Sources */,
+				68FCA2661C4E58CB00DAAC9D /* RewardCell.m in Sources */,
 				68FC5E9F1C4E3E700021F396 /* AAALoginAndRegionViewController.m in Sources */,
 				68E2D8F11C4DC7CD0042BAEF /* VCDataInfoResult.m in Sources */,
 				749EE23D1C48F50600F533A0 /* AAAWeatherTODAY.m in Sources */,
@@ -1318,6 +1337,7 @@
 				68E2D8D21C4DC7A60042BAEF /* ZCTradeInputView.m in Sources */,
 				68E2D8EE1C4DC7CD0042BAEF /* PDDataResult.m in Sources */,
 				68E2D8C31C4DC7A60042BAEF /* JTCalendar.m in Sources */,
+				68FCA2631C4E58B500DAAC9D /* RewardTableViewController.m in Sources */,
 				68E2D8CC1C4DC7A60042BAEF /* JTCircleView.m in Sources */,
 				749EE18D1C48E6DD00F533A0 /* AAAHouseTableViewController.m in Sources */,
 				68FC5EB11C4E40700021F396 /* AAAHomeTab.m in Sources */,

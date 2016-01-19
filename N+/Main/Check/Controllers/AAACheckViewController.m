@@ -22,6 +22,7 @@
 #import "MonthDetailViewController.h"
 #import "SalaryViewController.h"
 #import "LeaveTableViewController.h"
+#import "RewardTableViewController.h"
 
 #import "UIView+becomeCornerView.h"
 
@@ -202,6 +203,9 @@
     }else if([btn.modelName isEqualToString:@"请假查询"]){
         LeaveTableViewController *lTVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"Leave"];
         [self.navigationController pushViewController:lTVC animated:YES];
+    }else if ([btn.modelName isEqualToString:@"奖惩查询"]){
+        RewardTableViewController *rTVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"Reward"];
+        [self.navigationController pushViewController:rTVC animated:YES];
     }
     
 }
