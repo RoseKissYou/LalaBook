@@ -103,7 +103,14 @@
 		74289D6A1C4CF05E0092F2BE /* LeaveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74289D5E1C4CF05E0092F2BE /* LeaveCell.m */; };
 		74289D6B1C4CF05E0092F2BE /* Special2Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74289D601C4CF05E0092F2BE /* Special2Cell.m */; };
 		74289D6C1C4CF05E0092F2BE /* SpecialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74289D621C4CF05E0092F2BE /* SpecialCell.m */; };
-		74289D6E1C4CF55F0092F2BE /* check.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74289D6D1C4CF55F0092F2BE /* check.storyboard */; };
+		74289D701C4D07010092F2BE /* check.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74289D6F1C4D07010092F2BE /* check.storyboard */; };
+		74289D741C4D09E30092F2BE /* loginOrRegion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74289D731C4D09E30092F2BE /* loginOrRegion.storyboard */; };
+		74289D781C4D0B760092F2BE /* headLogin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 74289D771C4D0B760092F2BE /* headLogin.jpg */; };
+		74289D7C1C4D11130092F2BE /* RegionForAngel.png in Resources */ = {isa = PBXBuildFile; fileRef = 74289D7B1C4D11130092F2BE /* RegionForAngel.png */; };
+		74289D7E1C4D118D0092F2BE /* RegionAngel.png in Resources */ = {isa = PBXBuildFile; fileRef = 74289D7D1C4D118D0092F2BE /* RegionAngel.png */; };
+		74289D801C4D18900092F2BE /* LoginAngel.png in Resources */ = {isa = PBXBuildFile; fileRef = 74289D7F1C4D18900092F2BE /* LoginAngel.png */; };
+		74289D831C4D1B240092F2BE /* AAALoginAndRegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74289D821C4D1B240092F2BE /* AAALoginAndRegionViewController.m */; };
+		74289D861C4D1DE80092F2BE /* buttonRect.png in Resources */ = {isa = PBXBuildFile; fileRef = 74289D851C4D1DE80092F2BE /* buttonRect.png */; };
 		747EF0B91C49161500D1BA13 /* AAALalaNudeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 747EF0B81C49161500D1BA13 /* AAALalaNudeView.m */; };
 		747EF0BC1C49188400D1BA13 /* AAAHouseBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 747EF0BB1C49188400D1BA13 /* AAAHouseBaseViewController.m */; };
 		749EE18D1C48E6DD00F533A0 /* AAAHouseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749EE1861C48E6DD00F533A0 /* AAAHouseTableViewController.m */; };
@@ -302,7 +309,16 @@
 		74289D601C4CF05E0092F2BE /* Special2Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Special2Cell.m; sourceTree = "<group>"; };
 		74289D611C4CF05E0092F2BE /* SpecialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialCell.h; sourceTree = "<group>"; };
 		74289D621C4CF05E0092F2BE /* SpecialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialCell.m; sourceTree = "<group>"; };
-		74289D6D1C4CF55F0092F2BE /* check.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = check.storyboard; sourceTree = "<group>"; };
+		74289D6F1C4D07010092F2BE /* check.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = check.storyboard; sourceTree = "<group>"; };
+		74289D731C4D09E30092F2BE /* loginOrRegion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = loginOrRegion.storyboard; sourceTree = "<group>"; };
+		74289D771C4D0B760092F2BE /* headLogin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = headLogin.jpg; sourceTree = "<group>"; };
+		74289D7B1C4D11130092F2BE /* RegionForAngel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RegionForAngel.png; sourceTree = "<group>"; };
+		74289D7D1C4D118D0092F2BE /* RegionAngel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RegionAngel.png; sourceTree = "<group>"; };
+		74289D7F1C4D18900092F2BE /* LoginAngel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginAngel.png; sourceTree = "<group>"; };
+		74289D811C4D1B240092F2BE /* AAALoginAndRegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAALoginAndRegionViewController.h; sourceTree = "<group>"; };
+		74289D821C4D1B240092F2BE /* AAALoginAndRegionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAALoginAndRegionViewController.m; sourceTree = "<group>"; };
+		74289D841C4D1BA90092F2BE /* loginHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginHead.h; sourceTree = "<group>"; };
+		74289D851C4D1DE80092F2BE /* buttonRect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonRect.png; sourceTree = "<group>"; };
 		747EF0B71C49161500D1BA13 /* AAALalaNudeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAALalaNudeView.h; sourceTree = "<group>"; };
 		747EF0B81C49161500D1BA13 /* AAALalaNudeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAALalaNudeView.m; sourceTree = "<group>"; };
 		747EF0BA1C49188400D1BA13 /* AAAHouseBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAAHouseBaseViewController.h; sourceTree = "<group>"; };
@@ -503,6 +519,7 @@
 		0C6B2A9A1C434AC900F0D866 /* N+ */ = {
 			isa = PBXGroup;
 			children = (
+				74289D711C4D09B80092F2BE /* LoginOrRegion */,
 				749EE2051C48F50600F533A0 /* Tool */,
 				749EE1BB1C48F48E00F533A0 /* Lib */,
 				6800AD461C4380F3006B756A /* Login */,
@@ -539,6 +556,7 @@
 				0C89BD111C45CB8200263AB3 /* houseName.h */,
 				74065E5E1C462B8300B75924 /* AAARquestAPI.h */,
 				74F190E11C474319004A6B56 /* HouseHeader.h */,
+				74289D841C4D1BA90092F2BE /* loginHead.h */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -635,6 +653,10 @@
 		0C6B2AD31C435A8A00F0D866 /* Delete */ = {
 			isa = PBXGroup;
 			children = (
+				74289D7F1C4D18900092F2BE /* LoginAngel.png */,
+				74289D7D1C4D118D0092F2BE /* RegionAngel.png */,
+				74289D7B1C4D11130092F2BE /* RegionForAngel.png */,
+				74289D771C4D0B760092F2BE /* headLogin.jpg */,
 				74289D251C4CCE150092F2BE /* inbg.jpg */,
 				74F190E71C474D09004A6B56 /* lala */,
 				74F190E51C474B37004A6B56 /* sunny.png */,
@@ -663,6 +685,7 @@
 		0C6B2AF21C435B0900F0D866 /* header */ = {
 			isa = PBXGroup;
 			children = (
+				74289D851C4D1DE80092F2BE /* buttonRect.png */,
 				0C6B2AF31C435B0900F0D866 /* 截图1.png */,
 				0C4520D51C4392190001F0E3 /* 档案查询.png */,
 				0C4520D61C4392190001F0E3 /* 工资查询.png */,
@@ -886,7 +909,7 @@
 		74289D451C4CF05E0092F2BE /* Check */ = {
 			isa = PBXGroup;
 			children = (
-				74289D6D1C4CF55F0092F2BE /* check.storyboard */,
+				74289D6F1C4D07010092F2BE /* check.storyboard */,
 				74289D471C4CF05E0092F2BE /* Controllers */,
 				74289D591C4CF05E0092F2BE /* Models */,
 				74289D5A1C4CF05E0092F2BE /* Views */,
@@ -987,6 +1010,24 @@
 				74289D621C4CF05E0092F2BE /* SpecialCell.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		74289D711C4D09B80092F2BE /* LoginOrRegion */ = {
+			isa = PBXGroup;
+			children = (
+				74289D721C4D09CB0092F2BE /* Controllers */,
+				74289D731C4D09E30092F2BE /* loginOrRegion.storyboard */,
+			);
+			path = LoginOrRegion;
+			sourceTree = "<group>";
+		};
+		74289D721C4D09CB0092F2BE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				74289D811C4D1B240092F2BE /* AAALoginAndRegionViewController.h */,
+				74289D821C4D1B240092F2BE /* AAALoginAndRegionViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		749EE1831C48E6DD00F533A0 /* NewLA */ = {
@@ -1335,18 +1376,22 @@
 				0CBE20A81C43608800349FF0 /* house.storyboard in Resources */,
 				74F190F41C474D09004A6B56 /* lala_3.png in Resources */,
 				0C1D0BC91C438542002932D9 /* cloudyBackground.png in Resources */,
+				74289D741C4D09E30092F2BE /* loginOrRegion.storyboard in Resources */,
 				74289D261C4CCE150092F2BE /* inbg.jpg in Resources */,
 				0C6B2B141C435B0900F0D866 /* 2.png in Resources */,
 				74F190F31C474D09004A6B56 /* lala_2.png in Resources */,
+				74289D861C4D1DE80092F2BE /* buttonRect.png in Resources */,
 				0C6B2AE41C435A8A00F0D866 /* girl.png in Resources */,
 				0C6B2B0A1C435B0900F0D866 /* 截图10.png in Resources */,
 				0C1E5CCD1C43DE720033433D /* Collection.png in Resources */,
+				74289D7C1C4D11130092F2BE /* RegionForAngel.png in Resources */,
 				0C6B2AE21C435A8A00F0D866 /* essay.png in Resources */,
 				0C1E5CCF1C43DE720033433D /* settingCenter.png in Resources */,
 				0C6B2B1A1C435B0900F0D866 /* 截图5.png in Resources */,
 				0C6B2AAB1C434AC900F0D866 /* LaunchScreen.storyboard in Resources */,
 				0C6B2B1B1C435B0900F0D866 /* 截图6.png in Resources */,
 				74F190F01C474D09004A6B56 /* balck.png in Resources */,
+				74289D801C4D18900092F2BE /* LoginAngel.png in Resources */,
 				6800AD831C4381CF006B756A /* setting.storyboard in Resources */,
 				0C6B2AE51C435A8A00F0D866 /* hy.png in Resources */,
 				0C6B2AE61C435A8A00F0D866 /* lala.png in Resources */,
@@ -1355,7 +1400,7 @@
 				0C6B2B0C1C435B0900F0D866 /* 截图12.png in Resources */,
 				0C4520D91C4392190001F0E3 /* 工资查询.png in Resources */,
 				0C4520D81C4392190001F0E3 /* 档案查询.png in Resources */,
-				74289D6E1C4CF55F0092F2BE /* check.storyboard in Resources */,
+				74289D701C4D07010092F2BE /* check.storyboard in Resources */,
 				0C6B2B1C1C435B0900F0D866 /* 截图7.png in Resources */,
 				74F190F51C474D09004A6B56 /* lala_4.png in Resources */,
 				0C6B2B1E1C435B0900F0D866 /* 截图9.png in Resources */,
@@ -1373,6 +1418,8 @@
 				6800AD4E1C4380F3006B756A /* login.storyboard in Resources */,
 				0C6B2AE81C435A8A00F0D866 /* sun.png in Resources */,
 				0C6B2B0B1C435B0900F0D866 /* 截图11.png in Resources */,
+				74289D7E1C4D118D0092F2BE /* RegionAngel.png in Resources */,
+				74289D781C4D0B760092F2BE /* headLogin.jpg in Resources */,
 				0C6B2B0D1C435B0900F0D866 /* 截图13.png in Resources */,
 				74F190F71C474D09004A6B56 /* white.png in Resources */,
 				0C1E5CCE1C43DE720033433D /* personalCenter.png in Resources */,
@@ -1480,6 +1527,7 @@
 				0C53224F1C45E2EA00872A1F /* MGViewControllerDelegate.m in Sources */,
 				0C6B2B471C435CDE00F0D866 /* AAASendMiController.m in Sources */,
 				749EE1F81C48F48E00F533A0 /* JTCalendarPageView.m in Sources */,
+				74289D831C4D1B240092F2BE /* AAALoginAndRegionViewController.m in Sources */,
 				74289D6B1C4CF05E0092F2BE /* Special2Cell.m in Sources */,
 				0C6B2B4D1C435CF200F0D866 /* AAAHomeTabCell.m in Sources */,
 				74AA7AB11C46610D0097859B /* NSDate+DateLocationChange.m in Sources */,

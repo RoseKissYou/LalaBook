@@ -13,6 +13,7 @@
 //新的选择注册或者登陆界面
 #import "AAALoginOrRegionViewController.h"
 
+#import "AAALoginAndRegionViewController.h"
 @interface AAAWelcomeViewController ()<UIScrollViewDelegate>
 @property (strong, nonatomic) UIPageControl *pageControl;
 @end
@@ -103,10 +104,11 @@
 -(void)enterApp:(UIButton *)button
 {
     
-    UIStoryboard *loginStory = [UIStoryboard storyboardWithName:@"login" bundle:nil];
+    UIStoryboard *loginStory = [UIStoryboard storyboardWithName:@"loginOrRegion" bundle:nil];
+    //AAALoginOrRegionViewController *choseController =
    
-    AAALoginOrRegionViewController *chooseLoginOrRegion = [loginStory instantiateViewControllerWithIdentifier:@"choose"];
-    [self presentViewController:chooseLoginOrRegion animated:YES completion:nil];
+    AAALoginOrRegionViewController *chooseController = [loginStory instantiateViewControllerWithIdentifier:@"chooseNew"];
+    [self presentViewController:chooseController animated:YES completion:nil];
 }
 /* 配置分页控件 */
 -(void) setUpPageControl
