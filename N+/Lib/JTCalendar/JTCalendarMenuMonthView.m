@@ -6,6 +6,7 @@
 //
 
 #import "JTCalendarMenuMonthView.h"
+#import "NSDate+DateLocationChange.h"
 
 @interface JTCalendarMenuMonthView(){
     UILabel *textLabel;
@@ -49,7 +50,7 @@
     }
 }
 
-- (void)setMonthIndex:(NSInteger)monthIndex
+- (void)setMonthIndex:(NSInteger)monthIndex date:(NSDate *)date
 {
     static NSDateFormatter *dateFormatter;
     if(!dateFormatter){
@@ -61,7 +62,9 @@
         monthIndex += 12;
     }
     
-    textLabel.text = [[dateFormatter standaloneMonthSymbols][monthIndex - 1] capitalizedString];
+    NSString *MonthStr = [[dateFormatter shortMonthSymbols][monthIndex - 1] lowercaseString];
+    textLabel.text = [[NSDate NSDate2FormatNSStringByYear:date] stringByAppendingString:MonthStr];
+    NSLog(@"%@",textLabel.text);
 }
 
 - (void)layoutSubviews

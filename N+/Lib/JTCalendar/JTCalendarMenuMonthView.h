@@ -13,7 +13,7 @@
 
 @property (weak, nonatomic) JTCalendar *calendarManager;
 
-- (void)setMonthIndex:(NSInteger)monthIndex;
+- (void)setMonthIndex:(NSInteger)monthIndex date:(NSDate *)date;
 
 - (void)reloadAppearance;
 

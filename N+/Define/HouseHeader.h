@@ -14,7 +14,7 @@
 #import "JHAPISDK.h"
 #import "JHOpenidSupplier.h"
 //天气请求Cell
-#import "AAAWeatherCell.h"
+
 //天气请求自己写的工具
 #import "AAAWeather.h"
 #import "AAAWeatherDataRequestTool.h"

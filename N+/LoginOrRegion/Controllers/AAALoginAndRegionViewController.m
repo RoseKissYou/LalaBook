@@ -35,6 +35,11 @@
 
 @property (weak, nonatomic) IBOutlet UIView *loginView;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *subViewBottomLayout;
+//登陆界面
+@property (weak, nonatomic) IBOutlet UITextField *userLoginNameTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *userLoginPasswordTextField;
 
 
 @end
@@ -45,8 +50,11 @@
     [super viewDidLoad];
     //初始隐藏登陆视图
     self.loginView.hidden = YES;
+    [self setTextFiledFormat];
+    
     // Do any additional setup after loading the view.
 }
+#pragma mark - 选择登陆或者注册
 //点击登陆按钮 -> 隐藏 新用户注册视图
 - (IBAction)chooseLogin:(UIButton *)sender {
     self.regionView.hidden = YES;
@@ -56,10 +64,39 @@
     self.loginView.hidden = YES;
     self.regionView.hidden = NO;
 }
+- (void)setTextFiledFormat
+{
+    UIImageView *leftVN = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"gonghaoming"]];
+    leftVN.contentMode = UIViewContentModeCenter;
+    leftVN.frame = CGRectMake(0, 0, 30, 20);
+    self.userNumber.leftViewMode = UITextFieldViewModeAlways;
+    self.userNumber.leftView = leftVN;
+    UIImageView *leftVP = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"mima"]];
+    leftVP.contentMode = UIViewContentModeCenter;
+    leftVP.frame = CGRectMake(0, 0, 30, 20);
+    self.passWordTextFiled.leftViewMode = UITextFieldViewModeAlways;
+    self.passWordTextFiled.leftView = leftVP;
+    
+    UIImageView *leftVC = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"dianhua"]];
+    leftVC.contentMode = UIViewContentModeCenter;
+    leftVC.frame = CGRectMake(0, 0, 30, 20);
+    self.telephoneTF.leftViewMode = UITextFieldViewModeAlways;
+    self.telephoneTF.leftView = leftVC;
+    //设置登陆界面的
+    UIImageView *leftLU = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"gonghaoming"]];
+    leftLU.contentMode = UIViewContentModeCenter;
+    leftLU.frame = CGRectMake(0, 0, 30, 20);
+    self.userLoginNameTextField.leftViewMode = UITextFieldViewModeAlways;
+    self.userLoginNameTextField.leftView = leftLU;
+    
+    UIImageView *leftLP = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"mima"]];
+    leftLP.contentMode = UIViewContentModeCenter;
+    leftLP.frame = CGRectMake(0, 0, 30, 20);
+    self.userLoginPasswordTextField.leftViewMode = UITextFieldViewModeAlways;
+    self.userLoginPasswordTextField.leftView = leftLP;
+}
 
-
-
-
+#pragma mark - 注册
 - (IBAction)regionToServer:(UIButton *)sender {
     [self.view endEditing:YES];
     /**
@@ -219,6 +256,90 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+//
+#pragma mark - 键盘弹起
+//view看的见时,增加注册监听键盘
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    //增加键盘的弹起通知监听
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openKeyboard:) name:UIKeyboardWillShowNotification object:nil];
+    //增加键盘的收起通知监听
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeKeyboard:) name:UIKeyboardWillHideNotification object:nil];
+    
+}
+// 有键盘弹起,此方法就会被自动执行
+-(void)openKeyboard:(NSNotification *)noti
+{
+    // 获取键盘的 frame 数据
+    CGRect  keyboardFrame = [noti.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    
+    // 获取键盘动画的种类
+    int options = [noti.userInfo[UIKeyboardAnimationCurveUserInfoKey] intValue];
+    
+    // 获取键盘动画的时长
+    NSTimeInterval duration = [noti.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    // 修改文本框底部的约束的值
+    self.subViewBottomLayout.constant = keyboardFrame.size.height;
+    
+    // 在动画内调用 layoutIfNeeded 方法
+    [UIView animateWithDuration:duration delay:0 options:options animations:^{
+        [self.view layoutIfNeeded];
+    } completion:nil];
+    
+}
+
+-(void)closeKeyboard:(NSNotification *)noti
+{
+    // 获取键盘动画的种类
+    int options = [noti.userInfo[UIKeyboardAnimationCurveUserInfoKey] intValue];
+    
+    // 获取键盘动画的时长
+    NSTimeInterval duration = [noti.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    self.subViewBottomLayout.constant = 0;
+    
+    // 在动画内调用 layoutIfNeeded 方法
+    [UIView animateWithDuration:duration delay:0 options:options animations:^{
+        [self.view layoutIfNeeded];
+    } completion:nil];
+    
+}
+//键盘消失时取消监听
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    //增加键盘的弹起通知监听
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    //增加键盘的收起通知监听
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    
+}
+#pragma mark - 登陆
+- (IBAction)LoginToMianButton:(UIButton *)sender {
+    AAALoginParam *param = [AAALoginParam sharedAAALoginParam];
+    //这里把用户名和密码存在单例里面,
+    
+    if (self.userLoginPasswordTextField.text == nil || self.userLoginNameTextField.text == nil) {
+        //提示密码不能为空
+        [[[UIAlertView alloc]initWithTitle:@"输入错误" message:@"用户名或者密码不能为空" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil]  show];
+    }else {
+        param.corporationName =[@"百得电器" stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+        param.staffName = @"121075";
+        param.password = @"121075";
+        [AAALoginTool loginUseTool:param Success:^(NSInteger result) {
+            //跳转到APP
+            [self go2Main];
+        } Failure:^(NSError *error) {
+            
+        }];
+    }
+
+}
+
 
 /*
 #pragma mark - Navigation

@@ -9,7 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDate (DateLocationChange)
-
+///按日查询->返回yyyy/MM/dd
 + (NSString *)NSDate2FormatNSString:(NSDate *)date;
+///按月查询->返回yyyyMM
++ (NSString *)NSDate2FormatNSStringByMonth:(NSDate *)date;
+///按年查询->返回yyyy
++ (NSString *)NSDate2FormatNSStringByYear:(NSDate *)date;
 
 @end

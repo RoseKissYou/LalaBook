@@ -9,9 +9,9 @@
 #import "AAAWelcomeViewController.h"
 //注册
 
-#import "AAARegionViewController.h"
+
 //新的选择注册或者登陆界面
-#import "AAALoginOrRegionViewController.h"
+
 
 #import "AAALoginAndRegionViewController.h"
 @interface AAAWelcomeViewController ()<UIScrollViewDelegate>
@@ -105,9 +105,9 @@
 {
     
     UIStoryboard *loginStory = [UIStoryboard storyboardWithName:@"loginOrRegion" bundle:nil];
-    //AAALoginOrRegionViewController *choseController =
    
-    AAALoginOrRegionViewController *chooseController = [loginStory instantiateViewControllerWithIdentifier:@"chooseNew"];
+   
+    AAALoginAndRegionViewController *chooseController = [loginStory instantiateViewControllerWithIdentifier:@"chooseNew"];
     [self presentViewController:chooseController animated:YES completion:nil];
 }
 /* 配置分页控件 */

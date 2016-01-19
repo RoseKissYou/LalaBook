@@ -94,6 +94,7 @@
  
     NSCalendar *calendar = self.calendarManager.calendarAppearance.calendar;
     NSDateComponents *comps = [calendar components:NSCalendarUnitMonth fromDate:currentDate];
+ 
     NSInteger currentMonthIndex = comps.month;
     
     for(int i = 0; i < NUMBER_PAGES_LOADED; ++i){
@@ -101,7 +102,7 @@
         NSInteger monthIndex = currentMonthIndex - (NUMBER_PAGES_LOADED / 2) + i;
         monthIndex = monthIndex % 12;
 
-        [monthView setMonthIndex:monthIndex];
+        [monthView setMonthIndex:monthIndex date:currentDate];
     }
 }
 
@@ -130,7 +131,7 @@
         
         NSInteger monthIndex = currentMonthIndex - (NUMBER_PAGES_LOADED / 2);
         monthIndex = monthIndex % 12;
-        [monthView setMonthIndex:monthIndex];
+        [monthView setMonthIndex:monthIndex date:nil];
     }
     
     [self configureConstraintsForSubviews];
@@ -159,7 +160,7 @@
         
         NSInteger monthIndex = currentMonthIndex - (NUMBER_PAGES_LOADED / 2) + (NUMBER_PAGES_LOADED - 1);
         monthIndex = monthIndex % 12;
-        [monthView setMonthIndex:monthIndex];
+        [monthView setMonthIndex:monthIndex date:nil];
     }
     
     [self configureConstraintsForSubviews];
