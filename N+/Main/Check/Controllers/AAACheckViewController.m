@@ -23,6 +23,11 @@
 #import "SalaryViewController.h"
 #import "LeaveTableViewController.h"
 #import "RewardTableViewController.h"
+#import "MealRecondViewController.h"
+#import "TimeAndConsViewController.h"
+#import "ConsumeViewController.h"
+#import "ChargeCardViewController.h"
+#import "PunchCardViewController.h"
 
 #import "UIView+becomeCornerView.h"
 
@@ -180,6 +185,7 @@
                     //进入工资查询界面
                     NSLog(@"进入工资查询界面");
                     SalaryViewController *sVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"Salary"];
+                    self.navigationController.navigationBarHidden = NO;
                     [self.navigationController pushViewController:sVC animated:YES];
                 }else{
                     //提示工资密码错误
@@ -206,8 +212,22 @@
     }else if ([btn.modelName isEqualToString:@"奖惩查询"]){
         RewardTableViewController *rTVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"Reward"];
         [self.navigationController pushViewController:rTVC animated:YES];
+    }else if ([btn.modelName isEqualToString:@"订餐查询"]){
+        MealRecondViewController *mrVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"MealRecond"];
+    [self.navigationController pushViewController:mrVC animated:YES];
+    }else if ([btn.modelName isEqualToString:@"加班查询"]){
+        TimeAndConsViewController *tacVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"TimeAndCons"];
+        [self.navigationController pushViewController:tacVC animated:YES];
+    }else if ([btn.modelName isEqualToString:@"消费查询"]){
+        ConsumeViewController *cVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"Consume"];
+        [self.navigationController pushViewController:cVC animated:YES];
+    }else if ([btn.modelName isEqualToString:@"签卡查询"]){
+        ChargeCardViewController *ccVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"ChargeCard"];
+        [self.navigationController pushViewController:ccVC animated:YES];
+    }else if([btn.modelName isEqualToString:@"刷卡查询"]){
+        PunchCardViewController *pcVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"PunchCard"];
+        [self.navigationController pushViewController:pcVC animated:YES];
     }
-    
 }
 
 

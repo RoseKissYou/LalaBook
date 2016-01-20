@@ -1,28 +1,29 @@
 //
-//  Special2Cell.m
+//  SpecialCell.m
 //  N+
 //
-//  Created by hy1 on 16/1/14.
+//  Created by hy1 on 16/1/12.
 //  Copyright © 2016年 Jake_Smith. All rights reserved.
 //
 
-#import "Special2Cell.h"
+#import "SpecialCell.h"
 #import "UIView+becomeCornerView.h"
 
-@interface Special2Cell ()
+@interface SpecialCell ()
+
+
 @property (weak, nonatomic) IBOutlet UIView *redView;
 @property (weak, nonatomic) IBOutlet UIView *yellowView;
 @property (weak, nonatomic) IBOutlet UIView *blueView;
-@property (weak, nonatomic) IBOutlet UIView *greenView;
 
 @end
 
-@implementation Special2Cell
+@implementation SpecialCell
 - (void)layoutSubviews{
+    [super layoutSubviews];
     [UIView changeCorner:self.redView radius:35.];
     [UIView changeCorner:self.yellowView radius:35.];
     [UIView changeCorner:self.blueView radius:35.];
-    [UIView changeCorner:self.greenView radius:35.];
 }
 
 - (void)awakeFromNib {
