@@ -105,10 +105,9 @@
 {
     
     UIStoryboard *loginStory = [UIStoryboard storyboardWithName:@"loginOrRegion" bundle:nil];
-   
-   
     AAALoginAndRegionViewController *chooseController = [loginStory instantiateViewControllerWithIdentifier:@"chooseNew"];
-    [self presentViewController:chooseController animated:YES completion:nil];
+    UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:chooseController];
+    [self presentViewController:navi animated:YES completion:nil];
 }
 /* 配置分页控件 */
 -(void) setUpPageControl
