@@ -158,30 +158,6 @@
 		7479A6941C51F37E00E6DD47 /* third_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7479A67C1C51F37E00E6DD47 /* third_selected@2x.png */; };
 		747EF0B91C49161500D1BA13 /* AAALalaNudeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 747EF0B81C49161500D1BA13 /* AAALalaNudeView.m */; };
 		747EF0BC1C49188400D1BA13 /* AAAHouseBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 747EF0BB1C49188400D1BA13 /* AAAHouseBaseViewController.m */; };
-		74859F441C53A7BA00D1ED03 /* check.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74859EFE1C53A7BA00D1ED03 /* check.storyboard */; };
-		74859F451C53A7BA00D1ED03 /* AAACheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F011C53A7BA00D1ED03 /* AAACheckViewController.m */; };
-		74859F461C53A7BA00D1ED03 /* ChargeCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F041C53A7BA00D1ED03 /* ChargeCardViewController.m */; };
-		74859F471C53A7BA00D1ED03 /* ConsumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F071C53A7BA00D1ED03 /* ConsumeViewController.m */; };
-		74859F481C53A7BA00D1ED03 /* LeaveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F0A1C53A7BA00D1ED03 /* LeaveTableViewController.m */; };
-		74859F491C53A7BA00D1ED03 /* MealRecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F0D1C53A7BA00D1ED03 /* MealRecondViewController.m */; };
-		74859F4A1C53A7BA00D1ED03 /* TimeAndConsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F101C53A7BA00D1ED03 /* TimeAndConsViewController.m */; };
-		74859F4B1C53A7BA00D1ED03 /* PunchCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F131C53A7BA00D1ED03 /* PunchCardViewController.m */; };
-		74859F4C1C53A7BA00D1ED03 /* RewardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F161C53A7BA00D1ED03 /* RewardTableViewController.m */; };
-		74859F4D1C53A7BA00D1ED03 /* SearchContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F191C53A7BA00D1ED03 /* SearchContentViewController.m */; };
-		74859F4E1C53A7BA00D1ED03 /* SearchFilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F1C1C53A7BA00D1ED03 /* SearchFilesViewController.m */; };
-		74859F4F1C53A7BA00D1ED03 /* MonthDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F1F1C53A7BA00D1ED03 /* MonthDetailViewController.m */; };
-		74859F501C53A7BA00D1ED03 /* SalaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F221C53A7BA00D1ED03 /* SalaryViewController.m */; };
-		74859F511C53A7BA00D1ED03 /* AAASignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F251C53A7BA00D1ED03 /* AAASignInViewController.m */; };
-		74859F521C53A7BA00D1ED03 /* CDatePickerViewEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F291C53A7BA00D1ED03 /* CDatePickerViewEx.m */; };
-		74859F531C53A7BA00D1ED03 /* ChargeCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F2C1C53A7BA00D1ED03 /* ChargeCardCell.m */; };
-		74859F541C53A7BA00D1ED03 /* CommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F2E1C53A7BA00D1ED03 /* CommonCell.m */; };
-		74859F551C53A7BA00D1ED03 /* SpecialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F311C53A7BA00D1ED03 /* SpecialCell.m */; };
-		74859F561C53A7BA00D1ED03 /* LeaveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F341C53A7BA00D1ED03 /* LeaveCell.m */; };
-		74859F571C53A7BA00D1ED03 /* MealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F371C53A7BA00D1ED03 /* MealCell.m */; };
-		74859F581C53A7BA00D1ED03 /* Special2Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F3A1C53A7BA00D1ED03 /* Special2Cell.m */; };
-		74859F591C53A7BA00D1ED03 /* OverTAndCons.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F3D1C53A7BA00D1ED03 /* OverTAndCons.m */; };
-		74859F5A1C53A7BA00D1ED03 /* PunchCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F401C53A7BA00D1ED03 /* PunchCardCell.m */; };
-		74859F5B1C53A7BA00D1ED03 /* RewardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F431C53A7BA00D1ED03 /* RewardCell.m */; };
 		74859F6C1C53A7DC00D1ED03 /* ButtonWithModelName.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F5F1C53A7DC00D1ED03 /* ButtonWithModelName.m */; };
 		74859F6D1C53A7DC00D1ED03 /* NaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F611C53A7DC00D1ED03 /* NaviController.m */; };
 		74859F6E1C53A7DC00D1ED03 /* NSDate+DateLocationChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F631C53A7DC00D1ED03 /* NSDate+DateLocationChange.m */; };
@@ -189,6 +165,30 @@
 		74859F701C53A7DC00D1ED03 /* NSString+CN2UTF8.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F671C53A7DC00D1ED03 /* NSString+CN2UTF8.m */; };
 		74859F711C53A7DC00D1ED03 /* NSString+SubstringBySpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F691C53A7DC00D1ED03 /* NSString+SubstringBySpace.m */; };
 		74859F721C53A7DC00D1ED03 /* UIView+becomeCornerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F6B1C53A7DC00D1ED03 /* UIView+becomeCornerView.m */; };
+		74859FBA1C53AC9C00D1ED03 /* check.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74859F741C53AC9C00D1ED03 /* check.storyboard */; };
+		74859FBB1C53AC9C00D1ED03 /* AAACheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F771C53AC9C00D1ED03 /* AAACheckViewController.m */; };
+		74859FBC1C53AC9C00D1ED03 /* ChargeCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F7A1C53AC9C00D1ED03 /* ChargeCardViewController.m */; };
+		74859FBD1C53AC9C00D1ED03 /* ConsumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F7D1C53AC9C00D1ED03 /* ConsumeViewController.m */; };
+		74859FBE1C53AC9C00D1ED03 /* LeaveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F801C53AC9C00D1ED03 /* LeaveTableViewController.m */; };
+		74859FBF1C53AC9C00D1ED03 /* MealRecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F831C53AC9C00D1ED03 /* MealRecondViewController.m */; };
+		74859FC01C53AC9C00D1ED03 /* TimeAndConsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F861C53AC9C00D1ED03 /* TimeAndConsViewController.m */; };
+		74859FC11C53AC9C00D1ED03 /* PunchCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F891C53AC9C00D1ED03 /* PunchCardViewController.m */; };
+		74859FC21C53AC9C00D1ED03 /* RewardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F8C1C53AC9C00D1ED03 /* RewardTableViewController.m */; };
+		74859FC31C53AC9C00D1ED03 /* SearchContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F8F1C53AC9C00D1ED03 /* SearchContentViewController.m */; };
+		74859FC41C53AC9C00D1ED03 /* SearchFilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F921C53AC9C00D1ED03 /* SearchFilesViewController.m */; };
+		74859FC51C53AC9C00D1ED03 /* MonthDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F951C53AC9C00D1ED03 /* MonthDetailViewController.m */; };
+		74859FC61C53AC9C00D1ED03 /* SalaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F981C53AC9C00D1ED03 /* SalaryViewController.m */; };
+		74859FC71C53AC9C00D1ED03 /* AAASignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F9B1C53AC9C00D1ED03 /* AAASignInViewController.m */; };
+		74859FC81C53AC9C00D1ED03 /* CDatePickerViewEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859F9F1C53AC9C00D1ED03 /* CDatePickerViewEx.m */; };
+		74859FC91C53AC9C00D1ED03 /* ChargeCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859FA21C53AC9C00D1ED03 /* ChargeCardCell.m */; };
+		74859FCA1C53AC9C00D1ED03 /* CommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859FA41C53AC9C00D1ED03 /* CommonCell.m */; };
+		74859FCB1C53AC9C00D1ED03 /* SpecialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859FA71C53AC9C00D1ED03 /* SpecialCell.m */; };
+		74859FCC1C53AC9C00D1ED03 /* LeaveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859FAA1C53AC9C00D1ED03 /* LeaveCell.m */; };
+		74859FCD1C53AC9C00D1ED03 /* MealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859FAD1C53AC9C00D1ED03 /* MealCell.m */; };
+		74859FCE1C53AC9C00D1ED03 /* Special2Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859FB01C53AC9C00D1ED03 /* Special2Cell.m */; };
+		74859FCF1C53AC9C00D1ED03 /* OverTAndCons.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859FB31C53AC9C00D1ED03 /* OverTAndCons.m */; };
+		74859FD01C53AC9C00D1ED03 /* PunchCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859FB61C53AC9C00D1ED03 /* PunchCardCell.m */; };
+		74859FD11C53AC9C00D1ED03 /* RewardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74859FB91C53AC9C00D1ED03 /* RewardCell.m */; };
 		749EE18D1C48E6DD00F533A0 /* AAAHouseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749EE1861C48E6DD00F533A0 /* AAAHouseTableViewController.m */; };
 		749EE18E1C48E6DD00F533A0 /* lala.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 749EE1871C48E6DD00F533A0 /* lala.storyboard */; };
 		749EE18F1C48E6DD00F533A0 /* AAATodayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 749EE18B1C48E6DD00F533A0 /* AAATodayCell.m */; };
@@ -417,53 +417,6 @@
 		747EF0B81C49161500D1BA13 /* AAALalaNudeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAALalaNudeView.m; sourceTree = "<group>"; };
 		747EF0BA1C49188400D1BA13 /* AAAHouseBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAAHouseBaseViewController.h; sourceTree = "<group>"; };
 		747EF0BB1C49188400D1BA13 /* AAAHouseBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAAHouseBaseViewController.m; sourceTree = "<group>"; };
-		74859EFE1C53A7BA00D1ED03 /* check.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = check.storyboard; sourceTree = "<group>"; };
-		74859F001C53A7BA00D1ED03 /* AAACheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAACheckViewController.h; sourceTree = "<group>"; };
-		74859F011C53A7BA00D1ED03 /* AAACheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAACheckViewController.m; sourceTree = "<group>"; };
-		74859F031C53A7BA00D1ED03 /* ChargeCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeCardViewController.h; sourceTree = "<group>"; };
-		74859F041C53A7BA00D1ED03 /* ChargeCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeCardViewController.m; sourceTree = "<group>"; };
-		74859F061C53A7BA00D1ED03 /* ConsumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsumeViewController.h; sourceTree = "<group>"; };
-		74859F071C53A7BA00D1ED03 /* ConsumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsumeViewController.m; sourceTree = "<group>"; };
-		74859F091C53A7BA00D1ED03 /* LeaveTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaveTableViewController.h; sourceTree = "<group>"; };
-		74859F0A1C53A7BA00D1ED03 /* LeaveTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaveTableViewController.m; sourceTree = "<group>"; };
-		74859F0C1C53A7BA00D1ED03 /* MealRecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealRecondViewController.h; sourceTree = "<group>"; };
-		74859F0D1C53A7BA00D1ED03 /* MealRecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealRecondViewController.m; sourceTree = "<group>"; };
-		74859F0F1C53A7BA00D1ED03 /* TimeAndConsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeAndConsViewController.h; sourceTree = "<group>"; };
-		74859F101C53A7BA00D1ED03 /* TimeAndConsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeAndConsViewController.m; sourceTree = "<group>"; };
-		74859F121C53A7BA00D1ED03 /* PunchCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PunchCardViewController.h; sourceTree = "<group>"; };
-		74859F131C53A7BA00D1ED03 /* PunchCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PunchCardViewController.m; sourceTree = "<group>"; };
-		74859F151C53A7BA00D1ED03 /* RewardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardTableViewController.h; sourceTree = "<group>"; };
-		74859F161C53A7BA00D1ED03 /* RewardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardTableViewController.m; sourceTree = "<group>"; };
-		74859F181C53A7BA00D1ED03 /* SearchContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchContentViewController.h; sourceTree = "<group>"; };
-		74859F191C53A7BA00D1ED03 /* SearchContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchContentViewController.m; sourceTree = "<group>"; };
-		74859F1B1C53A7BA00D1ED03 /* SearchFilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchFilesViewController.h; sourceTree = "<group>"; };
-		74859F1C1C53A7BA00D1ED03 /* SearchFilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchFilesViewController.m; sourceTree = "<group>"; };
-		74859F1E1C53A7BA00D1ED03 /* MonthDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthDetailViewController.h; sourceTree = "<group>"; };
-		74859F1F1C53A7BA00D1ED03 /* MonthDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthDetailViewController.m; sourceTree = "<group>"; };
-		74859F211C53A7BA00D1ED03 /* SalaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalaryViewController.h; sourceTree = "<group>"; };
-		74859F221C53A7BA00D1ED03 /* SalaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalaryViewController.m; sourceTree = "<group>"; };
-		74859F241C53A7BA00D1ED03 /* AAASignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAASignInViewController.h; sourceTree = "<group>"; };
-		74859F251C53A7BA00D1ED03 /* AAASignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAASignInViewController.m; sourceTree = "<group>"; };
-		74859F281C53A7BA00D1ED03 /* CDatePickerViewEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDatePickerViewEx.h; sourceTree = "<group>"; };
-		74859F291C53A7BA00D1ED03 /* CDatePickerViewEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDatePickerViewEx.m; sourceTree = "<group>"; };
-		74859F2B1C53A7BA00D1ED03 /* ChargeCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeCardCell.h; sourceTree = "<group>"; };
-		74859F2C1C53A7BA00D1ED03 /* ChargeCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeCardCell.m; sourceTree = "<group>"; };
-		74859F2D1C53A7BA00D1ED03 /* CommonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonCell.h; sourceTree = "<group>"; };
-		74859F2E1C53A7BA00D1ED03 /* CommonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonCell.m; sourceTree = "<group>"; };
-		74859F301C53A7BA00D1ED03 /* SpecialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialCell.h; sourceTree = "<group>"; };
-		74859F311C53A7BA00D1ED03 /* SpecialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialCell.m; sourceTree = "<group>"; };
-		74859F331C53A7BA00D1ED03 /* LeaveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaveCell.h; sourceTree = "<group>"; };
-		74859F341C53A7BA00D1ED03 /* LeaveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaveCell.m; sourceTree = "<group>"; };
-		74859F361C53A7BA00D1ED03 /* MealCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealCell.h; sourceTree = "<group>"; };
-		74859F371C53A7BA00D1ED03 /* MealCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealCell.m; sourceTree = "<group>"; };
-		74859F391C53A7BA00D1ED03 /* Special2Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Special2Cell.h; sourceTree = "<group>"; };
-		74859F3A1C53A7BA00D1ED03 /* Special2Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Special2Cell.m; sourceTree = "<group>"; };
-		74859F3C1C53A7BA00D1ED03 /* OverTAndCons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverTAndCons.h; sourceTree = "<group>"; };
-		74859F3D1C53A7BA00D1ED03 /* OverTAndCons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverTAndCons.m; sourceTree = "<group>"; };
-		74859F3F1C53A7BA00D1ED03 /* PunchCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PunchCardCell.h; sourceTree = "<group>"; };
-		74859F401C53A7BA00D1ED03 /* PunchCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PunchCardCell.m; sourceTree = "<group>"; };
-		74859F421C53A7BA00D1ED03 /* RewardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardCell.h; sourceTree = "<group>"; };
-		74859F431C53A7BA00D1ED03 /* RewardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardCell.m; sourceTree = "<group>"; };
 		74859F5E1C53A7DC00D1ED03 /* ButtonWithModelName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonWithModelName.h; sourceTree = "<group>"; };
 		74859F5F1C53A7DC00D1ED03 /* ButtonWithModelName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonWithModelName.m; sourceTree = "<group>"; };
 		74859F601C53A7DC00D1ED03 /* NaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviController.h; sourceTree = "<group>"; };
@@ -478,6 +431,53 @@
 		74859F691C53A7DC00D1ED03 /* NSString+SubstringBySpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SubstringBySpace.m"; sourceTree = "<group>"; };
 		74859F6A1C53A7DC00D1ED03 /* UIView+becomeCornerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+becomeCornerView.h"; sourceTree = "<group>"; };
 		74859F6B1C53A7DC00D1ED03 /* UIView+becomeCornerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+becomeCornerView.m"; sourceTree = "<group>"; };
+		74859F741C53AC9C00D1ED03 /* check.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = check.storyboard; sourceTree = "<group>"; };
+		74859F761C53AC9C00D1ED03 /* AAACheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAACheckViewController.h; sourceTree = "<group>"; };
+		74859F771C53AC9C00D1ED03 /* AAACheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAACheckViewController.m; sourceTree = "<group>"; };
+		74859F791C53AC9C00D1ED03 /* ChargeCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeCardViewController.h; sourceTree = "<group>"; };
+		74859F7A1C53AC9C00D1ED03 /* ChargeCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeCardViewController.m; sourceTree = "<group>"; };
+		74859F7C1C53AC9C00D1ED03 /* ConsumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsumeViewController.h; sourceTree = "<group>"; };
+		74859F7D1C53AC9C00D1ED03 /* ConsumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsumeViewController.m; sourceTree = "<group>"; };
+		74859F7F1C53AC9C00D1ED03 /* LeaveTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaveTableViewController.h; sourceTree = "<group>"; };
+		74859F801C53AC9C00D1ED03 /* LeaveTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaveTableViewController.m; sourceTree = "<group>"; };
+		74859F821C53AC9C00D1ED03 /* MealRecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealRecondViewController.h; sourceTree = "<group>"; };
+		74859F831C53AC9C00D1ED03 /* MealRecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealRecondViewController.m; sourceTree = "<group>"; };
+		74859F851C53AC9C00D1ED03 /* TimeAndConsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeAndConsViewController.h; sourceTree = "<group>"; };
+		74859F861C53AC9C00D1ED03 /* TimeAndConsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeAndConsViewController.m; sourceTree = "<group>"; };
+		74859F881C53AC9C00D1ED03 /* PunchCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PunchCardViewController.h; sourceTree = "<group>"; };
+		74859F891C53AC9C00D1ED03 /* PunchCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PunchCardViewController.m; sourceTree = "<group>"; };
+		74859F8B1C53AC9C00D1ED03 /* RewardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardTableViewController.h; sourceTree = "<group>"; };
+		74859F8C1C53AC9C00D1ED03 /* RewardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardTableViewController.m; sourceTree = "<group>"; };
+		74859F8E1C53AC9C00D1ED03 /* SearchContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchContentViewController.h; sourceTree = "<group>"; };
+		74859F8F1C53AC9C00D1ED03 /* SearchContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchContentViewController.m; sourceTree = "<group>"; };
+		74859F911C53AC9C00D1ED03 /* SearchFilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchFilesViewController.h; sourceTree = "<group>"; };
+		74859F921C53AC9C00D1ED03 /* SearchFilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchFilesViewController.m; sourceTree = "<group>"; };
+		74859F941C53AC9C00D1ED03 /* MonthDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthDetailViewController.h; sourceTree = "<group>"; };
+		74859F951C53AC9C00D1ED03 /* MonthDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthDetailViewController.m; sourceTree = "<group>"; };
+		74859F971C53AC9C00D1ED03 /* SalaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalaryViewController.h; sourceTree = "<group>"; };
+		74859F981C53AC9C00D1ED03 /* SalaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalaryViewController.m; sourceTree = "<group>"; };
+		74859F9A1C53AC9C00D1ED03 /* AAASignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAASignInViewController.h; sourceTree = "<group>"; };
+		74859F9B1C53AC9C00D1ED03 /* AAASignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAASignInViewController.m; sourceTree = "<group>"; };
+		74859F9E1C53AC9C00D1ED03 /* CDatePickerViewEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDatePickerViewEx.h; sourceTree = "<group>"; };
+		74859F9F1C53AC9C00D1ED03 /* CDatePickerViewEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDatePickerViewEx.m; sourceTree = "<group>"; };
+		74859FA11C53AC9C00D1ED03 /* ChargeCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeCardCell.h; sourceTree = "<group>"; };
+		74859FA21C53AC9C00D1ED03 /* ChargeCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeCardCell.m; sourceTree = "<group>"; };
+		74859FA31C53AC9C00D1ED03 /* CommonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonCell.h; sourceTree = "<group>"; };
+		74859FA41C53AC9C00D1ED03 /* CommonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonCell.m; sourceTree = "<group>"; };
+		74859FA61C53AC9C00D1ED03 /* SpecialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialCell.h; sourceTree = "<group>"; };
+		74859FA71C53AC9C00D1ED03 /* SpecialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialCell.m; sourceTree = "<group>"; };
+		74859FA91C53AC9C00D1ED03 /* LeaveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaveCell.h; sourceTree = "<group>"; };
+		74859FAA1C53AC9C00D1ED03 /* LeaveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaveCell.m; sourceTree = "<group>"; };
+		74859FAC1C53AC9C00D1ED03 /* MealCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealCell.h; sourceTree = "<group>"; };
+		74859FAD1C53AC9C00D1ED03 /* MealCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealCell.m; sourceTree = "<group>"; };
+		74859FAF1C53AC9C00D1ED03 /* Special2Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Special2Cell.h; sourceTree = "<group>"; };
+		74859FB01C53AC9C00D1ED03 /* Special2Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Special2Cell.m; sourceTree = "<group>"; };
+		74859FB21C53AC9C00D1ED03 /* OverTAndCons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverTAndCons.h; sourceTree = "<group>"; };
+		74859FB31C53AC9C00D1ED03 /* OverTAndCons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverTAndCons.m; sourceTree = "<group>"; };
+		74859FB51C53AC9C00D1ED03 /* PunchCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PunchCardCell.h; sourceTree = "<group>"; };
+		74859FB61C53AC9C00D1ED03 /* PunchCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PunchCardCell.m; sourceTree = "<group>"; };
+		74859FB81C53AC9C00D1ED03 /* RewardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardCell.h; sourceTree = "<group>"; };
+		74859FB91C53AC9C00D1ED03 /* RewardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardCell.m; sourceTree = "<group>"; };
 		749EE1851C48E6DD00F533A0 /* AAAHouseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAAHouseTableViewController.h; sourceTree = "<group>"; };
 		749EE1861C48E6DD00F533A0 /* AAAHouseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAAHouseTableViewController.m; sourceTree = "<group>"; };
 		749EE1871C48E6DD00F533A0 /* lala.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = lala.storyboard; sourceTree = "<group>"; };
@@ -591,7 +591,7 @@
 		0C6B2AB91C4350F100F0D866 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				74859EFD1C53A7BA00D1ED03 /* Check */,
+				74859F731C53AC9C00D1ED03 /* Check */,
 				7479A6341C51D01A00E6DD47 /* TarBarController */,
 				74F8BD2B1C50B85D00B5DDEB /* Navigation */,
 				74F8BD191C50B41B00B5DDEB /* First */,
@@ -997,244 +997,6 @@
 			path = "tabBar@2x合并";
 			sourceTree = "<group>";
 		};
-		74859EFD1C53A7BA00D1ED03 /* Check */ = {
-			isa = PBXGroup;
-			children = (
-				74859EFE1C53A7BA00D1ED03 /* check.storyboard */,
-				74859EFF1C53A7BA00D1ED03 /* Controllers */,
-				74859F261C53A7BA00D1ED03 /* Models */,
-				74859F271C53A7BA00D1ED03 /* Views */,
-			);
-			path = Check;
-			sourceTree = "<group>";
-		};
-		74859EFF1C53A7BA00D1ED03 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				74859F001C53A7BA00D1ED03 /* AAACheckViewController.h */,
-				74859F011C53A7BA00D1ED03 /* AAACheckViewController.m */,
-				74859F021C53A7BA00D1ED03 /* ChargeCard */,
-				74859F051C53A7BA00D1ED03 /* ConsumeVC */,
-				74859F081C53A7BA00D1ED03 /* LeaveTableView */,
-				74859F0B1C53A7BA00D1ED03 /* MealRecondTabelView */,
-				74859F0E1C53A7BA00D1ED03 /* OverTimeAndConsume */,
-				74859F111C53A7BA00D1ED03 /* PunchCard */,
-				74859F141C53A7BA00D1ED03 /* RewardTableView */,
-				74859F171C53A7BA00D1ED03 /* SearchDailyData */,
-				74859F1A1C53A7BA00D1ED03 /* SearchFiles */,
-				74859F1D1C53A7BA00D1ED03 /* SearchMonthData */,
-				74859F201C53A7BA00D1ED03 /* SearchSalary */,
-				74859F231C53A7BA00D1ED03 /* SignInByMoving */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		74859F021C53A7BA00D1ED03 /* ChargeCard */ = {
-			isa = PBXGroup;
-			children = (
-				74859F031C53A7BA00D1ED03 /* ChargeCardViewController.h */,
-				74859F041C53A7BA00D1ED03 /* ChargeCardViewController.m */,
-			);
-			path = ChargeCard;
-			sourceTree = "<group>";
-		};
-		74859F051C53A7BA00D1ED03 /* ConsumeVC */ = {
-			isa = PBXGroup;
-			children = (
-				74859F061C53A7BA00D1ED03 /* ConsumeViewController.h */,
-				74859F071C53A7BA00D1ED03 /* ConsumeViewController.m */,
-			);
-			path = ConsumeVC;
-			sourceTree = "<group>";
-		};
-		74859F081C53A7BA00D1ED03 /* LeaveTableView */ = {
-			isa = PBXGroup;
-			children = (
-				74859F091C53A7BA00D1ED03 /* LeaveTableViewController.h */,
-				74859F0A1C53A7BA00D1ED03 /* LeaveTableViewController.m */,
-			);
-			path = LeaveTableView;
-			sourceTree = "<group>";
-		};
-		74859F0B1C53A7BA00D1ED03 /* MealRecondTabelView */ = {
-			isa = PBXGroup;
-			children = (
-				74859F0C1C53A7BA00D1ED03 /* MealRecondViewController.h */,
-				74859F0D1C53A7BA00D1ED03 /* MealRecondViewController.m */,
-			);
-			path = MealRecondTabelView;
-			sourceTree = "<group>";
-		};
-		74859F0E1C53A7BA00D1ED03 /* OverTimeAndConsume */ = {
-			isa = PBXGroup;
-			children = (
-				74859F0F1C53A7BA00D1ED03 /* TimeAndConsViewController.h */,
-				74859F101C53A7BA00D1ED03 /* TimeAndConsViewController.m */,
-			);
-			path = OverTimeAndConsume;
-			sourceTree = "<group>";
-		};
-		74859F111C53A7BA00D1ED03 /* PunchCard */ = {
-			isa = PBXGroup;
-			children = (
-				74859F121C53A7BA00D1ED03 /* PunchCardViewController.h */,
-				74859F131C53A7BA00D1ED03 /* PunchCardViewController.m */,
-			);
-			path = PunchCard;
-			sourceTree = "<group>";
-		};
-		74859F141C53A7BA00D1ED03 /* RewardTableView */ = {
-			isa = PBXGroup;
-			children = (
-				74859F151C53A7BA00D1ED03 /* RewardTableViewController.h */,
-				74859F161C53A7BA00D1ED03 /* RewardTableViewController.m */,
-			);
-			path = RewardTableView;
-			sourceTree = "<group>";
-		};
-		74859F171C53A7BA00D1ED03 /* SearchDailyData */ = {
-			isa = PBXGroup;
-			children = (
-				74859F181C53A7BA00D1ED03 /* SearchContentViewController.h */,
-				74859F191C53A7BA00D1ED03 /* SearchContentViewController.m */,
-			);
-			path = SearchDailyData;
-			sourceTree = "<group>";
-		};
-		74859F1A1C53A7BA00D1ED03 /* SearchFiles */ = {
-			isa = PBXGroup;
-			children = (
-				74859F1B1C53A7BA00D1ED03 /* SearchFilesViewController.h */,
-				74859F1C1C53A7BA00D1ED03 /* SearchFilesViewController.m */,
-			);
-			path = SearchFiles;
-			sourceTree = "<group>";
-		};
-		74859F1D1C53A7BA00D1ED03 /* SearchMonthData */ = {
-			isa = PBXGroup;
-			children = (
-				74859F1E1C53A7BA00D1ED03 /* MonthDetailViewController.h */,
-				74859F1F1C53A7BA00D1ED03 /* MonthDetailViewController.m */,
-			);
-			path = SearchMonthData;
-			sourceTree = "<group>";
-		};
-		74859F201C53A7BA00D1ED03 /* SearchSalary */ = {
-			isa = PBXGroup;
-			children = (
-				74859F211C53A7BA00D1ED03 /* SalaryViewController.h */,
-				74859F221C53A7BA00D1ED03 /* SalaryViewController.m */,
-			);
-			path = SearchSalary;
-			sourceTree = "<group>";
-		};
-		74859F231C53A7BA00D1ED03 /* SignInByMoving */ = {
-			isa = PBXGroup;
-			children = (
-				74859F241C53A7BA00D1ED03 /* AAASignInViewController.h */,
-				74859F251C53A7BA00D1ED03 /* AAASignInViewController.m */,
-			);
-			path = SignInByMoving;
-			sourceTree = "<group>";
-		};
-		74859F261C53A7BA00D1ED03 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		74859F271C53A7BA00D1ED03 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				74859F281C53A7BA00D1ED03 /* CDatePickerViewEx.h */,
-				74859F291C53A7BA00D1ED03 /* CDatePickerViewEx.m */,
-				74859F2A1C53A7BA00D1ED03 /* ChargeCardView */,
-				74859F2D1C53A7BA00D1ED03 /* CommonCell.h */,
-				74859F2E1C53A7BA00D1ED03 /* CommonCell.m */,
-				74859F2F1C53A7BA00D1ED03 /* Day */,
-				74859F321C53A7BA00D1ED03 /* Leave */,
-				74859F351C53A7BA00D1ED03 /* MealRecond */,
-				74859F381C53A7BA00D1ED03 /* Month */,
-				74859F3B1C53A7BA00D1ED03 /* OverTAndConsume */,
-				74859F3E1C53A7BA00D1ED03 /* PunchCardView */,
-				74859F411C53A7BA00D1ED03 /* Reward */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		74859F2A1C53A7BA00D1ED03 /* ChargeCardView */ = {
-			isa = PBXGroup;
-			children = (
-				74859F2B1C53A7BA00D1ED03 /* ChargeCardCell.h */,
-				74859F2C1C53A7BA00D1ED03 /* ChargeCardCell.m */,
-			);
-			path = ChargeCardView;
-			sourceTree = "<group>";
-		};
-		74859F2F1C53A7BA00D1ED03 /* Day */ = {
-			isa = PBXGroup;
-			children = (
-				74859F301C53A7BA00D1ED03 /* SpecialCell.h */,
-				74859F311C53A7BA00D1ED03 /* SpecialCell.m */,
-			);
-			path = Day;
-			sourceTree = "<group>";
-		};
-		74859F321C53A7BA00D1ED03 /* Leave */ = {
-			isa = PBXGroup;
-			children = (
-				74859F331C53A7BA00D1ED03 /* LeaveCell.h */,
-				74859F341C53A7BA00D1ED03 /* LeaveCell.m */,
-			);
-			path = Leave;
-			sourceTree = "<group>";
-		};
-		74859F351C53A7BA00D1ED03 /* MealRecond */ = {
-			isa = PBXGroup;
-			children = (
-				74859F361C53A7BA00D1ED03 /* MealCell.h */,
-				74859F371C53A7BA00D1ED03 /* MealCell.m */,
-			);
-			path = MealRecond;
-			sourceTree = "<group>";
-		};
-		74859F381C53A7BA00D1ED03 /* Month */ = {
-			isa = PBXGroup;
-			children = (
-				74859F391C53A7BA00D1ED03 /* Special2Cell.h */,
-				74859F3A1C53A7BA00D1ED03 /* Special2Cell.m */,
-			);
-			path = Month;
-			sourceTree = "<group>";
-		};
-		74859F3B1C53A7BA00D1ED03 /* OverTAndConsume */ = {
-			isa = PBXGroup;
-			children = (
-				74859F3C1C53A7BA00D1ED03 /* OverTAndCons.h */,
-				74859F3D1C53A7BA00D1ED03 /* OverTAndCons.m */,
-			);
-			path = OverTAndConsume;
-			sourceTree = "<group>";
-		};
-		74859F3E1C53A7BA00D1ED03 /* PunchCardView */ = {
-			isa = PBXGroup;
-			children = (
-				74859F3F1C53A7BA00D1ED03 /* PunchCardCell.h */,
-				74859F401C53A7BA00D1ED03 /* PunchCardCell.m */,
-			);
-			path = PunchCardView;
-			sourceTree = "<group>";
-		};
-		74859F411C53A7BA00D1ED03 /* Reward */ = {
-			isa = PBXGroup;
-			children = (
-				74859F421C53A7BA00D1ED03 /* RewardCell.h */,
-				74859F431C53A7BA00D1ED03 /* RewardCell.m */,
-			);
-			path = Reward;
-			sourceTree = "<group>";
-		};
 		74859F5C1C53A7DC00D1ED03 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -1262,6 +1024,244 @@
 				74859F6B1C53A7DC00D1ED03 /* UIView+becomeCornerView.m */,
 			);
 			path = DfCategory;
+			sourceTree = "<group>";
+		};
+		74859F731C53AC9C00D1ED03 /* Check */ = {
+			isa = PBXGroup;
+			children = (
+				74859F741C53AC9C00D1ED03 /* check.storyboard */,
+				74859F751C53AC9C00D1ED03 /* Controllers */,
+				74859F9C1C53AC9C00D1ED03 /* Models */,
+				74859F9D1C53AC9C00D1ED03 /* Views */,
+			);
+			path = Check;
+			sourceTree = "<group>";
+		};
+		74859F751C53AC9C00D1ED03 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				74859F761C53AC9C00D1ED03 /* AAACheckViewController.h */,
+				74859F771C53AC9C00D1ED03 /* AAACheckViewController.m */,
+				74859F781C53AC9C00D1ED03 /* ChargeCard */,
+				74859F7B1C53AC9C00D1ED03 /* ConsumeVC */,
+				74859F7E1C53AC9C00D1ED03 /* LeaveTableView */,
+				74859F811C53AC9C00D1ED03 /* MealRecondTabelView */,
+				74859F841C53AC9C00D1ED03 /* OverTimeAndConsume */,
+				74859F871C53AC9C00D1ED03 /* PunchCard */,
+				74859F8A1C53AC9C00D1ED03 /* RewardTableView */,
+				74859F8D1C53AC9C00D1ED03 /* SearchDailyData */,
+				74859F901C53AC9C00D1ED03 /* SearchFiles */,
+				74859F931C53AC9C00D1ED03 /* SearchMonthData */,
+				74859F961C53AC9C00D1ED03 /* SearchSalary */,
+				74859F991C53AC9C00D1ED03 /* SignInByMoving */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		74859F781C53AC9C00D1ED03 /* ChargeCard */ = {
+			isa = PBXGroup;
+			children = (
+				74859F791C53AC9C00D1ED03 /* ChargeCardViewController.h */,
+				74859F7A1C53AC9C00D1ED03 /* ChargeCardViewController.m */,
+			);
+			path = ChargeCard;
+			sourceTree = "<group>";
+		};
+		74859F7B1C53AC9C00D1ED03 /* ConsumeVC */ = {
+			isa = PBXGroup;
+			children = (
+				74859F7C1C53AC9C00D1ED03 /* ConsumeViewController.h */,
+				74859F7D1C53AC9C00D1ED03 /* ConsumeViewController.m */,
+			);
+			path = ConsumeVC;
+			sourceTree = "<group>";
+		};
+		74859F7E1C53AC9C00D1ED03 /* LeaveTableView */ = {
+			isa = PBXGroup;
+			children = (
+				74859F7F1C53AC9C00D1ED03 /* LeaveTableViewController.h */,
+				74859F801C53AC9C00D1ED03 /* LeaveTableViewController.m */,
+			);
+			path = LeaveTableView;
+			sourceTree = "<group>";
+		};
+		74859F811C53AC9C00D1ED03 /* MealRecondTabelView */ = {
+			isa = PBXGroup;
+			children = (
+				74859F821C53AC9C00D1ED03 /* MealRecondViewController.h */,
+				74859F831C53AC9C00D1ED03 /* MealRecondViewController.m */,
+			);
+			path = MealRecondTabelView;
+			sourceTree = "<group>";
+		};
+		74859F841C53AC9C00D1ED03 /* OverTimeAndConsume */ = {
+			isa = PBXGroup;
+			children = (
+				74859F851C53AC9C00D1ED03 /* TimeAndConsViewController.h */,
+				74859F861C53AC9C00D1ED03 /* TimeAndConsViewController.m */,
+			);
+			path = OverTimeAndConsume;
+			sourceTree = "<group>";
+		};
+		74859F871C53AC9C00D1ED03 /* PunchCard */ = {
+			isa = PBXGroup;
+			children = (
+				74859F881C53AC9C00D1ED03 /* PunchCardViewController.h */,
+				74859F891C53AC9C00D1ED03 /* PunchCardViewController.m */,
+			);
+			path = PunchCard;
+			sourceTree = "<group>";
+		};
+		74859F8A1C53AC9C00D1ED03 /* RewardTableView */ = {
+			isa = PBXGroup;
+			children = (
+				74859F8B1C53AC9C00D1ED03 /* RewardTableViewController.h */,
+				74859F8C1C53AC9C00D1ED03 /* RewardTableViewController.m */,
+			);
+			path = RewardTableView;
+			sourceTree = "<group>";
+		};
+		74859F8D1C53AC9C00D1ED03 /* SearchDailyData */ = {
+			isa = PBXGroup;
+			children = (
+				74859F8E1C53AC9C00D1ED03 /* SearchContentViewController.h */,
+				74859F8F1C53AC9C00D1ED03 /* SearchContentViewController.m */,
+			);
+			path = SearchDailyData;
+			sourceTree = "<group>";
+		};
+		74859F901C53AC9C00D1ED03 /* SearchFiles */ = {
+			isa = PBXGroup;
+			children = (
+				74859F911C53AC9C00D1ED03 /* SearchFilesViewController.h */,
+				74859F921C53AC9C00D1ED03 /* SearchFilesViewController.m */,
+			);
+			path = SearchFiles;
+			sourceTree = "<group>";
+		};
+		74859F931C53AC9C00D1ED03 /* SearchMonthData */ = {
+			isa = PBXGroup;
+			children = (
+				74859F941C53AC9C00D1ED03 /* MonthDetailViewController.h */,
+				74859F951C53AC9C00D1ED03 /* MonthDetailViewController.m */,
+			);
+			path = SearchMonthData;
+			sourceTree = "<group>";
+		};
+		74859F961C53AC9C00D1ED03 /* SearchSalary */ = {
+			isa = PBXGroup;
+			children = (
+				74859F971C53AC9C00D1ED03 /* SalaryViewController.h */,
+				74859F981C53AC9C00D1ED03 /* SalaryViewController.m */,
+			);
+			path = SearchSalary;
+			sourceTree = "<group>";
+		};
+		74859F991C53AC9C00D1ED03 /* SignInByMoving */ = {
+			isa = PBXGroup;
+			children = (
+				74859F9A1C53AC9C00D1ED03 /* AAASignInViewController.h */,
+				74859F9B1C53AC9C00D1ED03 /* AAASignInViewController.m */,
+			);
+			path = SignInByMoving;
+			sourceTree = "<group>";
+		};
+		74859F9C1C53AC9C00D1ED03 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		74859F9D1C53AC9C00D1ED03 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				74859F9E1C53AC9C00D1ED03 /* CDatePickerViewEx.h */,
+				74859F9F1C53AC9C00D1ED03 /* CDatePickerViewEx.m */,
+				74859FA01C53AC9C00D1ED03 /* ChargeCardView */,
+				74859FA31C53AC9C00D1ED03 /* CommonCell.h */,
+				74859FA41C53AC9C00D1ED03 /* CommonCell.m */,
+				74859FA51C53AC9C00D1ED03 /* Day */,
+				74859FA81C53AC9C00D1ED03 /* Leave */,
+				74859FAB1C53AC9C00D1ED03 /* MealRecond */,
+				74859FAE1C53AC9C00D1ED03 /* Month */,
+				74859FB11C53AC9C00D1ED03 /* OverTAndConsume */,
+				74859FB41C53AC9C00D1ED03 /* PunchCardView */,
+				74859FB71C53AC9C00D1ED03 /* Reward */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		74859FA01C53AC9C00D1ED03 /* ChargeCardView */ = {
+			isa = PBXGroup;
+			children = (
+				74859FA11C53AC9C00D1ED03 /* ChargeCardCell.h */,
+				74859FA21C53AC9C00D1ED03 /* ChargeCardCell.m */,
+			);
+			path = ChargeCardView;
+			sourceTree = "<group>";
+		};
+		74859FA51C53AC9C00D1ED03 /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				74859FA61C53AC9C00D1ED03 /* SpecialCell.h */,
+				74859FA71C53AC9C00D1ED03 /* SpecialCell.m */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
+		74859FA81C53AC9C00D1ED03 /* Leave */ = {
+			isa = PBXGroup;
+			children = (
+				74859FA91C53AC9C00D1ED03 /* LeaveCell.h */,
+				74859FAA1C53AC9C00D1ED03 /* LeaveCell.m */,
+			);
+			path = Leave;
+			sourceTree = "<group>";
+		};
+		74859FAB1C53AC9C00D1ED03 /* MealRecond */ = {
+			isa = PBXGroup;
+			children = (
+				74859FAC1C53AC9C00D1ED03 /* MealCell.h */,
+				74859FAD1C53AC9C00D1ED03 /* MealCell.m */,
+			);
+			path = MealRecond;
+			sourceTree = "<group>";
+		};
+		74859FAE1C53AC9C00D1ED03 /* Month */ = {
+			isa = PBXGroup;
+			children = (
+				74859FAF1C53AC9C00D1ED03 /* Special2Cell.h */,
+				74859FB01C53AC9C00D1ED03 /* Special2Cell.m */,
+			);
+			path = Month;
+			sourceTree = "<group>";
+		};
+		74859FB11C53AC9C00D1ED03 /* OverTAndConsume */ = {
+			isa = PBXGroup;
+			children = (
+				74859FB21C53AC9C00D1ED03 /* OverTAndCons.h */,
+				74859FB31C53AC9C00D1ED03 /* OverTAndCons.m */,
+			);
+			path = OverTAndConsume;
+			sourceTree = "<group>";
+		};
+		74859FB41C53AC9C00D1ED03 /* PunchCardView */ = {
+			isa = PBXGroup;
+			children = (
+				74859FB51C53AC9C00D1ED03 /* PunchCardCell.h */,
+				74859FB61C53AC9C00D1ED03 /* PunchCardCell.m */,
+			);
+			path = PunchCardView;
+			sourceTree = "<group>";
+		};
+		74859FB71C53AC9C00D1ED03 /* Reward */ = {
+			isa = PBXGroup;
+			children = (
+				74859FB81C53AC9C00D1ED03 /* RewardCell.h */,
+				74859FB91C53AC9C00D1ED03 /* RewardCell.m */,
+			);
+			path = Reward;
 			sourceTree = "<group>";
 		};
 		749EE1831C48E6DD00F533A0 /* NewLA */ = {
@@ -1548,7 +1548,7 @@
 				685291AC1C4FB5CF00A78405 /* RegionForAngel.png in Resources */,
 				685291D41C4FB5D600A78405 /* 3.jpg in Resources */,
 				7479A6861C51F37E00E6DD47 /* navigationbar_background@2x.png in Resources */,
-				74859F441C53A7BA00D1ED03 /* check.storyboard in Resources */,
+				74859FBA1C53AC9C00D1ED03 /* check.storyboard in Resources */,
 				685291DD1C4FB5D600A78405 /* 截图1.png in Resources */,
 				685291E41C4FB5D600A78405 /* 截图6.png in Resources */,
 				7479A6901C51F37E00E6DD47 /* tabbar_selected_background@2x.png in Resources */,
@@ -1692,19 +1692,19 @@
 			files = (
 				0C5322561C45E3FE00872A1F /* AAAAlterPasswordViewController.m in Sources */,
 				749EE22E1C48F50600F533A0 /* AAALocateTool.m in Sources */,
-				74859F4B1C53A7BA00D1ED03 /* PunchCardViewController.m in Sources */,
-				74859F561C53A7BA00D1ED03 /* LeaveCell.m in Sources */,
+				74859FC11C53AC9C00D1ED03 /* PunchCardViewController.m in Sources */,
+				74859FCC1C53AC9C00D1ED03 /* LeaveCell.m in Sources */,
 				74D53A131C5354EE0082CD2B /* AAAManagerEmailViewController.m in Sources */,
-				74859F471C53A7BA00D1ED03 /* ConsumeViewController.m in Sources */,
+				74859FBD1C53AC9C00D1ED03 /* ConsumeViewController.m in Sources */,
 				68E2D8D41C4DC7A60042BAEF /* ZCTradeView.m in Sources */,
-				74859F511C53A7BA00D1ED03 /* AAASignInViewController.m in Sources */,
-				74859F4C1C53A7BA00D1ED03 /* RewardTableViewController.m in Sources */,
-				74859F481C53A7BA00D1ED03 /* LeaveTableViewController.m in Sources */,
+				74859FC71C53AC9C00D1ED03 /* AAASignInViewController.m in Sources */,
+				74859FC21C53AC9C00D1ED03 /* RewardTableViewController.m in Sources */,
+				74859FBE1C53AC9C00D1ED03 /* LeaveTableViewController.m in Sources */,
 				68E2D8F11C4DC7CD0042BAEF /* VCDataInfoResult.m in Sources */,
 				749EE23D1C48F50600F533A0 /* AAAWeatherTODAY.m in Sources */,
 				68E2D8EC1C4DC7CD0042BAEF /* AAASearchTool.m in Sources */,
-				74859F4D1C53A7BA00D1ED03 /* SearchContentViewController.m in Sources */,
-				74859F591C53A7BA00D1ED03 /* OverTAndCons.m in Sources */,
+				74859FC31C53AC9C00D1ED03 /* SearchContentViewController.m in Sources */,
+				74859FCF1C53AC9C00D1ED03 /* OverTAndCons.m in Sources */,
 				0C6B2AA01C434AC900F0D866 /* AppDelegate.m in Sources */,
 				68E2D8CD1C4DC7A60042BAEF /* NSString+Extension.m in Sources */,
 				68E2D8ED1C4DC7CD0042BAEF /* PDDataInfoResult.m in Sources */,
@@ -1713,13 +1713,13 @@
 				74859F701C53A7DC00D1ED03 /* NSString+CN2UTF8.m in Sources */,
 				685291521C4FB50900A78405 /* AAALoginParam.m in Sources */,
 				68E2D8EF1C4DC7CD0042BAEF /* TableViewContentResult.m in Sources */,
-				74859F451C53A7BA00D1ED03 /* AAACheckViewController.m in Sources */,
 				749EE22F1C48F50600F533A0 /* AAALocationStr.m in Sources */,
+				74859FBB1C53AC9C00D1ED03 /* AAACheckViewController.m in Sources */,
 				68E2D8C41C4DC7A60042BAEF /* JTCalendarAppearance.m in Sources */,
 				749EE23C1C48F50600F533A0 /* AAAWeatherSK.m in Sources */,
 				68E2D8C61C4DC7A60042BAEF /* JTCalendarDayView.m in Sources */,
-				74859F5B1C53A7BA00D1ED03 /* RewardCell.m in Sources */,
 				74859F711C53A7DC00D1ED03 /* NSString+SubstringBySpace.m in Sources */,
+				74859FD11C53AC9C00D1ED03 /* RewardCell.m in Sources */,
 				74F8BD291C50B41B00B5DDEB /* AAAHomeTab.m in Sources */,
 				74859F6D1C53A7DC00D1ED03 /* NaviController.m in Sources */,
 				68E2D8C81C4DC7A60042BAEF /* JTCalendarMenuView.m in Sources */,
@@ -1745,36 +1745,36 @@
 				6852914B1C4FB4E500A78405 /* QRCodeReaderView.m in Sources */,
 				0C6B2A9D1C434AC900F0D866 /* main.m in Sources */,
 				6852914C1C4FB4E500A78405 /* QRCodeReaderViewController.m in Sources */,
+				74859FD01C53AC9C00D1ED03 /* PunchCardCell.m in Sources */,
 				74D53A0C1C5319A50082CD2B /* AAASendBossViewController.m in Sources */,
-				74859F5A1C53A7BA00D1ED03 /* PunchCardCell.m in Sources */,
 				74859F6F1C53A7DC00D1ED03 /* NSDictionary+In2ArrayOutDic.m in Sources */,
+				74859FC01C53AC9C00D1ED03 /* TimeAndConsViewController.m in Sources */,
+				74859FC61C53AC9C00D1ED03 /* SalaryViewController.m in Sources */,
 				68E2D8D31C4DC7A60042BAEF /* ZCTradeKeyboard.m in Sources */,
 				68E2D8CA1C4DC7A60042BAEF /* JTCalendarMonthWeekDaysView.m in Sources */,
-				74859F4A1C53A7BA00D1ED03 /* TimeAndConsViewController.m in Sources */,
 				74859F6E1C53A7DC00D1ED03 /* NSDate+DateLocationChange.m in Sources */,
-				74859F501C53A7BA00D1ED03 /* SalaryViewController.m in Sources */,
+				74859FCE1C53AC9C00D1ED03 /* Special2Cell.m in Sources */,
+				74859FC91C53AC9C00D1ED03 /* ChargeCardCell.m in Sources */,
 				68E2D8F21C4DC7CD0042BAEF /* VContentResult.m in Sources */,
 				685291401C4FB4CF00A78405 /* AAALoginAndRegionViewController.m in Sources */,
+				74859FC81C53AC9C00D1ED03 /* CDatePickerViewEx.m in Sources */,
+				74859FC51C53AC9C00D1ED03 /* MonthDetailViewController.m in Sources */,
 				749EE18F1C48E6DD00F533A0 /* AAATodayCell.m in Sources */,
-				74859F581C53A7BA00D1ED03 /* Special2Cell.m in Sources */,
-				74859F531C53A7BA00D1ED03 /* ChargeCardCell.m in Sources */,
+				74859FCD1C53AC9C00D1ED03 /* MealCell.m in Sources */,
 				68E2D8EB1C4DC7CD0042BAEF /* AAASearchParam.m in Sources */,
-				74859F521C53A7BA00D1ED03 /* CDatePickerViewEx.m in Sources */,
-				74859F4F1C53A7BA00D1ED03 /* MonthDetailViewController.m in Sources */,
 				68E2D8D11C4DC7A60042BAEF /* ZCAudioTool.m in Sources */,
-				74859F571C53A7BA00D1ED03 /* MealCell.m in Sources */,
+				74859FBC1C53AC9C00D1ED03 /* ChargeCardViewController.m in Sources */,
 				6852914A1C4FB4E500A78405 /* QRCameraSwitchButton.m in Sources */,
-				74859F461C53A7BA00D1ED03 /* ChargeCardViewController.m in Sources */,
 				68E2D8CB1C4DC7A60042BAEF /* JTCalendarWeekView.m in Sources */,
 				68E2D8C51C4DC7A60042BAEF /* JTCalendarContentView.m in Sources */,
+				74859FBF1C53AC9C00D1ED03 /* MealRecondViewController.m in Sources */,
 				74859F6C1C53A7DC00D1ED03 /* ButtonWithModelName.m in Sources */,
-				74859F491C53A7BA00D1ED03 /* MealRecondViewController.m in Sources */,
+				74859FCB1C53AC9C00D1ED03 /* SpecialCell.m in Sources */,
 				74F8BD271C50B41B00B5DDEB /* AAASendMiController.m in Sources */,
-				74859F551C53A7BA00D1ED03 /* SpecialCell.m in Sources */,
 				749EE23A1C48F50600F533A0 /* AAAWeather.m in Sources */,
+				74859FC41C53AC9C00D1ED03 /* SearchFilesViewController.m in Sources */,
+				74859FCA1C53AC9C00D1ED03 /* CommonCell.m in Sources */,
 				68E2D8CF1C4DC7A60042BAEF /* UIAlertView+Quick.m in Sources */,
-				74859F4E1C53A7BA00D1ED03 /* SearchFilesViewController.m in Sources */,
-				74859F541C53A7BA00D1ED03 /* CommonCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

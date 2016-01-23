@@ -16,4 +16,14 @@
 
 #import "AAALocationStr.h"
 
+#import "NSString+CN2UTF8.h"
+
+//纯代码TabBar
+#import "AAATabBarController.h"
+
+//旧版扫一扫
+#import "QRCodeReaderViewController.h"
+
+#import "AAASearchAPI.h"
+#import "AAALoginResult.h"
 #endif /* loginHead_h */

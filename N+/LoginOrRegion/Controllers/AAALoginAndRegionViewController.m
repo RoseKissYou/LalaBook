@@ -10,13 +10,6 @@
 
 #import "loginHead.h"
 
-#import "NSString+CN2UTF8.h"
-
-//纯代码TabBar
-#import "AAATabBarController.h"
-
-//旧版扫一扫
-#import "QRCodeReaderViewController.h"
 @import AVFoundation;
 static NSInteger changeHeightLayout = 30;
 static NSInteger originalHeightLayout = 50;
@@ -143,6 +136,9 @@ static NSInteger bossOriginalLayout = 10;
         //去HR服务器查找员工号存不存在
         [AAALoginTool stateOfStaff:param Success:^(AAALoginResult *result) {
             //根据result来把设定权限
+            NSLog(@"%@",result);
+            [AAASearchParam sharedAAASearchParam].entname = result.entname;
+            [AAASearchParam sharedAAASearchParam].empcode = result.empcode;
 #warning df-权限设定
         } Failure:^(NSError *error) {
             NSLog(@"%@",error);
@@ -152,8 +148,8 @@ static NSInteger bossOriginalLayout = 10;
         if (result == 1) {
             //跳转到主页
             AAATabBarController *tabBar = [[AAATabBarController alloc] init];
-//            UIStoryboard *mainStory = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//            AAAHomeViewController *firstControl = [mainStory instantiateViewControllerWithIdentifier:@"Main"];
+            //            UIStoryboard *mainStory = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            //            AAAHomeViewController *firstControl = [mainStory instantiateViewControllerWithIdentifier:@"Main"];
             [self presentViewController:tabBar animated:YES completion:nil];
         }else {
             [[[UIAlertView alloc] initWithTitle:@"登陆错误" message:@"用户名或密码错误" delegate:self cancelButtonTitle:@"重新输入" otherButtonTitles: nil] show];
@@ -161,6 +157,7 @@ static NSInteger bossOriginalLayout = 10;
     } Failure:^(NSError *error) {
         NSLog(@"%@",error);
     }];
+    
     
     
 }
