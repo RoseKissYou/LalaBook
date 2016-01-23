@@ -187,16 +187,16 @@ static NSInteger bossOriginalLayout = 10;
 - (void)go2Main{
     
     //把记录写入云
-    //获取设备型号和地址
-    AAALoginParam *param = [AAALoginParam sharedAAALoginParam];
-    param.phoneType = [UIDevice currentDevice].model;
-#warning df-写好定位方法
-    param.address = [AAALocationStr sharedAAALocationStr].locationStr;
-    [AAALoginTool uploadTelephoneTypeAndAddr:param Success:^(BOOL result) {
-        NSLog(@"插入成功");
-    } Failure:^(NSError *error) {
-        NSLog(@"插入失败");
-    }];
+//    //获取设备型号和地址
+//    AAALoginParam *param = [AAALoginParam sharedAAALoginParam];
+//    param.phoneType = [UIDevice currentDevice].model;
+//#warning df-写好定位方法
+//    param.address = [AAALocationStr sharedAAALocationStr].locationStr;
+//    [AAALoginTool uploadTelephoneTypeAndAddr:param Success:^(BOOL result) {
+//        NSLog(@"插入成功");
+//    } Failure:^(NSError *error) {
+//        NSLog(@"插入失败");
+//    }];
     
     //再跳转
     AAATabBarController *tabBar = [[AAATabBarController alloc] init];
@@ -438,6 +438,10 @@ static NSInteger bossOriginalLayout = 10;
     //非企业注册按钮
     NSLog(@"非企业注册按钮");
     //注册到云端, 没有HR账户, 直接跳转
+    
+    
+    
+    
     AAATabBarController *tabBar = [[AAATabBarController alloc] init];
     
     [self presentViewController:tabBar animated:YES completion:nil];

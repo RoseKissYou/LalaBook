@@ -12,7 +12,8 @@
 
 #import "NSString+SubstringBySpace.h"
 
-@interface LeaveTableViewController ()
+@interface LeaveTableViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (assign,nonatomic) NSInteger count;
 

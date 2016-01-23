@@ -21,11 +21,12 @@
 
 #import "NSDate+DateLocationChange.h"
 
+#import "CDatePickerViewEx.h"
+
 @interface MonthDetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UIView *calenderView;
 
 @property (assign,nonatomic) NSInteger count;
 
@@ -33,6 +34,21 @@
 @property (nonatomic,strong) NSArray *secondArr;
 @property (nonatomic,strong) AAASearchParam *param;
 @property (nonatomic,assign) BOOL isShowCircle;
+
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *btnsArr;
+@property (weak, nonatomic) IBOutlet UIView *labelView;
+
+
+@property (nonatomic, strong) CDatePickerViewEx *dpView;
+@property (nonatomic, strong) UIView *btnView;
+@property (nonatomic, strong) NSString *currentYear;
+@property (nonatomic, strong) NSString *currentMonth;
+
+@property (nonatomic, strong) NSString *selectYear;
+@property (nonatomic, strong) NSString *selectMonth;
+
+@property (nonatomic ,assign) NSInteger indexMonth;
 
 @end
 
@@ -42,26 +58,15 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
-    [self addCalendar];
-    
-    //加入手势
-    [self addGestureRecognizer];
     
     self.param = [AAASearchParam sharedAAASearchParam];
-    self.param.entname = @"百得电器";
-    self.param.tbname = @"月考勤查询";
-    self.param.empcode = @"111714";
-    self.param.autoid = @"201508";
+    
+    self.param.tbname = self.modelName;
+    self.param.autoid = [NSDate NSDate2FormatNSStringByMonth:[NSDate date]];
     
     [self requestData];
     
-}
-
-#pragma mark - addGestureRecognizer
-- (void)addGestureRecognizer{
-    UISwipeGestureRecognizer *sgr = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(didChangeModeTouch)];
-    [sgr setDirection:(UISwipeGestureRecognizerDirectionUp|UISwipeGestureRecognizerDirectionDown)];
-    [self.calenderView addGestureRecognizer:sgr];
+    [self setUpCalendar];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -91,13 +96,103 @@
                 }
             }
         }
-        NSLog(@"%d",self.isShowCircle);
+        NSLog(@"%@",result2);
         self.count = result1.count;
         [self.tableView reloadData];
     } Failure:^(NSError *error) {
         ;
     }];
 }
+
+- (void)setUpCalendar{
+    
+    self.currentMonth = [NSDate NSDate2StrByMonth:[NSDate date]];
+    self.currentYear = [NSDate NSDate2FormatNSStringByYear:[NSDate date]];
+    self.label.text = [self.currentYear stringByAppendingString:self.currentMonth];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(datePicker)];
+    [self.labelView addGestureRecognizer:tap];
+    self.dpView = [[CDatePickerViewEx alloc]initWithFrame:CGRectMake(0, 0, 270, 200)];
+    self.dpView.center = self.view.center;
+    self.dpView.hidden = YES;
+    self.dpView.backgroundColor = [UIColor colorWithRed:100/255. green:100/255. blue:100/255. alpha:0.9];
+    [self.dpView selectToday];
+    [self.view addSubview:self.dpView];
+    
+    UIView *btnView = [[UIView alloc]initWithFrame:CGRectMake(self.dpView.frame.origin.x, self.dpView.frame.origin.y + self.dpView.frame.size.height, 270, 35)];
+    self.btnView = btnView;
+    btnView.backgroundColor = [UIColor colorWithRed:100/255. green:100/255. blue:100/255. alpha:0.9];
+    self.btnView.hidden = self.dpView.hidden;
+    [self.view addSubview:btnView];
+    
+    CGFloat w = 270/2.;
+    CGFloat h = 35.;
+    
+    UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, w, h)];
+    [btn1 setTitle:@"本月" forState:UIControlStateNormal];
+    [btn1 addTarget:self action:@selector(back2ThisMonth) forControlEvents:UIControlEventTouchUpInside];
+    [btnView addSubview:btn1];
+    UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(w, 0, w, h)];
+    [btn2 addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
+    [btn2 setTitle:@"确定" forState:UIControlStateNormal];
+    [btnView addSubview:btn2];
+}
+
+- (void)back2ThisMonth{
+    [self.dpView selectToday];
+    NSDate *date = [NSDate date];
+    self.label.text = [[NSDate NSDate2StrByYear:date] stringByAppendingString:[NSDate NSDate2StrByMonth:date]];
+    self.dpView.hidden = YES;
+    self.btnView.hidden = YES;
+    
+    NSInteger index = ((NSString *)((NSArray *)[[NSDate NSDate2StrByMonth:date] componentsSeparatedByString:@"月"])[0]).integerValue - 1;
+    UIButton *btn = self.btnsArr[index];
+    btn.selected = YES;
+    for (UIButton *button in self.btnsArr) {
+        if (button != btn) {
+            button.selected = NO;
+        }
+    }
+}
+
+- (void)search{
+    self.dpView.hidden = YES;
+    self.btnView.hidden = self.dpView.hidden;
+    [self clickBtn:self.btnsArr[_indexMonth]];
+}
+
+- (IBAction)clickBtn:(UIButton *)btn {
+    btn.selected = YES;
+    for (UIButton *button in self.btnsArr) {
+        if (button != btn) {
+            button.selected = NO;
+        }
+    }
+    self.selectMonth = [NSString stringWithFormat:@"%02ld",[self.btnsArr indexOfObject:btn] + 1];
+    self.label.text = [self.currentYear stringByAppendingString:btn.titleLabel.text];
+    self.param.autoid = [self.selectYear stringByAppendingString:self.selectMonth];
+    [self requestData];
+}
+
+
+- (void)datePicker{
+    __weak UILabel *label = self.label;
+    __weak MonthDetailViewController *mdVC = self;
+    self.dpView.hidden = NO;
+    self.btnView.hidden = self.dpView.hidden;
+    self.dpView.returnStr = ^(NSString *str){
+        NSArray *strArr = [str componentsSeparatedByString:@" "];
+        mdVC.indexMonth = [strArr[1] integerValue] - 1;
+        label.text = [NSString stringWithFormat:@"%@年%@月",strArr[0],strArr[1]];
+        mdVC.currentYear = [NSString stringWithFormat:@"%@年",strArr[0]];
+        mdVC.selectYear = strArr[0];
+        mdVC.selectMonth = strArr[1];
+        NSString *autoidStr = [(strArr[0]) stringByAppendingString:(strArr[1])];
+        NSLog(@"%@",autoidStr);
+        mdVC.param.autoid = autoidStr;
+    };
+}
+
 
 #pragma mark - 以下为TableView相关板块
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -129,10 +224,10 @@
     
     if (indexPath.section == 0) {
         Special2Cell *cell = [tableView dequeueReusableCellWithIdentifier:@"SCell2" forIndexPath:indexPath];
-        cell.labelOne.text = [NSString stringWithFormat:@"%g",((NSNumber *)secondArr[3][1]).doubleValue];;
-        cell.lableTwo.text = [NSString stringWithFormat:@"%g",((NSNumber *)secondArr[3][2]).doubleValue];;
-        cell.labelThree.text = [NSString stringWithFormat:@"%g",((NSNumber *)secondArr[3][3]).doubleValue];;
-        cell.labelFour.text = [NSString stringWithFormat:@"%g",((NSNumber *)secondArr[3][4]).doubleValue];;
+        cell.labelOne.text = [NSString stringWithFormat:@"%g",((NSNumber *)secondArr[3][0]).doubleValue];;
+        cell.lableTwo.text = [NSString stringWithFormat:@"%g",((NSNumber *)secondArr[3][1]).doubleValue];;
+        cell.labelThree.text = [NSString stringWithFormat:@"%g",((NSNumber *)secondArr[3][2]).doubleValue];;
+        cell.labelFour.text = [NSString stringWithFormat:@"%g",((NSNumber *)secondArr[3][3]).doubleValue];;
         return cell;
     }else{
         CommonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CCell" forIndexPath:indexPath];
@@ -158,11 +253,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    if (section == self.firstArr.count - 1) {
-        return 20.;
-    }else{
-        return 1.;
-    }
+    return 1.;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
@@ -172,95 +263,5 @@
         return self.firstArr[section - 1];
 }
 
-#pragma mark - 以下为日历处理板块
-
-- (void)addCalendar{
-    self.calendar = [JTCalendar new];
-    
-    {
-        self.calendar.calendarAppearance.calendar.firstWeekday = 2; // Sunday == 1, Saturday == 7
-        self.calendar.calendarAppearance.dayCircleRatio = 9. / 10.;
-        self.calendar.calendarAppearance.ratioContentMenu = 1.;
-    }
-    
-    [self.calendar setMenuMonthsView:self.calendarMenuView];
-    [self.calendar setContentView:self.calendarContentView];
-    [self.calendar setDataSource:self];
-    
-    self.calendar.calendarAppearance.isWeekMode = YES;
-    [self changeCalendarMode:0];
-    
-    //加手势
-    
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    self.calenderView.hidden = NO;
-    [self.calendar reloadData]; // Must be call in viewDidAppear
-}
-
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    self.calenderView.hidden = YES;
-}
-
-#pragma mark - Buttons callback
-
-- (IBAction)didGoTodayTouch
-{
-    [self.calendar setCurrentDate:[NSDate date]];
-}
-
-- (IBAction)didChangeModeTouch
-{
-    self.calendar.calendarAppearance.isWeekMode = !self.calendar.calendarAppearance.isWeekMode;
-    
-    [self changeCalendarMode:.5];
-}
-
-#pragma mark - JTCalendarDataSource
-
-- (void)calendarDidDateSelected:(JTCalendar *)calendar date:(NSDate *)date
-{
-    
-    self.param.autoid = [NSDate NSDate2FormatNSStringByMonth:date];
-    [self requestData];
-    
-}
-
-- (BOOL)calendarHaveEvent:(JTCalendar *)calendar date:(NSDate *)date{
-    return NO;
-}
-
-#pragma mark - 改变日历模式调用
-
-- (void)changeCalendarMode:(CGFloat)time
-{
-    CGFloat newHeight = 210;
-    if(self.calendar.calendarAppearance.isWeekMode){
-        newHeight = 60.;
-    }
-    
-    [UIView animateWithDuration:time
-                     animations:^{
-                         self.calendarContentViewHeight.constant = newHeight;
-                         [self.view layoutIfNeeded];
-                     }];
-    
-    [UIView animateWithDuration:time/2
-                     animations:^{
-                         self.calendarContentView.layer.opacity = 0;
-                     }
-                     completion:^(BOOL finished) {
-                         [self.calendar reloadAppearance];
-                         
-                         [UIView animateWithDuration:time/2
-                                          animations:^{
-                                              self.calendarContentView.layer.opacity = 1;
-                                          }];
-                     }];
-}
 
 @end

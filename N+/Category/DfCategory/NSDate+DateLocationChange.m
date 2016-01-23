@@ -41,5 +41,26 @@
     return str;
 }
 
++ (NSString *)NSDate2StrByYear:(NSDate *)date{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    //设置本地格式
+    [formatter setLocale:[NSLocale currentLocale]];
+    //设置输出显示格式
+    [formatter setDateFormat:@"yyyy"];
+    
+    NSString *str = [formatter stringFromDate:date];
+    return str;
+}
+
++ (NSString *)NSDate2StrByMonth:(NSDate *)date{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    //设置本地格式
+    [formatter setLocale:[NSLocale currentLocale]];
+    //设置输出显示格式
+    [formatter setDateFormat:@"MM月"];
+    
+    NSString *str = [formatter stringFromDate:date];
+    return str;
+}
 
 @end

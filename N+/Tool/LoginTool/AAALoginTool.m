@@ -12,25 +12,21 @@
 #import "AAARquestAPI.h"
 
 @implementation AAALoginTool
-
+#pragma mark - 1)注册接口
 /*
-1)注册接口
  参数： entname - 公司名称，empcode - 工号，pwd - 登陆密码，telephone - 电话号码
- 
  返回值1：
  {
  “flag”:”True”,
  “info”:”提示信息”,
  “userid”:”34223432”
  }
- 
  返回值2：
  {
  “flag”:"False",
  “info”:”提示信息”,
  “userid”:””
  }
- 
  返回信息说明：
  Flag: 注册是否成功的标记，True表示成功，False表示失败;
  Info: 如果注册失败，返回失败的提示信息；
@@ -48,7 +44,7 @@
         NSLog(@"%@",error);
     }];
 }
-
+#pragma mark - 2)登录接口
 /*
  2)登录接口
  http://120.76.77.155:8003/Server/Login?userid=18&pwd=123456
@@ -74,7 +70,7 @@
     }];
     
 }
-
+#pragma mark -3)获取HR工号接口
 /*
 3)获取HR工号接口
 
@@ -102,18 +98,12 @@ Empcode 为返回的工号值，如果返回空，则表示该用户没有绑定
         NSLog(@"%@",error);
     }];
 }
-
+#pragma mark -5)修改用户工资密码接口
 /*
- 5)修改用户工资密码接口
- 
- 接口示例
- 
  http://120.76.77.155:8003/Server.asmx/UpdateSalaryPwd?entname=华跃科技&empcode=201204230011&oldpwd=123456&newpwd=123
  
  http://120.76.77.155:8003/Server.asmx/UpdateSalaryPwd?entname=百得电器&empcode=111714&oldpwd=123456&newpwd=123
- 
  参数： entname - 公司名称，empcode - 工号，oldpwd - 旧工资密码，newpwd - 新工资密码
- 
  返回值： {"result":true} / {"result":false}
  
  值说明：true - 修改成功
@@ -132,9 +122,49 @@ Empcode 为返回的工号值，如果返回空，则表示该用户没有绑定
     }];
 
 }
+#pragma mark - 6 非企业员工注册
+/*http://url/reguser?entname=@entname&empcode=@empcode&pwd=@pwd&telephone=@telephone&isent=@isent
+ @entname：企业名称
+ @empcode：工号
+ @pwd：登录密码（也是HR查询密码）
+ @telephone：手机号
+ @isent：是否企业用户注册，1：是，0：否
+ 返回信息：
+ {
+ “flag”:”True”,
+ “info”:”提示信息”,
+ “userid”:”34223432”
+ }
+ 返回信息说明：
+ Flag: 注册是否成功的标记，True表示成功，False表示失败;
+ Info: 如果注册失败，返回失败的提示信息；
+ userid: 如果注册成功，返回云服务中表tsys_clounduser 的userid值；
+ 
+ 接口内部处理逻辑：
+ {
+ String entver=getver; //获取企业的版本号
+ Int  userid;
+ 
+ //调用HR服务的接口 (主要是判断工号是否正确或者能否访问HR服务器)
+ http://hrsvr/reguser?entname=@entname&ver=@ver
+ &empcode=@empcode&pwd=@pwd&telephone=@telephone
+ 
+ //HR接口返回的信息是：flag , info , empid, empname
+ //如果工号有误或HR网络不通，则 flag=false;
+ 
+ If (flag==true)or(isent==true)
+ {
+ //调用云服务上的存储过程来增加用户
+ Exec psys_reguser @entname,@emid,@empname,@pwd,@telephone,@isent
+ //过程有一个返回值，用来返回  flag , userid , info 值；
+ }
+ 
+ //返回：flag , info , userid 
+ }
+*/
 
 
-
+#pragma mark -登陆记录/退出登陆
 /*
  3)插入用户登录记录接口(登录正确后，调用)
  

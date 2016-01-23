@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RewardTableViewController : UITableViewController
+@interface RewardTableViewController : UIViewController
 
 @end

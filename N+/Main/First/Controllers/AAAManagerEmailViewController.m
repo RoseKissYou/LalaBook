@@ -113,21 +113,30 @@
 #pragma mark -匿名切换
 - (IBAction)switchToRealName:(UISwitch *)sender {
     //点击切换为实名
-//    UISwitch *mySwitch = (UISwitch *)sender;
-//    if ([mySwitch isOn]) {
-//        //显示匿名anonymous
-//        self.noneNameImageView.image = [UIImage imageNamed:@"anonymous"];
-//        self.noneNameImageLabel.text = @"匿名";
-//    }else{
-//        self.noneNameImageView.image = [UIImage imageNamed:@"house_hili"];
-//        self.noneNameImageLabel.text = @"实名";
-//    }
+    
+    NSLog(@"%ld",(long)sender.tag);
+    UISwitch *mySwitch = (UISwitch *)sender;
+    if ([mySwitch isOn]) {
+        //显示匿名anonymous
+        NSLog(@"打开按钮");
+        self.noneNameImageView.image = [UIImage imageNamed:@"anonymous"];
+        self.noneNameImageLabel.text = @"匿名";
+    }else{
+        NSLog(@"关闭按钮");
+        self.noneNameImageView.image = [UIImage imageNamed:@"house_hili"];
+        self.noneNameImageLabel.text = @"实名";
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
 #pragma mark -返回
 - (IBAction)backToFirst:(UIBarButtonItem *)sender {
 #warning 返回到了登陆界面, 不是首页, 待检查

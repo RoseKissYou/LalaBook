@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LeaveTableViewController : UITableViewController
+@interface LeaveTableViewController : UIViewController
 
 @end
