@@ -35,8 +35,6 @@
 - (void)getFilesData{
     AAASearchParam *param = [AAASearchParam sharedAAASearchParam];
     param.tbname = @"档案查询";
-    param.entname = @"百得电器";
-    param.empcode = @"111714";
     
     [[AAASearchTool sharedAAASearchTool] getPresentDailyData:param Success:^(NSArray *result1, NSArray *result2) {
         self.firstArr = result1;

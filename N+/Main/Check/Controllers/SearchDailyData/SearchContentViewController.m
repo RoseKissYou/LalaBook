@@ -49,6 +49,7 @@
     
     self.param = [AAASearchParam sharedAAASearchParam];
     
+    self.param.tbname = @"日考勤查询";
     self.param.autoid = [NSDate NSDate2FormatNSString:[NSDate date]];
     
     [self requestData];

@@ -61,6 +61,7 @@
     
     self.param = [AAASearchParam sharedAAASearchParam];
     
+    self.param.tbname = self.modelName;
     self.param.autoid = [NSDate NSDate2FormatNSStringByMonth:[NSDate date]];
     
     [self requestData];
