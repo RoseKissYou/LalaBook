@@ -41,7 +41,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationController.navigationBarHidden = YES;
     // Do any additional setup after loading the view.
     [self addCalendar];
     
@@ -49,10 +48,8 @@
     [self addGestureRecognizer];
     
     self.param = [AAASearchParam sharedAAASearchParam];
-    self.param.entname = @"百得电器";
-    self.param.tbname = self.modelName;
-    self.param.empcode = @"111714";
-    self.param.autoid = @"2015/08/01";
+    
+    self.param.autoid = [NSDate NSDate2FormatNSString:[NSDate date]];
     
     [self requestData];
     
@@ -160,11 +157,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    if (section == self.firstArr.count - 1) {
-        return 20.;
-    }else{
-        return 1.;
-    }
+    return 1.;
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     if (section == 0) {

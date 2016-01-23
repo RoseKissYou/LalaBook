@@ -8,17 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "JTCalendar.h"
 
-@interface MonthDetailViewController : UIViewController<JTCalendarDataSource>
-
-///日历以下
-@property (weak, nonatomic) IBOutlet JTCalendarMenuView *calendarMenuView;
-@property (weak, nonatomic) IBOutlet JTCalendarContentView *calendarContentView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *calendarContentViewHeight;
-
-@property (strong, nonatomic) JTCalendar *calendar;
-//日历以上
+@interface MonthDetailViewController : UIViewController
 
 ///用于判断是否是日考勤
 @property (strong, nonatomic)NSString *modelName;

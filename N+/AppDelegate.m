@@ -12,7 +12,7 @@
 
 #import "AAASearchTool.h"
 
-
+#import "AAATabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -27,6 +27,8 @@
     AAAWelcomeViewController *welcome = [[AAAWelcomeViewController alloc]init];
 
     self.window.rootViewController = welcome;
+//    AAATabBarController *tabBar = [[AAATabBarController alloc] init];
+//    self.window.rootViewController = tabBar;
     [self.window makeKeyAndVisible];
 
     [[AAALocateTool sharedAAALocateTool] getLocation];

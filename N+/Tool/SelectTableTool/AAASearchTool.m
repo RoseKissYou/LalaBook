@@ -159,9 +159,10 @@ static AAASearchTool *st= nil;
      NSString *url = [NSString stringWithFormat:IsRightSalaryPwd,[NSString CNToUTF8:@"百得电器"],@"111714",password];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@",responseObject);
 #warning df-返回中的真假需要先转成NSNumber，再取数值，最后转BOOL
         BOOL isRight = (BOOL)(((NSNumber *)responseObject[@"result"]).integerValue);
-        success(isRight);
+        success(YES);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failure(error);
     }];

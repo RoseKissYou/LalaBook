@@ -12,7 +12,8 @@
 
 #import "NSString+SubstringBySpace.h"
 
-@interface RewardTableViewController ()
+@interface RewardTableViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (assign,nonatomic) NSInteger count;
 

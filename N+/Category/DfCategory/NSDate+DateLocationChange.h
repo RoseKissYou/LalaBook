@@ -13,7 +13,11 @@
 + (NSString *)NSDate2FormatNSString:(NSDate *)date;
 ///按月查询->返回yyyyMM
 + (NSString *)NSDate2FormatNSStringByMonth:(NSDate *)date;
-///按年查询->返回yyyy
+///按年查询->返回yyyy年
 + (NSString *)NSDate2FormatNSStringByYear:(NSDate *)date;
 
+///日历用 ->返回yyyy
++ (NSString *)NSDate2StrByYear:(NSDate *)date;
+///日历用 ->返回MM月
++ (NSString *)NSDate2StrByMonth:(NSDate *)date;
 @end
