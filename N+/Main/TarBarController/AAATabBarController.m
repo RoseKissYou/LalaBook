@@ -15,7 +15,7 @@
 #import "AAAHouseTableViewController.h"
 #import "AAASettingViewController.h"
 
-#import "RDVTabBarItem.h"
+
 @interface AAATabBarController ()
 
 @end
@@ -54,25 +54,8 @@
     settingNaviController.tabBarItem.image = [UIImage imageNamed:@"forth_selected"];
     
     [self setViewControllers:@[firstNaviController,checkNaviController,houseNaviController,settingNaviController]];
-    [self customizeTabBarForController];
-    // Do any additional setup after loading the view.
-}
-- (void)customizeTabBarForController {
-    UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
-    UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
-    NSArray *tabBarItemImages = @[@"first", @"second", @"third",@"forth"];
     
-    NSInteger index = 0;
-    for (RDVTabBarItem *item in [[self.tabBarController tabBar] items]) {
-        [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
-        UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",
-                                                      [tabBarItemImages objectAtIndex:index]]];
-        UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_normal",
-                                                        [tabBarItemImages objectAtIndex:index]]];
-        [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
-        
-        index++;
-    }
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

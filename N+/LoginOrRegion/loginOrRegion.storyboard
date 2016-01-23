@@ -39,8 +39,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vw-Va-9vu" userLabel="主体视图">
                                         <rect key="frame" x="0.0" y="140" width="320" height="408"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWx-VA-GGS" userLabel="按钮视图背景">
-                                                <rect key="frame" x="0.0" y="20" width="320" height="40"/>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jWx-VA-GGS" userLabel="按钮视图背景">
+                                                <rect key="frame" x="0.0" y="27" width="320" height="40"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daohangtiao" translatesAutoresizingMaskIntoConstraints="NO" id="jg8-CO-Uwn">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
@@ -65,8 +65,8 @@
                                                     <constraint firstAttribute="bottom" secondItem="6Y5-Fy-4Pp" secondAttribute="bottom" constant="5" id="wgM-Yo-0CF"/>
                                                 </constraints>
                                             </view>
-                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="We8-AU-3oo" userLabel="登录">
-                                                <rect key="frame" x="0.0" y="47" width="320" height="361"/>
+                                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="We8-AU-3oo" userLabel="登录">
+                                                <rect key="frame" x="0.0" y="54" width="320" height="361"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RegionAngel.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fdu-eE-5qt">
                                                         <rect key="frame" x="0.0" y="8" width="320" height="353"/>
@@ -174,41 +174,40 @@
                                                 <rect key="frame" x="0.0" y="47" width="320" height="361"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginAngel.png" translatesAutoresizingMaskIntoConstraints="NO" id="d6i-dg-KWh">
-                                                        <rect key="frame" x="0.0" y="8" width="320" height="353"/>
+                                                        <rect key="frame" x="0.0" y="15" width="320" height="346"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MpO-YX-YpL" userLabel="企业或非企业按钮">
-                                                        <rect key="frame" x="0.0" y="20" width="320" height="30"/>
+                                                        <rect key="frame" x="0.0" y="20" width="320" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTP-HZ-O6K">
-                                                                <rect key="frame" x="0.0" y="0.0" width="160" height="30"/>
-                                                                <state key="normal" title="企业员工登录">
-                                                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </state>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9E-Fs-R4v">
+                                                                <rect key="frame" x="0.0" y="0.0" width="160" height="40"/>
+                                                                <state key="normal" title="非企业员工注册"/>
                                                                 <connections>
-                                                                    <action selector="companyRegisterChooseButton:" destination="7E0-Pw-Bln" eventType="touchUpInside" id="v49-76-AUr"/>
+                                                                    <action selector="notCompanyMemberRegister:" destination="7E0-Pw-Bln" eventType="touchUpInside" id="vaw-0P-5eI"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fq2-kl-CpW">
-                                                                <rect key="frame" x="160" y="0.0" width="160" height="30"/>
-                                                                <state key="normal" title="非企业员工登录">
-                                                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </state>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJ9-a7-zb8">
+                                                                <rect key="frame" x="160" y="0.0" width="160" height="40"/>
+                                                                <state key="normal" title="企业员工注册"/>
                                                                 <connections>
-                                                                    <action selector="notCompanyMemberRegister:" destination="7E0-Pw-Bln" eventType="touchUpInside" id="4Xe-VH-ZsO"/>
+                                                                    <action selector="companyRegisterChooseButton:" destination="7E0-Pw-Bln" eventType="touchUpInside" id="cVd-LC-bKg"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                                         <constraints>
-                                                            <constraint firstItem="UTP-HZ-O6K" firstAttribute="top" secondItem="MpO-YX-YpL" secondAttribute="top" id="3cy-92-pa1"/>
-                                                            <constraint firstItem="fq2-kl-CpW" firstAttribute="leading" secondItem="UTP-HZ-O6K" secondAttribute="trailing" id="G2W-qQ-9X7"/>
-                                                            <constraint firstItem="UTP-HZ-O6K" firstAttribute="leading" secondItem="MpO-YX-YpL" secondAttribute="leading" id="Ggy-md-Zim"/>
-                                                            <constraint firstAttribute="bottom" secondItem="UTP-HZ-O6K" secondAttribute="bottom" id="IWB-G0-9wd"/>
-                                                            <constraint firstAttribute="bottom" secondItem="fq2-kl-CpW" secondAttribute="bottom" id="Kqh-ls-NKZ"/>
-                                                            <constraint firstAttribute="height" constant="30" id="OMH-J6-7h9"/>
-                                                            <constraint firstItem="fq2-kl-CpW" firstAttribute="width" secondItem="UTP-HZ-O6K" secondAttribute="width" id="TVS-00-gQa"/>
-                                                            <constraint firstAttribute="trailing" secondItem="fq2-kl-CpW" secondAttribute="trailing" id="cyG-Vr-zRb"/>
-                                                            <constraint firstItem="fq2-kl-CpW" firstAttribute="top" secondItem="MpO-YX-YpL" secondAttribute="top" id="gwq-ho-2eZ"/>
+                                                            <constraint firstAttribute="bottom" secondItem="S9E-Fs-R4v" secondAttribute="bottom" id="3QP-LT-18A"/>
+                                                            <constraint firstItem="S9E-Fs-R4v" firstAttribute="leading" secondItem="MpO-YX-YpL" secondAttribute="leading" id="7Nr-Xc-GBZ"/>
+                                                            <constraint firstItem="S9E-Fs-R4v" firstAttribute="top" secondItem="MpO-YX-YpL" secondAttribute="top" id="Dgu-4j-KB1"/>
+                                                            <constraint firstAttribute="bottom" secondItem="CJ9-a7-zb8" secondAttribute="bottom" id="HCa-GU-EEo"/>
+                                                            <constraint firstAttribute="height" constant="40" id="OMH-J6-7h9"/>
+                                                            <constraint firstItem="S9E-Fs-R4v" firstAttribute="top" secondItem="MpO-YX-YpL" secondAttribute="top" id="ONE-4i-jvC"/>
+                                                            <constraint firstAttribute="bottom" secondItem="S9E-Fs-R4v" secondAttribute="bottom" id="OXK-Uf-Lfy"/>
+                                                            <constraint firstItem="S9E-Fs-R4v" firstAttribute="leading" secondItem="MpO-YX-YpL" secondAttribute="leading" id="Uim-pk-PuZ"/>
+                                                            <constraint firstItem="CJ9-a7-zb8" firstAttribute="width" secondItem="S9E-Fs-R4v" secondAttribute="width" id="g2I-hA-c4k"/>
+                                                            <constraint firstItem="CJ9-a7-zb8" firstAttribute="leading" secondItem="S9E-Fs-R4v" secondAttribute="trailing" id="hXC-5n-anJ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="CJ9-a7-zb8" secondAttribute="trailing" id="xEo-AY-zAT"/>
+                                                            <constraint firstItem="CJ9-a7-zb8" firstAttribute="top" secondItem="MpO-YX-YpL" secondAttribute="top" id="yK2-Iy-HKb"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6v-Zn-F5P" userLabel="企业注册">
@@ -388,7 +387,7 @@
                                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="0.0" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="J6v-Zn-F5P" secondAttribute="bottom" id="03G-g5-YdR"/>
-                                                    <constraint firstItem="d6i-dg-KWh" firstAttribute="top" secondItem="NFm-7C-j9x" secondAttribute="top" constant="8" id="7HF-Ul-gN9"/>
+                                                    <constraint firstItem="d6i-dg-KWh" firstAttribute="top" secondItem="NFm-7C-j9x" secondAttribute="top" constant="15" id="7HF-Ul-gN9"/>
                                                     <constraint firstAttribute="trailing" secondItem="d6i-dg-KWh" secondAttribute="trailing" id="7Tl-IF-P3k"/>
                                                     <constraint firstAttribute="trailing" secondItem="MpO-YX-YpL" secondAttribute="trailing" id="F8b-Ni-a2I"/>
                                                     <constraint firstAttribute="trailing" secondItem="J6v-Zn-F5P" secondAttribute="trailing" constant="20" id="G0S-B9-Lla"/>
@@ -406,7 +405,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0U-XC-qXb">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="68"/>
                                                         <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
-                                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-8"/>
+                                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-25"/>
                                                         <state key="normal" title="登录">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -417,7 +416,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5t4-Pc-Kve">
                                                         <rect key="frame" x="160" y="0.0" width="160" height="68"/>
                                                         <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
-                                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-8"/>
+                                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-25"/>
                                                         <state key="normal" title="新用户注册">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -483,8 +482,8 @@
                     <navigationItem key="navigationItem" id="Dff-cq-9m6"/>
                     <connections>
                         <outlet property="chooseCompanyOrNotTopLayout" destination="pD2-ko-Kvb" id="q6a-yV-7hm"/>
-                        <outlet property="clickCompanyRegisterButton" destination="UTP-HZ-O6K" id="6Ei-bN-Gx9"/>
-                        <outlet property="clickNotCompanyRegisterButton" destination="fq2-kl-CpW" id="Q8C-6P-013"/>
+                        <outlet property="clickCompanyRegisterButton" destination="CJ9-a7-zb8" id="b1r-5C-QqS"/>
+                        <outlet property="clickNotCompanyRegisterButton" destination="S9E-Fs-R4v" id="lYg-X0-u4W"/>
                         <outlet property="companyNameView" destination="3Pi-oE-2gZ" id="ZW8-98-w0G"/>
                         <outlet property="companyNameViewHeightLayout" destination="Bi6-LZ-rWk" id="aoc-Ub-Rah"/>
                         <outlet property="companyRegisterButtonView" destination="WeE-jL-czE" id="UaM-xY-k2u"/>
@@ -508,7 +507,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEh-QF-dpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1601" y="273"/>
+            <point key="canvasLocation" x="1710" y="271"/>
         </scene>
     </scenes>
     <resources>

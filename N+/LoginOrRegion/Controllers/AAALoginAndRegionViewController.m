@@ -67,6 +67,7 @@ static NSInteger bossOriginalLayout = 10;
 @property (weak, nonatomic) IBOutlet UIButton *clickCompanyRegisterButton;
 @property (weak, nonatomic) IBOutlet UIButton *clickNotCompanyRegisterButton;
 
+
 @end
 
 @implementation AAALoginAndRegionViewController
@@ -90,9 +91,9 @@ static NSInteger bossOriginalLayout = 10;
 - (IBAction)chooseRegion:(UIButton *)sender {
     self.loginView.hidden = YES;
     self.regionView.hidden = NO;
-    //改变企业注册按钮的颜色
-    [self.clickCompanyRegisterButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [self.clickNotCompanyRegisterButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    
+     [self changeToCompanyMemberRegister];
+    
 }
 #pragma mark -return按钮设置
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
@@ -393,9 +394,13 @@ static NSInteger bossOriginalLayout = 10;
 #pragma mark - 企业或非企业员工
 - (IBAction)companyRegisterChooseButton:(UIButton *)sender {
     //改变两个按钮的颜色状态
-    [self.clickNotCompanyRegisterButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    [self.clickCompanyRegisterButton setTitle:@"输入企业用户信息" forState:UIControlStateNormal];
-    [self.clickCompanyRegisterButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal ];
+    [self changeToCompanyMemberRegister];
+}
+- (void) changeToCompanyMemberRegister
+{
+    [self.clickCompanyRegisterButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    //    [self.clickNotCompanyRegisterButton setTitle:@"输入非企业用户信息" forState:UIControlStateNormal];
+    [self.clickNotCompanyRegisterButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal ];
     //
     self.companyNameView.hidden = NO;
     self.companyNameViewHeightLayout.constant = 50;
@@ -413,9 +418,9 @@ static NSInteger bossOriginalLayout = 10;
 //非企业员工注册
 - (IBAction)notCompanyMemberRegister:(UIButton *)sender {
     //改变两个按钮的颜色状态
-    [self.clickCompanyRegisterButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    [self.clickNotCompanyRegisterButton setTitle:@"输入非企业用户信息" forState:UIControlStateNormal];
-    [self.clickNotCompanyRegisterButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal ];
+   [self.clickCompanyRegisterButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+//    [self.clickNotCompanyRegisterButton setTitle:@"输入非企业用户信息" forState:UIControlStateNormal];
+   [self.clickNotCompanyRegisterButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal ];
     //隐藏公司名称view
     self.companyNameView.hidden = YES;
     self.companyNameViewHeightLayout.constant = 0;

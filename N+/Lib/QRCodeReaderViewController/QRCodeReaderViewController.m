@@ -58,11 +58,11 @@
 @implementation QRCodeReaderViewController
 
 - (id)init
-{
+{if ((self = [super init])) {
     NSString * wavPath = [[NSBundle mainBundle] pathForResource:@"beep" ofType:@"wav"];
     NSData* data = [[NSData alloc] initWithContentsOfFile:wavPath];
     _beepPlayer = [[AVAudioPlayer alloc] initWithData:data error:nil];
-    
+}
     return [self initWithCancelButtonTitle:NSLocalizedString(@"Cancel", @"Cancel")];
 }
 

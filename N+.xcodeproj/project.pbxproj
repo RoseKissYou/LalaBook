@@ -157,9 +157,7 @@
 		68FC5E431C4E1EEE0021F396 /* LeaveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FC5E421C4E1EEE0021F396 /* LeaveTableViewController.m */; };
 		68FC5E4B1C4E396E0021F396 /* NSString+SubstringBySpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FC5E4A1C4E396E0021F396 /* NSString+SubstringBySpace.m */; };
 		68FCA2631C4E58B500DAAC9D /* RewardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FCA2621C4E58B500DAAC9D /* RewardTableViewController.m */; };
-		7479A6331C51C93C00E6DD47 /* AAASettingNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7479A6321C51C93C00E6DD47 /* AAASettingNavigationController.m */; };
 		7479A6371C51D05B00E6DD47 /* AAATabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7479A6361C51D05B00E6DD47 /* AAATabBarController.m */; };
-		7479A63A1C51DB0100E6DD47 /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7479A6391C51DB0100E6DD47 /* RDVTabBarItem.m */; };
 		7479A67D1C51F37E00E6DD47 /* first_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7479A6651C51F37E00E6DD47 /* first_normal.png */; };
 		7479A67E1C51F37E00E6DD47 /* first_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7479A6661C51F37E00E6DD47 /* first_normal@2x.png */; };
 		7479A67F1C51F37E00E6DD47 /* first_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 7479A6671C51F37E00E6DD47 /* first_selected.png */; };
@@ -201,6 +199,9 @@
 		74AA7AB11C46610D0097859B /* NSDate+DateLocationChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AA7AAB1C46610D0097859B /* NSDate+DateLocationChange.m */; };
 		74AA7AB21C46610D0097859B /* NSDictionary+In2ArrayOutDic.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AA7AAD1C46610D0097859B /* NSDictionary+In2ArrayOutDic.m */; };
 		74AA7AB31C46610D0097859B /* NSString+CN2UTF8.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AA7AAF1C46610D0097859B /* NSString+CN2UTF8.m */; };
+		74D53A0C1C5319A50082CD2B /* AAASendBossViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D53A0A1C5319A50082CD2B /* AAASendBossViewController.m */; };
+		74D53A0D1C5319A50082CD2B /* AAASendBossViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74D53A0B1C5319A50082CD2B /* AAASendBossViewController.xib */; };
+		74D53A131C5354EE0082CD2B /* AAAManagerEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D53A121C5354EE0082CD2B /* AAAManagerEmailViewController.m */; };
 		74F8BD261C50B41B00B5DDEB /* AAAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F8BD1C1C50B41B00B5DDEB /* AAAHomeViewController.m */; };
 		74F8BD271C50B41B00B5DDEB /* AAASendMiController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F8BD1E1C50B41B00B5DDEB /* AAASendMiController.m */; };
 		74F8BD281C50B41B00B5DDEB /* first.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F8BD1F1C50B41B00B5DDEB /* first.storyboard */; };
@@ -436,12 +437,8 @@
 		68FCA2611C4E58B500DAAC9D /* RewardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardTableViewController.h; sourceTree = "<group>"; };
 		68FCA2621C4E58B500DAAC9D /* RewardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardTableViewController.m; sourceTree = "<group>"; };
 		6BDAA00CA8655EAD5B7A115B /* Pods-N+.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-N+.debug.xcconfig"; path = "Pods/Target Support Files/Pods-N+/Pods-N+.debug.xcconfig"; sourceTree = "<group>"; };
-		7479A6311C51C93C00E6DD47 /* AAASettingNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAASettingNavigationController.h; sourceTree = "<group>"; };
-		7479A6321C51C93C00E6DD47 /* AAASettingNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAASettingNavigationController.m; sourceTree = "<group>"; };
 		7479A6351C51D05B00E6DD47 /* AAATabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAATabBarController.h; sourceTree = "<group>"; };
 		7479A6361C51D05B00E6DD47 /* AAATabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAATabBarController.m; sourceTree = "<group>"; };
-		7479A6381C51DB0100E6DD47 /* RDVTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarItem.h; sourceTree = "<group>"; };
-		7479A6391C51DB0100E6DD47 /* RDVTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBarItem.m; sourceTree = "<group>"; };
 		7479A6651C51F37E00E6DD47 /* first_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first_normal.png; sourceTree = "<group>"; };
 		7479A6661C51F37E00E6DD47 /* first_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first_normal@2x.png"; sourceTree = "<group>"; };
 		7479A6671C51F37E00E6DD47 /* first_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first_selected.png; sourceTree = "<group>"; };
@@ -497,6 +494,11 @@
 		74AA7AAD1C46610D0097859B /* NSDictionary+In2ArrayOutDic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+In2ArrayOutDic.m"; sourceTree = "<group>"; };
 		74AA7AAE1C46610D0097859B /* NSString+CN2UTF8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CN2UTF8.h"; sourceTree = "<group>"; };
 		74AA7AAF1C46610D0097859B /* NSString+CN2UTF8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CN2UTF8.m"; sourceTree = "<group>"; };
+		74D53A091C5319A50082CD2B /* AAASendBossViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAASendBossViewController.h; sourceTree = "<group>"; };
+		74D53A0A1C5319A50082CD2B /* AAASendBossViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAASendBossViewController.m; sourceTree = "<group>"; };
+		74D53A0B1C5319A50082CD2B /* AAASendBossViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AAASendBossViewController.xib; sourceTree = "<group>"; };
+		74D53A111C5354EE0082CD2B /* AAAManagerEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAAManagerEmailViewController.h; sourceTree = "<group>"; };
+		74D53A121C5354EE0082CD2B /* AAAManagerEmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAAManagerEmailViewController.m; sourceTree = "<group>"; };
 		74F8BD1B1C50B41B00B5DDEB /* AAAHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAAHomeViewController.h; sourceTree = "<group>"; };
 		74F8BD1C1C50B41B00B5DDEB /* AAAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAAHomeViewController.m; sourceTree = "<group>"; };
 		74F8BD1D1C50B41B00B5DDEB /* AAASendMiController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAASendMiController.h; sourceTree = "<group>"; };
@@ -1199,8 +1201,6 @@
 		7479A6341C51D01A00E6DD47 /* TarBarController */ = {
 			isa = PBXGroup;
 			children = (
-				7479A6381C51DB0100E6DD47 /* RDVTabBarItem.h */,
-				7479A6391C51DB0100E6DD47 /* RDVTabBarItem.m */,
 				7479A6351C51D05B00E6DD47 /* AAATabBarController.h */,
 				7479A6361C51D05B00E6DD47 /* AAATabBarController.m */,
 			);
@@ -1387,6 +1387,11 @@
 				74F8BD1C1C50B41B00B5DDEB /* AAAHomeViewController.m */,
 				74F8BD1D1C50B41B00B5DDEB /* AAASendMiController.h */,
 				74F8BD1E1C50B41B00B5DDEB /* AAASendMiController.m */,
+				74D53A091C5319A50082CD2B /* AAASendBossViewController.h */,
+				74D53A0A1C5319A50082CD2B /* AAASendBossViewController.m */,
+				74D53A0B1C5319A50082CD2B /* AAASendBossViewController.xib */,
+				74D53A111C5354EE0082CD2B /* AAAManagerEmailViewController.h */,
+				74D53A121C5354EE0082CD2B /* AAAManagerEmailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1414,8 +1419,6 @@
 			children = (
 				74F8BD2F1C50B91600B5DDEB /* AAAFirstNavigationController.h */,
 				74F8BD301C50B91600B5DDEB /* AAAFirstNavigationController.m */,
-				7479A6311C51C93C00E6DD47 /* AAASettingNavigationController.h */,
-				7479A6321C51C93C00E6DD47 /* AAASettingNavigationController.m */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -1547,6 +1550,7 @@
 				685291941C4FB5CF00A78405 /* girl.png in Resources */,
 				0C6B2AAB1C434AC900F0D866 /* LaunchScreen.storyboard in Resources */,
 				685291D31C4FB5D600A78405 /* 2.jpg in Resources */,
+				74D53A0D1C5319A50082CD2B /* AAASendBossViewController.xib in Resources */,
 				685291961C4FB5CF00A78405 /* headLogin.jpg in Resources */,
 				685291AE1C4FB5CF00A78405 /* sun.png in Resources */,
 				6852918D1C4FB5CF00A78405 /* cloudyBackground.png in Resources */,
@@ -1684,6 +1688,7 @@
 				0C5322561C45E3FE00872A1F /* AAAAlterPasswordViewController.m in Sources */,
 				749EE22E1C48F50600F533A0 /* AAALocateTool.m in Sources */,
 				68E2D9141C4DC7E70042BAEF /* SearchFilesViewController.m in Sources */,
+				74D53A131C5354EE0082CD2B /* AAAManagerEmailViewController.m in Sources */,
 				68E2D8D41C4DC7A60042BAEF /* ZCTradeView.m in Sources */,
 				685290641C4F3C4100A78405 /* MealRecondViewController.m in Sources */,
 				68E2D8F11C4DC7CD0042BAEF /* VCDataInfoResult.m in Sources */,
@@ -1722,7 +1727,6 @@
 				68E2D8C31C4DC7A60042BAEF /* JTCalendar.m in Sources */,
 				68FCA2631C4E58B500DAAC9D /* RewardTableViewController.m in Sources */,
 				68E2D8CC1C4DC7A60042BAEF /* JTCircleView.m in Sources */,
-				7479A63A1C51DB0100E6DD47 /* RDVTabBarItem.m in Sources */,
 				683FD7F01C508ACB00A64129 /* AAALoginResult.m in Sources */,
 				749EE18D1C48E6DD00F533A0 /* AAAHouseTableViewController.m in Sources */,
 				685291531C4FB50900A78405 /* AAALoginTool.m in Sources */,
@@ -1745,6 +1749,7 @@
 				6852914B1C4FB4E500A78405 /* QRCodeReaderView.m in Sources */,
 				0C6B2A9D1C434AC900F0D866 /* main.m in Sources */,
 				6852914C1C4FB4E500A78405 /* QRCodeReaderViewController.m in Sources */,
+				74D53A0C1C5319A50082CD2B /* AAASendBossViewController.m in Sources */,
 				68E2D8D31C4DC7A60042BAEF /* ZCTradeKeyboard.m in Sources */,
 				68E2D8CA1C4DC7A60042BAEF /* JTCalendarMonthWeekDaysView.m in Sources */,
 				68E2D8F21C4DC7CD0042BAEF /* VContentResult.m in Sources */,
@@ -1755,7 +1760,6 @@
 				68E2D8EB1C4DC7CD0042BAEF /* AAASearchParam.m in Sources */,
 				68E2D8D11C4DC7A60042BAEF /* ZCAudioTool.m in Sources */,
 				74AA7AB01C46610D0097859B /* ButtonWithModelName.m in Sources */,
-				7479A6331C51C93C00E6DD47 /* AAASettingNavigationController.m in Sources */,
 				6852914A1C4FB4E500A78405 /* QRCameraSwitchButton.m in Sources */,
 				68E2D8CB1C4DC7A60042BAEF /* JTCalendarWeekView.m in Sources */,
 				68E2D8C51C4DC7A60042BAEF /* JTCalendarContentView.m in Sources */,
@@ -1877,7 +1881,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/N+/Resource/JuheApisSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.benbenSmithLast.www;
+				PRODUCT_BUNDLE_IDENTIFIER = com.benbenSmithLastk.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1897,7 +1901,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/N+/Resource/JuheApisSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.benbenSmithLast.www;
+				PRODUCT_BUNDLE_IDENTIFIER = com.benbenSmithLastk.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
