@@ -7,16 +7,8 @@
 //
 
 #import "AAACheckViewController.h"
-#import "AAASignInViewController.h"
-#import "SearchContentViewController.h"
-#import "ButtonWithModelName.h"
 
-
-#import "AAASearchTool.h"
-#import "VContentResult.h"
-#import "VCDataInfoResult.h"
-
-#import "ZCTradeView.h"
+#import "checkHead.h"
 
 @interface AAACheckViewController ()
 
@@ -108,9 +100,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.headerView.layer.cornerRadius = 35.0;
-    self.headerView.layer.masksToBounds = YES;
-    
+    [UIView changeCorner:self.headerView radius:35.];
     
     [[AAASearchTool sharedAAASearchTool] getViewContent:nil Success:^(VContentResult *result) {
         self.result = result;
@@ -133,7 +123,7 @@
             for (UIView *subview in view.subviews) {
                 if ([subview isKindOfClass:[UILabel class]]) {
                     UILabel *label = (UILabel *)subview;
-                    label.text = re.ModuleName;
+                    label.text = [re.ModuleName stringByReplacingOccurrencesOfString:@"查询" withString:@""];
                 }
                 if ([subview isKindOfClass:[UIImageView class]]) {
                     UIImageView *imageView = (UIImageView *)subview;
@@ -150,17 +140,17 @@
         count++;
     }
 }
-
+#pragma mark -移动考勤
 - (IBAction)SignInByMove:(id)sender {
     AAASignInViewController *signInVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"signIn"];
     [self presentViewController:signInVC animated:YES completion:nil];
 }
-
+#pragma mark -查询功能
 - (IBAction)clickButton:(ButtonWithModelName *)btn {
 #warning df-当需要按钮对应的模块名字时，自定义按钮加上字符串属性
     if ([btn.modelName isEqualToString:@"日考勤查询"]) {
         SearchContentViewController *scVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"searchContent"];
-        scVC.modelName = btn.modelName;
+        scVC.modelName = @"日考勤查询";
         [self.navigationController pushViewController:scVC animated:YES];
     }else if ([btn.modelName isEqualToString:@"工资查询"]){//调用第三方控件
         ZCTradeView *view = [[ZCTradeView alloc]init];
@@ -170,9 +160,13 @@
             //请求验证
             [[AAASearchTool sharedAAASearchTool]salaryPwdIsRight:pwd Success:^(BOOL result) {
                 NSLog(@"%d",result);
+#warning df-测试
                 if (result) {
                     //进入工资查询界面
                     NSLog(@"进入工资查询界面");
+                    SalaryViewController *sVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"Salary"];
+                    self.navigationController.navigationBarHidden = NO;
+                    [self.navigationController pushViewController:sVC animated:YES];
                 }else{
                     //提示工资密码错误
                     NSLog(@"不能进入工资查询界面");
@@ -186,11 +180,34 @@
             }];
         };
     }else if ([btn.modelName isEqualToString:@"月考勤查询"]){
-        SearchContentViewController *scVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@""];
-        scVC.modelName = btn.modelName;
-        [self.navigationController pushViewController:scVC animated:YES];
+        MonthDetailViewController *mdVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"MonthDetail"];
+        mdVC.modelName = @"月考勤查询";
+        [self.navigationController pushViewController:mdVC animated:YES];
+    }else if ([btn.modelName isEqualToString:@"档案查询"]){
+        SearchFilesViewController *sfVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"SearchFile"];
+        [self.navigationController pushViewController:sfVC animated:YES];
+    }else if([btn.modelName isEqualToString:@"请假查询"]){
+        LeaveTableViewController *lTVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"Leave"];
+        [self.navigationController pushViewController:lTVC animated:YES];
+    }else if ([btn.modelName isEqualToString:@"奖惩查询"]){
+        RewardTableViewController *rTVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"Reward"];
+        [self.navigationController pushViewController:rTVC animated:YES];
+    }else if ([btn.modelName isEqualToString:@"订餐查询"]){
+        MealRecondViewController *mrVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"MealRecond"];
+    [self.navigationController pushViewController:mrVC animated:YES];
+    }else if ([btn.modelName isEqualToString:@"加班查询"]){
+        TimeAndConsViewController *tacVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"TimeAndCons"];
+        [self.navigationController pushViewController:tacVC animated:YES];
+    }else if ([btn.modelName isEqualToString:@"消费查询"]){
+        ConsumeViewController *cVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"Consume"];
+        [self.navigationController pushViewController:cVC animated:YES];
+    }else if ([btn.modelName isEqualToString:@"签卡查询"]){
+        ChargeCardViewController *ccVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"ChargeCard"];
+        [self.navigationController pushViewController:ccVC animated:YES];
+    }else if([btn.modelName isEqualToString:@"刷卡查询"]){
+        PunchCardViewController *pcVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"PunchCard"];
+        [self.navigationController pushViewController:pcVC animated:YES];
     }
-    
 }
 
 

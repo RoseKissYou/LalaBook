@@ -19,15 +19,14 @@
 ///返回查询界面功能按钮列表
 - (void)getViewContent:(AAASearchParam *)sp Success:(void(^)(VContentResult *result))success Failure:(void(^)(NSError *error))failure;
 
-///返回查询列表接口
-- (void)getTableViewContent:(AAASearchParam *)sp Success:(void(^)(TableViewContentResult *result))success Failure:(void(^)(NSError *error))failure;
+///返回查询数据明细接口1
+- (void)getPresentDailyData:(AAASearchParam *)sp Success:(void(^)(NSArray *result1,NSArray *result2))success Failure:(void(^)(NSError *error))failure;
 
-///返回查询数据明细接口
-- (void)getPresentDailyData:(AAASearchParam *)sp Success:(void(^)(NSArray *result))success Failure:(void(^)(NSError *error))failure;
-
-///点击日历上的时间，拿到当天的具体信息
-- (void)getDataFormClickCalendar:(NSDate *)date Success:(void(^)())success Failure:(void(^)(NSError *error))failure;
+///返回查询数据明细接口2
+- (void)getPresentDailyDataMore:(AAASearchParam *)sp Success:(void(^)(NSArray *result1,NSArray *result2))success Failure:(void(^)(NSError *error))failure;
 
 ///验证用户工资密码是否正确接口
 - (void)salaryPwdIsRight:(NSString *)password Success:(void(^)(BOOL result))success Failure:(void(^)(NSError *error))failure;
+
+
 @end

@@ -21,13 +21,7 @@
 #import "NSDate+DateLocationChange.h"
 
 @interface SearchContentViewController ()<UITableViewDataSource,UITableViewDelegate>
-{
-    NSMutableDictionary *_eventsByDate;
-    
-    NSDate *_todayDate;
-    
-    NSDate *_dateSelected;
-}
+
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *calenderView;
@@ -36,7 +30,8 @@
 
 @property (nonatomic,strong) NSArray *firstArr;
 @property (nonatomic,strong) NSArray *secondArr;
-
+@property (nonatomic,strong) AAASearchParam *param;
+@property (nonatomic,assign) BOOL isShowCircle;
 
 @end
 
@@ -45,66 +40,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     // Do any additional setup after loading the view.
     [self addCalendar];
     
-    AAASearchParam *param = [AAASearchParam sharedAAASearchParam];
-    param.tbname = self.modelName;
-#warning df-调试中
-    [[AAASearchTool sharedAAASearchTool] getTableViewContent:param Success:^(TableViewContentResult *result) {
-        NSArray *arr1 = result.datainfo;
-        [[AAASearchTool sharedAAASearchTool] getPresentDailyData:nil Success:^(NSArray *result) {
-            
-            NSArray *arr2 = result[0];
-            ////
-            NSMutableArray *firstArr = [NSMutableArray array];
-            for (TVCDataInfoResult *tvc in arr1) {
-                if (firstArr.count == 0) {
-                    [firstArr addObject:tvc.GroupName];
-                }else{
-                    if (![firstArr containsObject:tvc.GroupName]) {
-                        [firstArr addObject:tvc.GroupName];
-                    }
-                }
-            }
-            NSLog(@"%@",firstArr);
-            
-            NSMutableArray *secondArr = [NSMutableArray array];
-            for (NSString *str in firstArr) {
-                NSMutableArray *keyArr = [NSMutableArray array];
-                NSMutableArray *valueArr = [NSMutableArray array];
-                for (TVCDataInfoResult *tvc in arr1) {
-                    NSLog(@"%@",tvc.FieldName);
-                    for (PDDataInfoResult *pd in arr2) {
-                        NSLog(@"%@",pd.FieldName);
-                        if ([tvc.FieldName isEqualToString:pd.FieldName]&&[tvc.GroupName isEqualToString:str]) {
-                            [keyArr addObject:pd.FieldName];
-                            [valueArr addObject:pd.FieldValue];
-                        }
-                    }
-                }
-//                NSDictionary *dic = [[NSDictionary alloc]initWithObjects:valueArr forKeys:keyArr];
-//                [secondArr addObject:dic];
-                [secondArr addObject:keyArr];
-                [secondArr addObject:valueArr];
-            }
-            NSLog(@"%@",secondArr);
-            ////
-//            NSLog(@"%@",[NSDictionary In2ArrayOutDicWithOneArr:arr andTwoArr:result[0]]);
-//            self.dataDic = [NSDictionary In2ArrayOutDicWithOneArr:arr andTwoArr:result[0]];
-//            self.count = [self.dataDic allKeys].count;
-            self.firstArr = [firstArr copy];
-            self.secondArr = [secondArr copy];
-            self.count = self.firstArr.count;
-            [self.tableView reloadData];
-        } Failure:^(NSError *error) {
-            ;
-        }];
-    } Failure:^(NSError *error) {
-        ;
-    }];
+    //加入手势
+    [self addGestureRecognizer];
     
+    self.param = [AAASearchParam sharedAAASearchParam];
+    
+    self.param.tbname = @"日考勤查询";
+    self.param.autoid = [NSDate NSDate2FormatNSString:[NSDate date]];
+    
+    [self requestData];
+    
+}
+
+#pragma mark - addGestureRecognizer
+- (void)addGestureRecognizer{
+    UISwipeGestureRecognizer *sgr = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(didChangeModeTouch)];
+    [sgr setDirection:(UISwipeGestureRecognizerDirectionUp|UISwipeGestureRecognizerDirectionDown)];
+    [self.calenderView addGestureRecognizer:sgr];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -116,26 +72,54 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-
+///请求数据
+- (void)requestData{
+    [[AAASearchTool sharedAAASearchTool] getPresentDailyData:self.param Success:^(NSArray *result1, NSArray *result2) {
+        self.firstArr = result1;
+        self.secondArr = result2;
+        for (int i = 0; i<result2.count; i++) {
+            if (i>0) {
+                if (((NSArray *)result2[i-1]).count == ((NSArray *)result2[i]).count) {
+                    if ((((NSArray *)result2[i]).count) == 0) {
+                        self.isShowCircle = NO;
+                    }else{
+                        self.isShowCircle = YES;
+                    }
+                }else{
+                    self.isShowCircle = YES;
+                }
+            }
+        }
+        NSLog(@"%d",self.isShowCircle);
+        self.count = result1.count;
+        [self.tableView reloadData];
+    } Failure:^(NSError *error) {
+        ;
+    }];
+}
 
 #pragma mark - 以下为TableView相关板块
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
 #warning df-测试观察
-    NSLog(@"%@",self.modelName);
-    if (self.count == 0) {
+    NSLog(@"%ld",(long)self.count);
+    if (!self.isShowCircle) {
         return 0;
     }else{
-        return self.count + 1;
+        if (self.count == 0) {
+            return 0;
+        }else{
+            return self.count + 1;
+        }
     }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSLog(@"%ld",(unsigned long)self.count);
     
-    if (section == 0) {
-        return 1;
-    }else
-        return ((NSArray *)self.secondArr[section * 2 - 1]).count;
+        if (section == 0) {
+            return 1;
+        }else
+            return ((NSArray *)self.secondArr[section * 2 - 1]).count;
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -144,9 +128,12 @@
 
         if (indexPath.section == 0) {
             SpecialCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SCell" forIndexPath:indexPath];
-            cell.timeOne.text = @"10分钟";
-            cell.timeTwo.text = @"20分钟";
-            cell.timeThree.text = @"30分钟";
+            cell.timeOne.text = [NSString stringWithFormat:@"%g",((NSNumber *)secondArr[5][1]).doubleValue];
+
+            cell.timeTwo.text = [NSString stringWithFormat:@"%g",((NSNumber *)secondArr[5][2]).doubleValue];
+
+            cell.timeThree.text = [NSString stringWithFormat:@"%g",((NSNumber *)secondArr[5][3]).doubleValue];
+
             return cell;
         }else{
             CommonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CCell" forIndexPath:indexPath];
@@ -156,6 +143,7 @@
             cell.valueLabel.text = arr2[indexPath.row];
             return cell;
         }
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -165,204 +153,108 @@
     return 44;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 35.;
+}
 
-
-
-
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 1.;
+}
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return @"考勤记录";
+    }else
+        return self.firstArr[section - 1];
+}
 
 #pragma mark - 以下为日历处理板块
 
 - (void)addCalendar{
-    _calendarManager = [JTCalendarManager new];
-    _calendarManager.delegate = self;
+    self.calendar = [JTCalendar new];
     
-    // Generate random events sort by date using a dateformatter for the demonstration
-//    [self createRandomEvents];
+    {
+        self.calendar.calendarAppearance.calendar.firstWeekday = 2; // Sunday == 1, Saturday == 7
+        self.calendar.calendarAppearance.dayCircleRatio = 9. / 10.;
+        self.calendar.calendarAppearance.ratioContentMenu = 1.;
+    }
     
-    // Create a min and max date for limit the calendar, optional
-    _todayDate = [NSDate date];
+    [self.calendar setMenuMonthsView:self.calendarMenuView];
+    [self.calendar setContentView:self.calendarContentView];
+    [self.calendar setDataSource:self];
     
-    [_calendarManager setMenuView:_calendarMenuView];
-    [_calendarManager setContentView:_calendarContentView];
-    [_calendarManager setDate:_todayDate];
+    self.calendar.calendarAppearance.isWeekMode = YES;
+    [self changeCalendarMode:0];
+    
 }
 
-
-- (IBAction)up:(UISwipeGestureRecognizer *)sender {
-    _calendarManager.settings.weekModeEnabled = YES;
-    [_calendarManager reload];
-
-    [UIView animateWithDuration:0.25 animations:^{
-        self.calendarContentViewHeight.constant = 60;
-        [self.view layoutIfNeeded];
-    }];
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.calenderView.hidden = NO;
+    [self.calendar reloadData]; // Must be call in viewDidAppear
 }
 
-- (IBAction)down:(id)sender {
-    _calendarManager.settings.weekModeEnabled = NO;
-    [_calendarManager reload];
-    
-    [UIView animateWithDuration:0.25 animations:^{
-        self.calendarContentViewHeight.constant = 210;
-        [self.view layoutIfNeeded];
-    }];
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.calenderView.hidden = YES;
 }
 
 #pragma mark - Buttons callback
 
+- (IBAction)didGoTodayTouch
+{
+    [self.calendar setCurrentDate:[NSDate date]];
+}
+
 - (IBAction)didChangeModeTouch
 {
-    _calendarManager.settings.weekModeEnabled = !_calendarManager.settings.weekModeEnabled;
-    [_calendarManager reload];
+    self.calendar.calendarAppearance.isWeekMode = !self.calendar.calendarAppearance.isWeekMode;
     
-    CGFloat newHeight = 300;
-    if(_calendarManager.settings.weekModeEnabled){
-        newHeight = 85.;
-    }
-    
-    self.calendarContentViewHeight.constant = newHeight;
-    [self.view layoutIfNeeded];
+    [self changeCalendarMode:.5];
 }
 
-#pragma mark - CalendarManager delegate
+#pragma mark - JTCalendarDataSource
 
-// Exemple of implementation of prepareDayView method
-// Used to customize the appearance of dayView
-- (void)calendar:(JTCalendarManager *)calendar prepareDayView:(JTCalendarDayView *)dayView
+- (void)calendarDidDateSelected:(JTCalendar *)calendar date:(NSDate *)date
 {
-    // Today
-    if([_calendarManager.dateHelper date:[NSDate date] isTheSameDayThan:dayView.date]){
-        dayView.circleView.hidden = NO;
-        dayView.circleView.backgroundColor = [UIColor blueColor];
-        dayView.dotView.backgroundColor = [UIColor whiteColor];
-        dayView.textLabel.textColor = [UIColor whiteColor];
-    }
-    // Selected date
-    else if(_dateSelected && [_calendarManager.dateHelper date:_dateSelected isTheSameDayThan:dayView.date]){
-        dayView.circleView.hidden = NO;
-        dayView.circleView.backgroundColor = [UIColor redColor];
-        dayView.dotView.backgroundColor = [UIColor whiteColor];
-        dayView.textLabel.textColor = [UIColor whiteColor];
-    }
-    // Other month
-    else if(![_calendarManager.dateHelper date:_calendarContentView.date isTheSameMonthThan:dayView.date]){
-        dayView.circleView.hidden = YES;
-        dayView.dotView.backgroundColor = [UIColor redColor];
-        dayView.textLabel.textColor = [UIColor lightGrayColor];
-    }
-    // Another day of the current month
-    else{
-        dayView.circleView.hidden = YES;
-        dayView.dotView.backgroundColor = [UIColor redColor];
-        dayView.textLabel.textColor = [UIColor blackColor];
-    }
     
-    if([self haveEventForDay:dayView.date]){
-        dayView.dotView.hidden = YES;
-    }
-    else{
-        dayView.dotView.hidden = YES;
-    }
+    NSLog(@"%@",date);
+    NSLog(@"%@",[NSDate NSDate2FormatNSString:date]);
+    self.param.autoid = [NSDate NSDate2FormatNSString:date];
+    [self requestData];
 }
 
-- (void)calendar:(JTCalendarManager *)calendar didTouchDayView:(JTCalendarDayView *)dayView
-{
-    _dateSelected = dayView.date;
-    
-    // Animation for the circleView
-    dayView.circleView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.1, 0.1);
-    [UIView transitionWithView:dayView
-                      duration:.3
-                       options:0
-                    animations:^{
-                        dayView.circleView.transform = CGAffineTransformIdentity;
-                        [_calendarManager reload];
-                    } completion:nil];
-    
-    
-    // Load the previous or next page if touch a day from another month
-    
-    if(![_calendarManager.dateHelper date:_calendarContentView.date isTheSameMonthThan:dayView.date]){
-        if([_calendarContentView.date compare:dayView.date] == NSOrderedAscending){
-            [_calendarContentView loadNextPageWithAnimation];
-        }
-        else{
-            [_calendarContentView loadPreviousPageWithAnimation];
-        }
-    }
-}
-
-#pragma mark - Views customization
-- (void)calendar:(JTCalendarManager *)calendar prepareMenuItemView:(UILabel *)menuItemView date:(NSDate *)date
-{
-    static NSDateFormatter *dateFormatter;
-    if(!dateFormatter){
-        dateFormatter = [NSDateFormatter new];
-        dateFormatter.dateFormat = @"yyyy年MM月";
-        
-        dateFormatter.locale = _calendarManager.dateHelper.calendar.locale;
-        dateFormatter.timeZone = _calendarManager.dateHelper.calendar.timeZone;
-    }
-    
-    menuItemView.text = [dateFormatter stringFromDate:date];
-}
-
-#pragma mark - Fake data
-
-
-// Used only to have a key for _eventsByDate
-- (NSDateFormatter *)dateFormatter
-{
-    static NSDateFormatter *dateFormatter;
-    if(!dateFormatter){
-        dateFormatter = [NSDateFormatter new];
-        dateFormatter.dateFormat = @"dd-MM-yyyy";
-    }
-    
-    return dateFormatter;
-}
-
-- (BOOL)haveEventForDay:(NSDate *)date
-{
-    NSString *key = [[self dateFormatter] stringFromDate:date];
-    
-    NSArray *arr = _eventsByDate[key];
-    
-    
-    if(arr && (arr.count) > 0){
-        return YES;
-    }
-    
+- (BOOL)calendarHaveEvent:(JTCalendar *)calendar date:(NSDate *)date{
     return NO;
-    
 }
 
-- (void)createRandomEvents
+#pragma mark - 改变日历模式调用
+
+- (void)changeCalendarMode:(CGFloat)time
 {
-    _eventsByDate = [NSMutableDictionary new];
-    
-    for(int i = 0; i < 30; ++i){
-        // Generate 30 random dates between now and 60 days later
-        NSDate *randomDate = [NSDate dateWithTimeInterval:(rand() % (3600 * 24 * 60)) sinceDate:[NSDate date]];
-        
-        // Use the date as key for eventsByDate
-        NSString *key = [[self dateFormatter] stringFromDate:randomDate];
-        
-        if(!_eventsByDate[key]){
-            _eventsByDate[key] = [NSMutableArray new];
-        }
-        
-        [_eventsByDate[key] addObject:randomDate];
+    CGFloat newHeight = 210;
+    if(self.calendar.calendarAppearance.isWeekMode){
+        newHeight = 60.;
     }
+    
+    [UIView animateWithDuration:time
+                     animations:^{
+                         self.calendarContentViewHeight.constant = newHeight;
+                         [self.view layoutIfNeeded];
+                     }];
+    
+    [UIView animateWithDuration:time/2
+                     animations:^{
+                         self.calendarContentView.layer.opacity = 0;
+                     }
+                     completion:^(BOOL finished) {
+                         [self.calendar reloadAppearance];
+                         
+                         [UIView animateWithDuration:time/2
+                                          animations:^{
+                                              self.calendarContentView.layer.opacity = 1;
+                                          }];
+                     }];
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

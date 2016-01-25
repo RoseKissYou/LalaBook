@@ -24,16 +24,16 @@
 
 
 - (IBAction)outToLogin:(UIButton *)sender {
-    [AAALoginTool loginOut:[AAALoginParam sharedAAALoginParam] Success:^(BOOL result) {
-        if (result) {
-            NSLog(@"更新成功");
-        }else{
-            NSLog(@"更新失败");
-        }
-        exit(0);
-    } Failure:^(NSError *error) {
-        NSLog(@"%@",error);
-    }];
+//    [AAALoginTool loginOut:[AAALoginParam sharedAAALoginParam] Success:^(BOOL result) {
+//        if (result) {
+//            NSLog(@"更新成功");
+//        }else{
+//            NSLog(@"更新失败");
+//        }
+//        exit(0);
+//    } Failure:^(NSError *error) {
+//        NSLog(@"%@",error);
+//    }];
 }
 
 - (void)viewDidLoad {

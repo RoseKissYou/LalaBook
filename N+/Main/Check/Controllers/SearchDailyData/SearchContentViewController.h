@@ -9,15 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "JTCalendar.h"
 
-@interface SearchContentViewController : UIViewController<JTCalendarDelegate>
+@interface SearchContentViewController : UIViewController<JTCalendarDataSource>
 
 ///日历以下
 @property (weak, nonatomic) IBOutlet JTCalendarMenuView *calendarMenuView;
-@property (weak, nonatomic) IBOutlet JTHorizontalCalendarView *calendarContentView;
-
-@property (strong, nonatomic) JTCalendarManager *calendarManager;
-
+@property (weak, nonatomic) IBOutlet JTCalendarContentView *calendarContentView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *calendarContentViewHeight;
+
+@property (strong, nonatomic) JTCalendar *calendar;
 //日历以上
 
 ///用于判断是否是日考勤
