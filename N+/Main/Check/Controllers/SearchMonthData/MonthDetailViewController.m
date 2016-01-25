@@ -64,9 +64,24 @@
     self.param.tbname = self.modelName;
     self.param.autoid = [NSDate NSDate2FormatNSStringByMonth:[NSDate date]];
     
+
+    
     [self requestData];
     
     [self setUpCalendar];
+    
+    [self setButtonSelect];
+}
+
+- (void)setButtonSelect{
+    NSInteger monthIndex = [[[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian] component:NSCalendarUnitMonth fromDate:[NSDate date]];
+    UIButton *btn = self.btnsArr[monthIndex - 1];
+    btn.selected = YES;
+    for (UIButton *button in self.btnsArr) {
+        if (button != btn) {
+            button.selected = NO;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -141,7 +156,7 @@
 - (void)back2ThisMonth{
     [self.dpView selectToday];
     NSDate *date = [NSDate date];
-    self.label.text = [[NSDate NSDate2StrByYear:date] stringByAppendingString:[NSDate NSDate2StrByMonth:date]];
+    self.label.text = [[NSDate NSDate2FormatNSStringByYear:date] stringByAppendingString:[NSDate NSDate2StrByMonth:date]];
     self.dpView.hidden = YES;
     self.btnView.hidden = YES;
     
@@ -153,6 +168,10 @@
             button.selected = NO;
         }
     }
+    self.currentYear = [NSDate NSDate2FormatNSStringByYear:date];
+    self.selectYear = [NSDate NSDate2StrByYear:date];
+    _indexMonth = index;
+    [self search];
 }
 
 - (void)search{
