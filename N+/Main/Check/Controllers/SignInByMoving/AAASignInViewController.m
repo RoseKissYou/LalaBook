@@ -47,15 +47,30 @@
    
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark -返回
 - (IBAction)back2CheckVC:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
+/*1.移动签到确认接口
+ 当点确认签到时，往服务器回传数据调用该接口，数据保存到云服务器，与HR服务器无关；
+ 接口格式：http://url/phonesign?userid=@userid&signaddr=@signaddr
+ @userid ： 当前登录的云账号
+ @signaddr ： 签到的位置地点
+ 返回：True 签到成功，False 签到失败；
+ 接口处理逻辑：
+ {
+ //直接调用语句插入记录
+ Insert into tsys_phonesign(userid,yymmdd,signtime,signaddr)
+ Valule(@userid,convert(varchar(10),getdate(),111),
+ convert(varchar(8),getdate(),8),@signaddr)
+ }
+ */
+#pragma mark -定位
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
     NSLog(@"%@",userLocation.location);
     [self.geocoder reverseGeocodeLocation:userLocation.location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
@@ -65,10 +80,20 @@
                 NSLog(@"详细信息:%@", placemark.addressDictionary);
                 NSLog(@"%@",placemark.name);
                 userLocation.title = placemark.name;
+                //取placemarks里面的最后一个定位值
+                
             }
         }
     }];
 }
+#pragma mark -确定签到
+- (IBAction)LocatedAndWriteButton:(UIButton *)sender {
+    //点击确定签到
+    NSLog(@"点击确定签到");
+}
+
+
+
 /*
  任务: 1 -> 上传
 #pragma mark - Navigation
