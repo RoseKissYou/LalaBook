@@ -13,7 +13,10 @@
 #import "AAASearchTool.h"
 
 #import "AAATabBarController.h"
+<<<<<<< HEAD
 #import "AAALoginAndRegionViewController.h"
+=======
+>>>>>>> origin/HYDeFeng
 @interface AppDelegate ()
 
 @end
@@ -24,6 +27,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+<<<<<<< HEAD
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"everLaunched"]) {
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"everLaunched"];
         
@@ -40,6 +44,14 @@
         AAALoginAndRegionViewController *chooseController = [loginStory instantiateViewControllerWithIdentifier:@"chooseNew"];
         self.window.rootViewController = chooseController;
     }
+=======
+    
+    AAAWelcomeViewController *welcome = [[AAAWelcomeViewController alloc]init];
+
+    self.window.rootViewController = welcome;
+//    AAATabBarController *tabBar = [[AAATabBarController alloc] init];
+//    self.window.rootViewController = tabBar;
+>>>>>>> origin/HYDeFeng
     [self.window makeKeyAndVisible];
     [[AAALocateTool sharedAAALocateTool] getLocation];
     return YES;

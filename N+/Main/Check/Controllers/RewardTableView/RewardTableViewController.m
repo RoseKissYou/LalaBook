@@ -12,9 +12,24 @@
 
 #import "NSString+SubstringBySpace.h"
 
+<<<<<<< HEAD
 #import "CDatePickerViewEx.h"
 #import "NSDate+DateLocationChange.h"
 
+=======
+<<<<<<< HEAD
+#import "CDatePickerViewEx.h"
+#import "NSDate+DateLocationChange.h"
+
+=======
+<<<<<<< HEAD
+#import "CDatePickerViewEx.h"
+#import "NSDate+DateLocationChange.h"
+
+=======
+>>>>>>> origin/HYDeFeng
+>>>>>>> origin/HYDeFeng
+>>>>>>> origin/HYDeFeng
 @interface RewardTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -52,9 +67,15 @@
 
     
     [self requestData];
+<<<<<<< HEAD
     
     [self setUpCalendar];
     
+=======
+    
+    [self setUpCalendar];
+    
+>>>>>>> origin/HYDeFeng
     [self setButtonSelect];
 }
 
@@ -113,6 +134,7 @@
     [btn2 addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
     [btn2 setTitle:@"确定" forState:UIControlStateNormal];
     [btnView addSubview:btn2];
+<<<<<<< HEAD
 }
 
 - (void)back2ThisMonth{
@@ -136,6 +158,31 @@
     [self search];
 }
 
+=======
+}
+
+- (void)back2ThisMonth{
+    [self.dpView selectToday];
+    NSDate *date = [NSDate date];
+    self.label.text = [[NSDate NSDate2FormatNSStringByYear:date] stringByAppendingString:[NSDate NSDate2StrByMonth:date]];
+    self.dpView.hidden = YES;
+    self.btnView.hidden = YES;
+    
+    NSInteger index = ((NSString *)((NSArray *)[[NSDate NSDate2StrByMonth:date] componentsSeparatedByString:@"月"])[0]).integerValue - 1;
+    UIButton *btn = self.btnsArr[index];
+    btn.selected = YES;
+    for (UIButton *button in self.btnsArr) {
+        if (button != btn) {
+            button.selected = NO;
+        }
+    }
+    self.currentYear = [NSDate NSDate2FormatNSStringByYear:date];
+    self.selectYear = [NSDate NSDate2StrByYear:date];
+    _indexMonth = index;
+    [self search];
+}
+
+>>>>>>> origin/HYDeFeng
 - (void)search{
     self.dpView.hidden = YES;
     self.btnView.hidden = self.dpView.hidden;

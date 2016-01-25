@@ -63,12 +63,26 @@
     
     self.param.tbname = self.modelName;
     self.param.autoid = [NSDate NSDate2FormatNSStringByMonth:[NSDate date]];
+<<<<<<< HEAD
+    
+
+=======
+>>>>>>> origin/HYDeFeng
+    
+
     
 
     
     [self requestData];
     
     [self setUpCalendar];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/HYDeFeng
+>>>>>>> origin/HYDeFeng
     
     [self setButtonSelect];
 }
@@ -82,6 +96,14 @@
             button.selected = NO;
         }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/HYDeFeng
+>>>>>>> origin/HYDeFeng
+>>>>>>> origin/HYDeFeng
 }
 
 - (void)didReceiveMemoryWarning {
@@ -156,7 +178,19 @@
 - (void)back2ThisMonth{
     [self.dpView selectToday];
     NSDate *date = [NSDate date];
+<<<<<<< HEAD
     self.label.text = [[NSDate NSDate2FormatNSStringByYear:date] stringByAppendingString:[NSDate NSDate2StrByMonth:date]];
+=======
+<<<<<<< HEAD
+    self.label.text = [[NSDate NSDate2FormatNSStringByYear:date] stringByAppendingString:[NSDate NSDate2StrByMonth:date]];
+=======
+<<<<<<< HEAD
+    self.label.text = [[NSDate NSDate2FormatNSStringByYear:date] stringByAppendingString:[NSDate NSDate2StrByMonth:date]];
+=======
+    self.label.text = [[NSDate NSDate2StrByYear:date] stringByAppendingString:[NSDate NSDate2StrByMonth:date]];
+>>>>>>> origin/HYDeFeng
+>>>>>>> origin/HYDeFeng
+>>>>>>> origin/HYDeFeng
     self.dpView.hidden = YES;
     self.btnView.hidden = YES;
     
@@ -168,10 +202,25 @@
             button.selected = NO;
         }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/HYDeFeng
+>>>>>>> origin/HYDeFeng
     self.currentYear = [NSDate NSDate2FormatNSStringByYear:date];
     self.selectYear = [NSDate NSDate2StrByYear:date];
     _indexMonth = index;
     [self search];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/HYDeFeng
+>>>>>>> origin/HYDeFeng
+>>>>>>> origin/HYDeFeng
 }
 
 - (void)search{
