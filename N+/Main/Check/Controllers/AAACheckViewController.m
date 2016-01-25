@@ -7,29 +7,8 @@
 //
 
 #import "AAACheckViewController.h"
-#import "AAASignInViewController.h"
-#import "SearchContentViewController.h"
-#import "ButtonWithModelName.h"
 
-
-#import "AAASearchTool.h"
-#import "VContentResult.h"
-#import "VCDataInfoResult.h"
-
-#import "ZCTradeView.h"
-
-#import "SearchFilesViewController.h"
-#import "MonthDetailViewController.h"
-#import "SalaryViewController.h"
-#import "LeaveTableViewController.h"
-#import "RewardTableViewController.h"
-#import "MealRecondViewController.h"
-#import "TimeAndConsViewController.h"
-#import "ConsumeViewController.h"
-#import "ChargeCardViewController.h"
-#import "PunchCardViewController.h"
-
-#import "UIView+becomeCornerView.h"
+#import "checkHead.h"
 
 @interface AAACheckViewController ()
 
@@ -161,12 +140,12 @@
         count++;
     }
 }
-
+#pragma mark -移动考勤
 - (IBAction)SignInByMove:(id)sender {
     AAASignInViewController *signInVC = [[UIStoryboard storyboardWithName:@"check" bundle:nil] instantiateViewControllerWithIdentifier:@"signIn"];
     [self presentViewController:signInVC animated:YES completion:nil];
 }
-
+#pragma mark -查询功能
 - (IBAction)clickButton:(ButtonWithModelName *)btn {
 #warning df-当需要按钮对应的模块名字时，自定义按钮加上字符串属性
     if ([btn.modelName isEqualToString:@"日考勤查询"]) {
@@ -181,6 +160,7 @@
             //请求验证
             [[AAASearchTool sharedAAASearchTool]salaryPwdIsRight:pwd Success:^(BOOL result) {
                 NSLog(@"%d",result);
+#warning df-测试
                 if (result) {
                     //进入工资查询界面
                     NSLog(@"进入工资查询界面");
