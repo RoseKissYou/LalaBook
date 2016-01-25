@@ -19,6 +19,11 @@
 ///手机号码
 @property (strong,nonatomic) NSString *telephone;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/HYDeFeng
 /*********************登录参数*********************/
 //云端用户名
 @property (strong, nonatomic) NSString *userNameInWeb;

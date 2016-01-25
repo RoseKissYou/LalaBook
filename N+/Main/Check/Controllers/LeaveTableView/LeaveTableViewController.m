@@ -12,6 +12,10 @@
 
 #import "NSString+SubstringBySpace.h"
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/HYDeFeng
 #import "NSDate+DateLocationChange.h"
 #import "CDatePickerViewEx.h"
 
@@ -33,6 +37,13 @@
 
 @property (nonatomic ,assign) NSInteger indexMonth;
 
+<<<<<<< HEAD
+=======
+=======
+@interface LeaveTableViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+>>>>>>> origin/HYDeFeng
+>>>>>>> origin/HYDeFeng
 
 @property (assign,nonatomic) NSInteger count;
 
@@ -52,12 +63,21 @@
     self.param.autoid = [NSDate NSDate2FormatNSStringByMonth:[NSDate date]];
     
     [self requestData];
+<<<<<<< HEAD
     
     [self setUpCalendar];
     
     [self setButtonSelect];
     
     
+=======
+    
+    [self setUpCalendar];
+    
+    [self setButtonSelect];
+    
+    
+>>>>>>> origin/HYDeFeng
 }
 
 - (void)setButtonSelect{
@@ -98,6 +118,7 @@
     self.dpView.backgroundColor = [UIColor colorWithRed:100/255. green:100/255. blue:100/255. alpha:0.9];
     [self.dpView selectToday];
     [self.view addSubview:self.dpView];
+<<<<<<< HEAD
     
     UIView *btnView = [[UIView alloc]initWithFrame:CGRectMake(self.dpView.frame.origin.x, self.dpView.frame.origin.y + self.dpView.frame.size.height, 270, 35)];
     self.btnView = btnView;
@@ -125,6 +146,35 @@
     self.dpView.hidden = YES;
     self.btnView.hidden = YES;
     
+=======
+    
+    UIView *btnView = [[UIView alloc]initWithFrame:CGRectMake(self.dpView.frame.origin.x, self.dpView.frame.origin.y + self.dpView.frame.size.height, 270, 35)];
+    self.btnView = btnView;
+    btnView.backgroundColor = [UIColor colorWithRed:100/255. green:100/255. blue:100/255. alpha:0.9];
+    self.btnView.hidden = self.dpView.hidden;
+    [self.view addSubview:btnView];
+    
+    CGFloat w = 270/2.;
+    CGFloat h = 35.;
+    
+    UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, w, h)];
+    [btn1 setTitle:@"本月" forState:UIControlStateNormal];
+    [btn1 addTarget:self action:@selector(back2ThisMonth) forControlEvents:UIControlEventTouchUpInside];
+    [btnView addSubview:btn1];
+    UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(w, 0, w, h)];
+    [btn2 addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
+    [btn2 setTitle:@"确定" forState:UIControlStateNormal];
+    [btnView addSubview:btn2];
+}
+
+- (void)back2ThisMonth{
+    [self.dpView selectToday];
+    NSDate *date = [NSDate date];
+    self.label.text = [[NSDate NSDate2FormatNSStringByYear:date] stringByAppendingString:[NSDate NSDate2StrByMonth:date]];
+    self.dpView.hidden = YES;
+    self.btnView.hidden = YES;
+    
+>>>>>>> origin/HYDeFeng
     NSInteger index = ((NSString *)((NSArray *)[[NSDate NSDate2StrByMonth:date] componentsSeparatedByString:@"月"])[0]).integerValue - 1;
     UIButton *btn = self.btnsArr[index];
     btn.selected = YES;

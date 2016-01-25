@@ -41,8 +41,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vw-Va-9vu" userLabel="主体视图">
                                         <rect key="frame" x="0.0" y="140" width="320" height="408"/>
                                         <subviews>
+<<<<<<< HEAD
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jWx-VA-GGS" userLabel="按钮视图背景">
                                                 <rect key="frame" x="0.0" y="27" width="320" height="40"/>
+=======
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWx-VA-GGS" userLabel="按钮视图背景">
+                                                <rect key="frame" x="0.0" y="20" width="320" height="40"/>
+>>>>>>> origin/HYDeFeng
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daohangtiao" translatesAutoresizingMaskIntoConstraints="NO" id="jg8-CO-Uwn">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
@@ -70,8 +75,13 @@
                                                     <constraint firstAttribute="bottom" secondItem="6Y5-Fy-4Pp" secondAttribute="bottom" constant="5" id="wgM-Yo-0CF"/>
                                                 </constraints>
                                             </view>
+<<<<<<< HEAD
                                             <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="We8-AU-3oo" userLabel="登录">
                                                 <rect key="frame" x="0.0" y="54" width="320" height="361"/>
+=======
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="We8-AU-3oo" userLabel="登录">
+                                                <rect key="frame" x="0.0" y="47" width="320" height="361"/>
+>>>>>>> origin/HYDeFeng
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RegionAngel.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fdu-eE-5qt">
                                                         <rect key="frame" x="0.0" y="8" width="320" height="353"/>
@@ -189,6 +199,7 @@
                                                 <rect key="frame" x="0.0" y="47" width="320" height="361"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginAngel.png" translatesAutoresizingMaskIntoConstraints="NO" id="d6i-dg-KWh">
+<<<<<<< HEAD
                                                         <rect key="frame" x="0.0" y="15" width="320" height="346"/>
                                                         <animations/>
                                                     </imageView>
@@ -230,6 +241,12 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6v-Zn-F5P" userLabel="企业注册">
+=======
+                                                        <rect key="frame" x="0.0" y="8" width="320" height="353"/>
+                                                        <animations/>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6v-Zn-F5P">
+>>>>>>> origin/HYDeFeng
                                                         <rect key="frame" x="20" y="40" width="280" height="321"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Pi-oE-2gZ" userLabel="公司名称和扫一扫">
@@ -379,6 +396,7 @@
                                                                     <action selector="regionToServer:" destination="7E0-Pw-Bln" eventType="touchUpInside" id="wgF-DD-WA7"/>
                                                                 </connections>
                                                             </button>
+<<<<<<< HEAD
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezR-6A-Yet" userLabel="非企业注册">
                                                                 <rect key="frame" x="20" y="256" width="240" height="35"/>
                                                                 <animations/>
@@ -393,12 +411,17 @@
                                                                     <action selector="notCompanyRegisterButton:" destination="7E0-Pw-Bln" eventType="touchUpInside" id="lpa-jL-gKO"/>
                                                                 </connections>
                                                             </button>
+=======
+>>>>>>> origin/HYDeFeng
                                                         </subviews>
                                                         <animations/>
                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.0" colorSpace="calibratedRGB"/>
                                                         <constraints>
+<<<<<<< HEAD
                                                             <constraint firstItem="ezR-6A-Yet" firstAttribute="leading" secondItem="J6v-Zn-F5P" secondAttribute="leading" constant="20" id="013-9b-Abf"/>
                                                             <constraint firstAttribute="bottom" secondItem="ezR-6A-Yet" secondAttribute="bottom" constant="30" id="1jy-Y7-bKk"/>
+=======
+>>>>>>> origin/HYDeFeng
                                                             <constraint firstItem="S3c-7l-elI" firstAttribute="top" secondItem="3Pi-oE-2gZ" secondAttribute="bottom" constant="10" id="6YT-X2-CUN"/>
                                                             <constraint firstItem="3Pi-oE-2gZ" firstAttribute="leading" secondItem="J6v-Zn-F5P" secondAttribute="leading" constant="5" id="9dm-iM-L8l"/>
                                                             <constraint firstItem="WeE-jL-czE" firstAttribute="centerX" secondItem="J6v-Zn-F5P" secondAttribute="centerX" id="CTC-3f-zfc"/>
@@ -411,7 +434,10 @@
                                                             <constraint firstAttribute="trailing" secondItem="SIt-ew-qZO" secondAttribute="trailing" constant="10" id="fqq-MY-8Na"/>
                                                             <constraint firstItem="SIt-ew-qZO" firstAttribute="leading" secondItem="J6v-Zn-F5P" secondAttribute="leading" constant="5" id="lAb-RW-WEx"/>
                                                             <constraint firstItem="S3c-7l-elI" firstAttribute="leading" secondItem="J6v-Zn-F5P" secondAttribute="leading" constant="5" id="nQJ-KQ-fM9"/>
+<<<<<<< HEAD
                                                             <constraint firstAttribute="trailing" secondItem="ezR-6A-Yet" secondAttribute="trailing" constant="20" id="nxm-kN-lwi"/>
+=======
+>>>>>>> origin/HYDeFeng
                                                             <constraint firstItem="3Pi-oE-2gZ" firstAttribute="top" secondItem="J6v-Zn-F5P" secondAttribute="top" constant="10" id="oLA-cd-3li"/>
                                                             <constraint firstItem="2ws-co-Z6O" firstAttribute="top" secondItem="S3c-7l-elI" secondAttribute="bottom" constant="10" id="qT7-Wo-oVm"/>
                                                             <constraint firstItem="2ws-co-Z6O" firstAttribute="leading" secondItem="J6v-Zn-F5P" secondAttribute="leading" constant="5" id="rht-g8-iyX"/>
@@ -423,6 +449,7 @@
                                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="0.0" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="J6v-Zn-F5P" secondAttribute="bottom" id="03G-g5-YdR"/>
+<<<<<<< HEAD
                                                     <constraint firstItem="d6i-dg-KWh" firstAttribute="top" secondItem="NFm-7C-j9x" secondAttribute="top" constant="15" id="7HF-Ul-gN9"/>
                                                     <constraint firstAttribute="trailing" secondItem="d6i-dg-KWh" secondAttribute="trailing" id="7Tl-IF-P3k"/>
                                                     <constraint firstAttribute="trailing" secondItem="MpO-YX-YpL" secondAttribute="trailing" id="F8b-Ni-a2I"/>
@@ -443,6 +470,24 @@
                                                         <animations/>
                                                         <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
                                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-25"/>
+=======
+                                                    <constraint firstItem="d6i-dg-KWh" firstAttribute="top" secondItem="NFm-7C-j9x" secondAttribute="top" constant="8" id="7HF-Ul-gN9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="d6i-dg-KWh" secondAttribute="trailing" id="7Tl-IF-P3k"/>
+                                                    <constraint firstAttribute="trailing" secondItem="J6v-Zn-F5P" secondAttribute="trailing" constant="20" id="G0S-B9-Lla"/>
+                                                    <constraint firstAttribute="bottom" secondItem="d6i-dg-KWh" secondAttribute="bottom" id="TGC-vW-lZT"/>
+                                                    <constraint firstItem="J6v-Zn-F5P" firstAttribute="top" secondItem="NFm-7C-j9x" secondAttribute="top" constant="40" id="amF-27-3La"/>
+                                                    <constraint firstItem="d6i-dg-KWh" firstAttribute="leading" secondItem="NFm-7C-j9x" secondAttribute="leading" id="bj5-BH-m5X"/>
+                                                    <constraint firstItem="J6v-Zn-F5P" firstAttribute="leading" secondItem="NFm-7C-j9x" secondAttribute="leading" constant="20" id="lg7-RF-z0D"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xu9-HI-zhd" userLabel="独立按钮视图">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0U-XC-qXb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="160" height="83"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
+>>>>>>> origin/HYDeFeng
                                                         <state key="normal" title="登录">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -451,10 +496,16 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5t4-Pc-Kve">
+<<<<<<< HEAD
                                                         <rect key="frame" x="160" y="0.0" width="160" height="68"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
                                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-25"/>
+=======
+                                                        <rect key="frame" x="160" y="0.0" width="160" height="83"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
+>>>>>>> origin/HYDeFeng
                                                         <state key="normal" title="新用户注册">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -477,12 +528,39 @@
                                                     <constraint firstItem="5t4-Pc-Kve" firstAttribute="height" secondItem="m0U-XC-qXb" secondAttribute="height" id="wTk-cB-Nqm"/>
                                                 </constraints>
                                             </view>
+<<<<<<< HEAD
+=======
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1K0-Pj-fr5">
+                                                <rect key="frame" x="170" y="378" width="150" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qw5-h9-NWH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                                        <animations/>
+                                                        <state key="normal" title="跳过注册,直接登陆"/>
+                                                        <connections>
+                                                            <action selector="LoginDirect:" destination="7E0-Pw-Bln" eventType="touchUpInside" id="mCf-9o-iQ0"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <animations/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="SJP-gm-V6N"/>
+                                                    <constraint firstAttribute="width" constant="150" id="hna-LN-SQR"/>
+                                                </constraints>
+                                            </view>
+>>>>>>> origin/HYDeFeng
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="Xu9-HI-zhd" firstAttribute="top" secondItem="9vw-Va-9vu" secondAttribute="top" id="1RI-w1-QdT"/>
+<<<<<<< HEAD
                                             <constraint firstAttribute="bottom" secondItem="Xu9-HI-zhd" secondAttribute="bottom" constant="340" id="5Px-wd-6LE"/>
+=======
+                                            <constraint firstAttribute="bottom" secondItem="1K0-Pj-fr5" secondAttribute="bottom" id="3P2-49-dWK"/>
+                                            <constraint firstAttribute="bottom" secondItem="Xu9-HI-zhd" secondAttribute="bottom" constant="325" id="5Px-wd-6LE"/>
+>>>>>>> origin/HYDeFeng
                                             <constraint firstItem="NFm-7C-j9x" firstAttribute="top" secondItem="9vw-Va-9vu" secondAttribute="top" constant="47" id="Fie-VT-Win"/>
                                             <constraint firstItem="jWx-VA-GGS" firstAttribute="top" secondItem="9vw-Va-9vu" secondAttribute="top" constant="20" id="Iwb-9I-c9V"/>
                                             <constraint firstItem="jWx-VA-GGS" firstAttribute="leading" secondItem="9vw-Va-9vu" secondAttribute="leading" id="LYE-xo-MTu"/>
@@ -496,6 +574,10 @@
                                             <constraint firstAttribute="trailing" secondItem="Xu9-HI-zhd" secondAttribute="trailing" id="r2J-f6-To8"/>
                                             <constraint firstAttribute="trailing" secondItem="jWx-VA-GGS" secondAttribute="trailing" id="uK5-Sg-1PD"/>
                                             <constraint firstAttribute="bottom" secondItem="NFm-7C-j9x" secondAttribute="bottom" id="uzL-Z5-iCE"/>
+<<<<<<< HEAD
+=======
+                                            <constraint firstAttribute="trailing" secondItem="1K0-Pj-fr5" secondAttribute="trailing" id="vko-AH-jym"/>
+>>>>>>> origin/HYDeFeng
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -523,17 +605,23 @@
                     </view>
                     <navigationItem key="navigationItem" id="Dff-cq-9m6"/>
                     <connections>
+<<<<<<< HEAD
                         <outlet property="chooseCompanyOrNotTopLayout" destination="pD2-ko-Kvb" id="q6a-yV-7hm"/>
                         <outlet property="clickCompanyRegisterButton" destination="CJ9-a7-zb8" id="b1r-5C-QqS"/>
                         <outlet property="clickNotCompanyRegisterButton" destination="S9E-Fs-R4v" id="lYg-X0-u4W"/>
                         <outlet property="companyNameView" destination="3Pi-oE-2gZ" id="ZW8-98-w0G"/>
                         <outlet property="companyNameViewHeightLayout" destination="Bi6-LZ-rWk" id="aoc-Ub-Rah"/>
                         <outlet property="companyRegisterButtonView" destination="WeE-jL-czE" id="UaM-xY-k2u"/>
+=======
+>>>>>>> origin/HYDeFeng
                         <outlet property="companyTopLayoutBoss" destination="oLA-cd-3li" id="0ve-N6-kmy"/>
                         <outlet property="corporationName" destination="oBe-g6-rjX" id="8cv-CA-xKr"/>
                         <outlet property="loginView" destination="We8-AU-3oo" id="B4f-I6-ShM"/>
                         <outlet property="logionReviseLayoutTop" destination="t7m-Nq-MFw" id="XDQ-Nm-FUc"/>
+<<<<<<< HEAD
                         <outlet property="notCompanyRegisterButtonView" destination="ezR-6A-Yet" id="d9f-Ga-HPj"/>
+=======
+>>>>>>> origin/HYDeFeng
                         <outlet property="passWordTextFiled" destination="5KY-ta-f9f" id="lxN-AQ-Zsh"/>
                         <outlet property="passwordHeightLayout" destination="8YM-1c-oFX" id="40j-8m-nhD"/>
                         <outlet property="regionBottomLayout" destination="XRV-sc-Z76" id="vXy-dO-VRD"/>
@@ -549,7 +637,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEh-QF-dpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="1710" y="271"/>
+=======
+            <point key="canvasLocation" x="1601" y="273"/>
+>>>>>>> origin/HYDeFeng
         </scene>
     </scenes>
     <resources>

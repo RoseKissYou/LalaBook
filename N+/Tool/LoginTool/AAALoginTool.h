@@ -34,13 +34,25 @@
 //修改用户登陆密码
 + (void)alertLoginPassword:(AAALoginParam *)lp Success:(void(^)(BOOL result))success Failure:(void(^)(NSError *error))failure;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/HYDeFeng
 /****************************暂时不用****************************/
 /**
  插入用户登录记录接口(登录正确后，调用)
  */
+<<<<<<< HEAD
 //+ (void)uploadTelephoneTypeAndAddr:(AAALoginParam *)lp Success:(void(^)(BOOL result))success Failure:(void(^)(NSError *error))failure;
 /**
  用户退出登录时调用的接口(记录退出时间，以及计算登陆时间)
  */
 //+ (void)loginOut:(AAALoginParam *)lp Success:(void(^)(BOOL result))success Failure:(void(^)(NSError *error))failure;
+=======
++ (void)uploadTelephoneTypeAndAddr:(AAALoginParam *)lp Success:(void(^)(BOOL result))success Failure:(void(^)(NSError *error))failure;
+/**
+ 用户退出登录时调用的接口(记录退出时间，以及计算登陆时间)
+ */
++ (void)loginOut:(AAALoginParam *)lp Success:(void(^)(BOOL result))success Failure:(void(^)(NSError *error))failure;
+>>>>>>> origin/HYDeFeng
 @end

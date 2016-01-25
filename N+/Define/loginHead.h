@@ -16,6 +16,7 @@
 
 #import "AAALocationStr.h"
 
+<<<<<<< HEAD
 #import "NSString+CN2UTF8.h"
 
 //纯代码TabBar
@@ -26,4 +27,6 @@
 
 #import "AAASearchAPI.h"
 #import "AAALoginResult.h"
+=======
+>>>>>>> origin/HYDeFeng
 #endif /* loginHead_h */
