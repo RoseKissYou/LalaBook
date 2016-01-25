@@ -63,12 +63,16 @@
     
     self.param.tbname = self.modelName;
     self.param.autoid = [NSDate NSDate2FormatNSStringByMonth:[NSDate date]];
+<<<<<<< HEAD
     
 
+=======
+>>>>>>> origin/HYDeFeng
     
     [self requestData];
     
     [self setUpCalendar];
+<<<<<<< HEAD
     
     [self setButtonSelect];
 }
@@ -82,6 +86,8 @@
             button.selected = NO;
         }
     }
+=======
+>>>>>>> origin/HYDeFeng
 }
 
 - (void)didReceiveMemoryWarning {
@@ -156,7 +162,11 @@
 - (void)back2ThisMonth{
     [self.dpView selectToday];
     NSDate *date = [NSDate date];
+<<<<<<< HEAD
     self.label.text = [[NSDate NSDate2FormatNSStringByYear:date] stringByAppendingString:[NSDate NSDate2StrByMonth:date]];
+=======
+    self.label.text = [[NSDate NSDate2StrByYear:date] stringByAppendingString:[NSDate NSDate2StrByMonth:date]];
+>>>>>>> origin/HYDeFeng
     self.dpView.hidden = YES;
     self.btnView.hidden = YES;
     
@@ -168,10 +178,13 @@
             button.selected = NO;
         }
     }
+<<<<<<< HEAD
     self.currentYear = [NSDate NSDate2FormatNSStringByYear:date];
     self.selectYear = [NSDate NSDate2StrByYear:date];
     _indexMonth = index;
     [self search];
+=======
+>>>>>>> origin/HYDeFeng
 }
 
 - (void)search{

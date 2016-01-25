@@ -7,9 +7,23 @@
 //
 
 #import "AAALoginAndRegionViewController.h"
+<<<<<<< HEAD
 
 #import "loginHead.h"
 
+=======
+#import "AAASearchAPI.h"
+#import "AAALoginResult.h"
+#import "loginHead.h"
+
+#import "NSString+CN2UTF8.h"
+
+//纯代码TabBar
+#import "AAATabBarController.h"
+
+//旧版扫一扫
+#import "QRCodeReaderViewController.h"
+>>>>>>> origin/HYDeFeng
 @import AVFoundation;
 static NSInteger changeHeightLayout = 30;
 static NSInteger originalHeightLayout = 50;
@@ -46,6 +60,7 @@ static NSInteger bossOriginalLayout = 10;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *passwordHeightLayout;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *userPhoneHeightLayout;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *regionBottomLayout;  //30
+<<<<<<< HEAD
 //企业员工或非企业员工登陆按钮视图顶部约束
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *chooseCompanyOrNotTopLayout; //默认是20 键盘弹起后变成90
 //公司名称view
@@ -59,6 +74,9 @@ static NSInteger bossOriginalLayout = 10;
 //非企业注册按钮视图
 @property (weak, nonatomic) IBOutlet UIButton *clickCompanyRegisterButton;
 @property (weak, nonatomic) IBOutlet UIButton *clickNotCompanyRegisterButton;
+=======
+
+>>>>>>> origin/HYDeFeng
 
 
 @end
@@ -67,7 +85,10 @@ static NSInteger bossOriginalLayout = 10;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+<<<<<<< HEAD
     self.navigationController.navigationBarHidden = YES;
+=======
+>>>>>>> origin/HYDeFeng
     //初始隐藏登陆视图
     self.loginView.hidden = NO;
     self.regionView.hidden = YES;
@@ -84,9 +105,12 @@ static NSInteger bossOriginalLayout = 10;
 - (IBAction)chooseRegion:(UIButton *)sender {
     self.loginView.hidden = YES;
     self.regionView.hidden = NO;
+<<<<<<< HEAD
     
      [self changeToCompanyMemberRegister];
     
+=======
+>>>>>>> origin/HYDeFeng
 }
 #pragma mark -return按钮设置
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
@@ -102,13 +126,20 @@ static NSInteger bossOriginalLayout = 10;
 
 #pragma mark - 注册
 - (IBAction)regionToServer:(UIButton *)sender {
+<<<<<<< HEAD
     NSLog(@"企业注册按钮");
+=======
+>>>>>>> origin/HYDeFeng
     [self.view endEditing:YES];
    
     AAALoginParam *param = [AAALoginParam sharedAAALoginParam];
 #warning df-self.codeScanStr这个参数在真机调试时换上
     param.corporationName = [NSString CNToUTF8:@"百得电器"];
     param.staffNummber = self.userNumber.text;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/HYDeFeng
     param.password = self.passWordTextFiled.text;
     param.userPasswordInWeb = param.password;
     if (self.telephoneTF.text.length != 11) {
@@ -119,6 +150,11 @@ static NSInteger bossOriginalLayout = 10;
         [AAALoginTool registerInWeb:param Success:^(NSString *userid) {
             param.userNameInWeb = userid;
             [self chooseLogin:nil];
+<<<<<<< HEAD
+=======
+            [AAASearchParam sharedAAASearchParam].entname = param.corporationName;
+            [AAASearchParam sharedAAASearchParam].empcode = param.staffNummber;
+>>>>>>> origin/HYDeFeng
             self.userLoginNameTextField.text = param.userNameInWeb;
             self.userLoginPasswordTextField.text = param.userPasswordInWeb;
         } Failure:^(NSError *error) {
@@ -143,13 +179,22 @@ static NSInteger bossOriginalLayout = 10;
         } Failure:^(NSError *error) {
             NSLog(@"%@",error);
         }];
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> origin/HYDeFeng
         NSLog(@"%d",result);
         if (result == 1) {
             //跳转到主页
             AAATabBarController *tabBar = [[AAATabBarController alloc] init];
+<<<<<<< HEAD
             //            UIStoryboard *mainStory = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             //            AAAHomeViewController *firstControl = [mainStory instantiateViewControllerWithIdentifier:@"Main"];
+=======
+//            UIStoryboard *mainStory = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//            AAAHomeViewController *firstControl = [mainStory instantiateViewControllerWithIdentifier:@"Main"];
+>>>>>>> origin/HYDeFeng
             [self presentViewController:tabBar animated:YES completion:nil];
         }else {
             [[[UIAlertView alloc] initWithTitle:@"登陆错误" message:@"用户名或密码错误" delegate:self cancelButtonTitle:@"重新输入" otherButtonTitles: nil] show];
@@ -159,7 +204,10 @@ static NSInteger bossOriginalLayout = 10;
     }];
     
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> origin/HYDeFeng
 }
 
 
@@ -184,6 +232,7 @@ static NSInteger bossOriginalLayout = 10;
 - (void)go2Main{
     
     //把记录写入云
+<<<<<<< HEAD
 //    //获取设备型号和地址
 //    AAALoginParam *param = [AAALoginParam sharedAAALoginParam];
 //    param.phoneType = [UIDevice currentDevice].model;
@@ -198,6 +247,23 @@ static NSInteger bossOriginalLayout = 10;
     //再跳转
     AAATabBarController *tabBar = [[AAATabBarController alloc] init];
     
+=======
+    //获取设备型号和地址
+    AAALoginParam *param = [AAALoginParam sharedAAALoginParam];
+    param.phoneType = [UIDevice currentDevice].model;
+#warning df-写好定位方法
+    param.address = [AAALocationStr sharedAAALocationStr].locationStr;
+    [AAALoginTool uploadTelephoneTypeAndAddr:param Success:^(BOOL result) {
+        NSLog(@"插入成功");
+    } Failure:^(NSError *error) {
+        NSLog(@"插入失败");
+    }];
+    
+    //再跳转
+    AAATabBarController *tabBar = [[AAATabBarController alloc] init];
+    //            UIStoryboard *mainStory = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //            AAAHomeViewController *firstControl = [mainStory instantiateViewControllerWithIdentifier:@"Main"];
+>>>>>>> origin/HYDeFeng
     [self presentViewController:tabBar animated:YES completion:nil];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -284,8 +350,11 @@ static NSInteger bossOriginalLayout = 10;
     self.userNumberHeightLayout.constant = changeHeightLayout;
     self.passwordHeightLayout.constant = changeHeightLayout;
     self.userPhoneHeightLayout.constant = changeHeightLayout;
+<<<<<<< HEAD
     //企业非企业
     self.chooseCompanyOrNotTopLayout.constant = bossTopLayout;
+=======
+>>>>>>> origin/HYDeFeng
     
 }
 
@@ -316,7 +385,10 @@ static NSInteger bossOriginalLayout = 10;
     self.passwordHeightLayout.constant = originalHeightLayout;
     self.userPhoneHeightLayout.constant = originalHeightLayout;
     //self.regionBottomLayout.constant = 30;
+<<<<<<< HEAD
     self.chooseCompanyOrNotTopLayout.constant = 20;
+=======
+>>>>>>> origin/HYDeFeng
 }
 //键盘消失时取消监听
 - (void)viewWillDisappear:(BOOL)animated
@@ -333,6 +405,7 @@ static NSInteger bossOriginalLayout = 10;
 
 - (void)setTextFiledFormat
 {
+<<<<<<< HEAD
     [self registerViewAddImages];
     //设置登陆界面的
     UIImageView *leftLU = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"gonghaoming"]];
@@ -350,6 +423,8 @@ static NSInteger bossOriginalLayout = 10;
 //注册界面TextField 图片加入
 - (void)registerViewAddImages
 {
+=======
+>>>>>>> origin/HYDeFeng
     UIImageView *leftVN = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"gonghaoming"]];
     leftVN.contentMode = UIViewContentModeCenter;
     leftVN.frame = CGRectMake(0, 0, 30, 20);
@@ -366,6 +441,7 @@ static NSInteger bossOriginalLayout = 10;
     leftVC.frame = CGRectMake(0, 0, 30, 20);
     self.telephoneTF.leftViewMode = UITextFieldViewModeAlways;
     self.telephoneTF.leftView = leftVC;
+<<<<<<< HEAD
 }
 //界面TextField 图片更换
 - (void) changeRegisterAddImages
@@ -447,6 +523,28 @@ static NSInteger bossOriginalLayout = 10;
 
 
 
+=======
+    //设置登陆界面的
+    UIImageView *leftLU = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"gonghaoming"]];
+    leftLU.contentMode = UIViewContentModeCenter;
+    leftLU.frame = CGRectMake(0, 0, 30, 20);
+    self.userLoginNameTextField.leftViewMode = UITextFieldViewModeAlways;
+    self.userLoginNameTextField.leftView = leftLU;
+    
+    UIImageView *leftLP = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"mima"]];
+    leftLP.contentMode = UIViewContentModeCenter;
+    leftLP.frame = CGRectMake(0, 0, 30, 20);
+    self.userLoginPasswordTextField.leftViewMode = UITextFieldViewModeAlways;
+    self.userLoginPasswordTextField.leftView = leftLP;
+}
+#pragma mark - 跳过注册, 直接登陆
+- (IBAction)LoginDirect:(UIButton *)sender {
+    UIStoryboard *mainStory = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    AAAHomeViewController *firstControl = [mainStory instantiateViewControllerWithIdentifier:@"Main"];
+    [self presentViewController:firstControl animated:YES completion:nil];
+}
+
+>>>>>>> origin/HYDeFeng
 /*
 #pragma mark - Navigation
 

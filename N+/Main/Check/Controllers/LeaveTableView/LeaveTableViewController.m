@@ -12,6 +12,7 @@
 
 #import "NSString+SubstringBySpace.h"
 
+<<<<<<< HEAD
 #import "NSDate+DateLocationChange.h"
 #import "CDatePickerViewEx.h"
 
@@ -33,6 +34,10 @@
 
 @property (nonatomic ,assign) NSInteger indexMonth;
 
+=======
+@interface LeaveTableViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+>>>>>>> origin/HYDeFeng
 
 @property (assign,nonatomic) NSInteger count;
 

@@ -12,9 +12,12 @@
 
 #import "NSString+SubstringBySpace.h"
 
+<<<<<<< HEAD
 #import "CDatePickerViewEx.h"
 #import "NSDate+DateLocationChange.h"
 
+=======
+>>>>>>> origin/HYDeFeng
 @interface RewardTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

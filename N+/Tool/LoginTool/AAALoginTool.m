@@ -12,21 +12,37 @@
 #import "AAARquestAPI.h"
 
 @implementation AAALoginTool
+<<<<<<< HEAD
 #pragma mark - 1)注册接口
 /*
  参数： entname - 公司名称，empcode - 工号，pwd - 登陆密码，telephone - 电话号码
+=======
+
+/*
+1)注册接口
+ 参数： entname - 公司名称，empcode - 工号，pwd - 登陆密码，telephone - 电话号码
+ 
+>>>>>>> origin/HYDeFeng
  返回值1：
  {
  “flag”:”True”,
  “info”:”提示信息”,
  “userid”:”34223432”
  }
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> origin/HYDeFeng
  返回值2：
  {
  “flag”:"False",
  “info”:”提示信息”,
  “userid”:””
  }
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> origin/HYDeFeng
  返回信息说明：
  Flag: 注册是否成功的标记，True表示成功，False表示失败;
  Info: 如果注册失败，返回失败的提示信息；
@@ -44,7 +60,11 @@
         NSLog(@"%@",error);
     }];
 }
+<<<<<<< HEAD
 #pragma mark - 2)登录接口
+=======
+
+>>>>>>> origin/HYDeFeng
 /*
  2)登录接口
  http://120.76.77.155:8003/Server/Login?userid=18&pwd=123456
@@ -70,7 +90,11 @@
     }];
     
 }
+<<<<<<< HEAD
 #pragma mark -3)获取HR工号接口
+=======
+
+>>>>>>> origin/HYDeFeng
 /*
 3)获取HR工号接口
 
@@ -98,12 +122,27 @@ Empcode 为返回的工号值，如果返回空，则表示该用户没有绑定
         NSLog(@"%@",error);
     }];
 }
+<<<<<<< HEAD
 #pragma mark -5)修改用户工资密码接口
 /*
  http://120.76.77.155:8003/Server.asmx/UpdateSalaryPwd?entname=华跃科技&empcode=201204230011&oldpwd=123456&newpwd=123
  
  http://120.76.77.155:8003/Server.asmx/UpdateSalaryPwd?entname=百得电器&empcode=111714&oldpwd=123456&newpwd=123
  参数： entname - 公司名称，empcode - 工号，oldpwd - 旧工资密码，newpwd - 新工资密码
+=======
+
+/*
+ 5)修改用户工资密码接口
+ 
+ 接口示例
+ 
+ http://120.76.77.155:8003/Server.asmx/UpdateSalaryPwd?entname=华跃科技&empcode=201204230011&oldpwd=123456&newpwd=123
+ 
+ http://120.76.77.155:8003/Server.asmx/UpdateSalaryPwd?entname=百得电器&empcode=111714&oldpwd=123456&newpwd=123
+ 
+ 参数： entname - 公司名称，empcode - 工号，oldpwd - 旧工资密码，newpwd - 新工资密码
+ 
+>>>>>>> origin/HYDeFeng
  返回值： {"result":true} / {"result":false}
  
  值说明：true - 修改成功
@@ -122,6 +161,7 @@ Empcode 为返回的工号值，如果返回空，则表示该用户没有绑定
     }];
 
 }
+<<<<<<< HEAD
 #pragma mark - 6 非企业员工注册
 /*http://url/reguser?entname=@entname&empcode=@empcode&pwd=@pwd&telephone=@telephone&isent=@isent
  @entname：企业名称
@@ -165,6 +205,11 @@ Empcode 为返回的工号值，如果返回空，则表示该用户没有绑定
 
 
 #pragma mark -登陆记录/退出登陆
+=======
+
+
+
+>>>>>>> origin/HYDeFeng
 /*
  3)插入用户登录记录接口(登录正确后，调用)
  
