@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AAAHomeTabCell : UITableViewCell
-- (void)essayWithImageView:(NSString *)imageName essayName:(NSString *)name;
+- (void)essayWithImageView:(NSString *)imageName essayName:(NSString *)name withContentImage:(NSString *)contentImage;
 @end

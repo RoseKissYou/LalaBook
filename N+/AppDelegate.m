@@ -4,7 +4,7 @@
 //
 //  Created by 小笨熊 on 16/1/11.
 //  Copyright © 2016年 Jake_Smith. All rights reserved.
-//
+///////////////////////////////////////////////////////
 
 #import "AppDelegate.h"
 #import "AAAWelcomeViewController.h"
@@ -12,7 +12,8 @@
 
 #import "AAASearchTool.h"
 
-
+#import "AAATabBarController.h"
+#import "AAALoginAndRegionViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -23,14 +24,24 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    
-    AAAWelcomeViewController *welcome = [[AAAWelcomeViewController alloc]init];
-
-    self.window.rootViewController = welcome;
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"everLaunched"]) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"everLaunched"];
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
+       
+        AAAWelcomeViewController *welcome = [[AAAWelcomeViewController alloc]init];
+        
+        self.window.rootViewController = welcome;
+    }else{
+        
+         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
+        //跳到登陆界面
+        UIStoryboard *loginStory = [UIStoryboard storyboardWithName:@"loginOrRegion" bundle:nil];
+        AAALoginAndRegionViewController *chooseController = [loginStory instantiateViewControllerWithIdentifier:@"chooseNew"];
+        self.window.rootViewController = chooseController;
+    }
     [self.window makeKeyAndVisible];
-
     [[AAALocateTool sharedAAALocateTool] getLocation];
-
     return YES;
 }
 
