@@ -32,6 +32,7 @@
 		6800AD831C4381CF006B756A /* setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6800AD801C4381CF006B756A /* setting.storyboard */; };
 		683FD7ED1C506ECA00A64129 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683FD7EC1C506ECA00A64129 /* MapKit.framework */; };
 		683FD7F01C508ACB00A64129 /* AAALoginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 683FD7EF1C508ACB00A64129 /* AAALoginResult.m */; };
+		685098721C55AAFD0097DBA1 /* yuan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 685098711C55AAFD0097DBA1 /* yuan@2x.png */; };
 		685291401C4FB4CF00A78405 /* AAALoginAndRegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6852913E1C4FB4CF00A78405 /* AAALoginAndRegionViewController.m */; };
 		685291411C4FB4CF00A78405 /* loginOrRegion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6852913F1C4FB4CF00A78405 /* loginOrRegion.storyboard */; };
 		6852914A1C4FB4E500A78405 /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 685291441C4FB4E500A78405 /* QRCameraSwitchButton.m */; };
@@ -248,6 +249,7 @@
 		683FD7EC1C506ECA00A64129 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		683FD7EE1C508ACB00A64129 /* AAALoginResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAALoginResult.h; sourceTree = "<group>"; };
 		683FD7EF1C508ACB00A64129 /* AAALoginResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAALoginResult.m; sourceTree = "<group>"; };
+		685098711C55AAFD0097DBA1 /* yuan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yuan@2x.png"; sourceTree = "<group>"; };
 		685291361C4FB4A200A78405 /* AAARquestAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAARquestAPI.h; sourceTree = "<group>"; };
 		685291371C4FB4A200A78405 /* AAASearchAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAASearchAPI.h; sourceTree = "<group>"; };
 		685291381C4FB4A200A78405 /* HouseHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseHeader.h; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 		685291CD1C4FB5D600A78405 /* 移动签到.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "移动签到.png"; sourceTree = "<group>"; };
 		685291EB1C4FB5DB00A78405 /* BEEP.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BEEP.mp3; sourceTree = "<group>"; };
 		685291EC1C4FB5DB00A78405 /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beep.wav; sourceTree = "<group>"; };
+		68702EEE1C53B386008A34D3 /* checkHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkHead.h; sourceTree = "<group>"; };
 		68E2D89D1C4DC7A60042BAEF /* JTCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendar.h; sourceTree = "<group>"; };
 		68E2D89E1C4DC7A60042BAEF /* JTCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendar.m; sourceTree = "<group>"; };
 		68E2D89F1C4DC7A60042BAEF /* JTCalendarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarAppearance.h; sourceTree = "<group>"; };
@@ -697,6 +700,7 @@
 				685291381C4FB4A200A78405 /* HouseHeader.h */,
 				685291391C4FB4A200A78405 /* houseName.h */,
 				6852913A1C4FB4A200A78405 /* loginHead.h */,
+				68702EEE1C53B386008A34D3 /* checkHead.h */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -749,6 +753,7 @@
 		685291661C4FB5CF00A78405 /* Delete */ = {
 			isa = PBXGroup;
 			children = (
+				685098711C55AAFD0097DBA1 /* yuan@2x.png */,
 				685291671C4FB5CF00A78405 /* B12.jpg */,
 				685291681C4FB5CF00A78405 /* cloudyBackground.png */,
 				685291691C4FB5CF00A78405 /* coll.png */,
@@ -1618,6 +1623,7 @@
 				7479A6821C51F37E00E6DD47 /* forth_normal@2x.png in Resources */,
 				749EE18E1C48E6DD00F533A0 /* lala.storyboard in Resources */,
 				685291901C4FB5CF00A78405 /* duigou.png in Resources */,
+				685098721C55AAFD0097DBA1 /* yuan@2x.png in Resources */,
 				685291921C4FB5CF00A78405 /* first.jpg in Resources */,
 				6852918E1C4FB5CF00A78405 /* coll.png in Resources */,
 				7479A6921C51F37E00E6DD47 /* third_normal@2x.png in Resources */,
